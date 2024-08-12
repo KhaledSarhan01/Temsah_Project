@@ -4,3 +4,4 @@
 ../Design/FIFO/FIFO_RAM.v
 ../Design/FIFO/RD_CONTRL.v
 ../Design/FIFO/WR_CONTRL.v
+../Design/RegFile.v
