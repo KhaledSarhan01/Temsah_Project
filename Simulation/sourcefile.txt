@@ -5,3 +5,5 @@
 ../Design/FIFO/RD_CONTRL.v
 ../Design/FIFO/WR_CONTRL.v
 ../Design/RegFile.v
+../Design/ClkDiv.v
+../Design/RST_SYNC.v

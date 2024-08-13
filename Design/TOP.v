@@ -18,7 +18,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     wire F_FULL,F_EMPTY;
 
     // Clocks
-    wire TX_CLK;
+    wire TX_CLK,RX_CLK;
 
     // ALU Datapath and Control
     wire [DATA_WIDTH-1:0] ALU_Op1,ALU_Op2;
@@ -53,7 +53,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     //Internal Registers
     .REG0(ALU_Op1), // ALU INPUT 
     .REG1(ALU_Op2), // ALU INPUT
-    .REG2(UART_Config), // UART Configuraion
+    .REG2(UART_Config), // UART_RX Configuraion
     .REG3(ClkDiv_Config) // Clock Divider  
 );
 
@@ -77,6 +77,57 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
         .R_INC(F_RD_INC),
         .RD_DATA(UART_TX_IN),
         .EMPTY(F_EMPTY)
+    );
+
+// Clock Dividers
+ClkDiv #(.Width(8)) UART_TX_Clock_Divider (
+    // active low async reset 
+    .i_rst_n(RST_SYNC_UART),
+    // Reference Clock
+    .i_ref_clk(UART_CLK),
+    // Configuration 
+    .i_clk_en(1'b1),
+    .i_div_ratio(ClkDiv_Config),
+    //output
+    .o_div_clk(TX_CLK)
+);
+
+reg [3:0] UART_RX_Prescale;
+always @(*) begin
+    case (UART_Config)
+            'd32: UART_RX_Prescale = 4'd1;
+            'd16: UART_RX_Prescale = 4'd2;
+            'd8:  UART_RX_Prescale = 4'd4;
+            'd4:  UART_RX_Prescale = 4'd8; 
+        default: begin
+            UART_RX_Prescale = 4'd1;
+        end
+    endcase    
+end
+ClkDiv #(.Width(4)) UART_RX_Clock_Divider (
+    // active low async reset 
+    .i_rst_n(RST_SYNC_UART),
+    // Reference Clock
+    .i_ref_clk(UART_CLK),
+    // Configuration 
+    .i_clk_en(1'b1),
+    .i_div_ratio(UART_RX_Prescale),
+    //output
+    .o_div_clk(RX_CLK)
+);
+
+
+// Reset Synchronizer
+    RST_SYNC #(.NUM_STAGES(2)) RST_SYNC_1 (
+    .RST(RST),
+    .CLK(REF_CLK),
+    .SYNC_RST(RST_SYNC_REF)
+    );
+
+    RST_SYNC #(.NUM_STAGES(2)) RST_SYNC_2 (
+    .RST(RST),
+    .CLK(UART_CLK),
+    .SYNC_RST(RST_SYNC_UART)
     );
 
 endmodule
