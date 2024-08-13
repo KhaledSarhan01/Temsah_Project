@@ -9,3 +9,4 @@
 ../Design/RST_SYNC.v
 ../Design/CLK_GATE.v
 ../Design/DATA_SYNC.v
+../Design/ALU.v

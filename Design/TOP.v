@@ -7,6 +7,14 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     input wire RX_IN,
     output wire TX_OUT 
 );
+////------------ Parameters ------------////
+    parameter  RegFile_MEM_SIZE   = 4 ;
+    parameter  RegFile_ADDR_WIDTH = 16;
+    
+    parameter ALU_FUNC_WIDTH = 4;
+    
+    parameter FIFO_ADDR_WIDTH = 4;
+    parameter FIFO_MEM_SIZE = 32;
 
 ////--------- Internal Signals ---------////
     // System Control Datapath
@@ -26,7 +34,10 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 
     // ALU Datapath and Control
     wire [DATA_WIDTH-1:0] ALU_Op1,ALU_Op2;
-    wire ALU_CLK_EN;
+    wire [DATA_WIDTH*2-1:0] ALU_OUT;
+    wire [ALU_FUNC_WIDTH-1:0] ALU_FUNC;
+    wire ALU_EN,ALU_OUT_VALID;
+    wire ALU_CLK_EN; 
 
     //Register File Control and Flags
     wire RegFile_Rd_En,RegFile_Wr_En;
@@ -41,8 +52,6 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 ////---------- Clock Domain 1 ----------////
 
 // Register File
-    parameter  RegFile_MEM_SIZE   = 4 ;
-    parameter  RegFile_ADDR_WIDTH = 16;
     RegFile #(.DATA_WIDTH(DATA_WIDTH),.MEM_SIZE(RegFile_MEM_SIZE) ,.ADDR_WIDTH(RegFile_ADDR_WIDTH)) Register_File (
     //Clock and Active Low Reset
     .CLK(REF_CLK),
@@ -62,13 +71,29 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     .REG3(ClkDiv_Config) // Clock Divider  
 );
 
+// ALU
+ ALU #(.DATA_WIDTH(DATA_WIDTH) ,.FUNC_WIDTH(ALU_FUNC_WIDTH))(
+    // Clock and Active low Async Reset
+    .CLK(ALU_CLK),
+    .RST(RST_SYNC_REF),
+
+    // Datapath 
+    .A(ALU_Op1),
+    .B(ALU_Op2),
+    .ALU_OUT(ALU_OUT),
+
+    // Control and Flags
+    .ALU_FUNC(ALU_FUNC),
+    .Enable(ALU_EN),
+    .OUT_VALID(ALU_OUT_VALID)
+);
+
+
 ////---------- Clock Domain 2 ----------////
 
 ////---------- Synchronizers -----------////
 
 //FIFO    
-    parameter FIFO_ADDR_WIDTH = 4;
-    parameter FIFO_MEM_SIZE = 32;
     FIFO #(.DATA_WIDTH(DATA_WIDTH),.ADDR_WIDTH(FIFO_ADDR_WIDTH),.MEM_SIZE(FIFO_MEM_SIZE)) Async_FIFO (
         //Write Part
         .W_CLK(REF_CLK),

@@ -9,28 +9,51 @@ z2
 !i10f 100
 cModel Technology
 dD:/Digital/Eltamseh Diplomia/Part 2/Projects/ASYNC_FIFO/Simulation
-vCLK_GATE
-Z0 !s110 1723569944
+vALU
+Z0 !s110 1723589245
 !i10b 1
-!s100 1Y2T8c7c?LnQn`JI[jLOE1
-I=EBfAEmUh5@;iP6C3DIjT2
+!s100 `d3KJfP94_L^XgjF[42c=3
+I;hOeAn1Zl6Lb14bV]mE?Q0
 Z1 dD:/Digital/Eltamseh Diplomia/System/Full System/Simulation
-w1723569299
-8../Design/CLK_GATE.v
-F../Design/CLK_GATE.v
-!i122 7
-Z2 L0 1 18
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 OL;L;2021.1;73
+w1723588504
+8../Design/ALU.v
+F../Design/ALU.v
+!i122 8
+L0 1 75
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z5 !s108 1723569944.000000
-!s107 ../Design/DATA_SYNC.v|../Design/CLK_GATE.v|../Design/RST_SYNC.v|../Design/ClkDiv.v|../Design/RegFile.v|../Design/FIFO/WR_CONTRL.v|../Design/FIFO/RD_CONTRL.v|../Design/FIFO/FIFO_RAM.v|../Design/FIFO/F_DATA_SYNC.v|../Design/FIFO.v|../Design/TOP.v|
-Z6 !s90 -reportprogress|300|-f|sourcefile.txt|
+Z4 !s108 1723589245.000000
+!s107 ../Design/ALU.v|../Design/DATA_SYNC.v|../Design/CLK_GATE.v|../Design/RST_SYNC.v|../Design/ClkDiv.v|../Design/RegFile.v|../Design/FIFO/WR_CONTRL.v|../Design/FIFO/RD_CONTRL.v|../Design/FIFO/FIFO_RAM.v|../Design/FIFO/F_DATA_SYNC.v|../Design/FIFO.v|../Design/TOP.v|
+Z5 !s90 -reportprogress|300|-f|sourcefile.txt|
 !i113 0
-Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z8 tCvgOpt 0
+Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 tCvgOpt 0
+n@a@l@u
+vCLK_GATE
+R0
+!i10b 1
+!s100 1Y2T8c7c?LnQn`JI[jLOE1
+I=EBfAEmUh5@;iP6C3DIjT2
+R1
+w1723569299
+8../Design/CLK_GATE.v
+F../Design/CLK_GATE.v
+!i122 8
+Z8 L0 1 18
+R2
+R3
+r1
+!s85 0
+31
+R4
+Z9 !s107 ../Design/ALU.v|../Design/DATA_SYNC.v|../Design/CLK_GATE.v|../Design/RST_SYNC.v|../Design/ClkDiv.v|../Design/RegFile.v|../Design/FIFO/WR_CONTRL.v|../Design/FIFO/RD_CONTRL.v|../Design/FIFO/FIFO_RAM.v|../Design/FIFO/F_DATA_SYNC.v|../Design/FIFO.v|../Design/TOP.v|
+R5
+!i113 0
+R6
+R7
 n@c@l@k_@g@a@t@e
 vClkDiv
 R0
@@ -41,19 +64,19 @@ R1
 w1721555481
 8../Design/ClkDiv.v
 F../Design/ClkDiv.v
-!i122 7
+!i122 8
 L0 5 56
+R2
 R3
-R4
 r1
 !s85 0
 31
+R4
+R9
 R5
-Z9 !s107 ../Design/DATA_SYNC.v|../Design/CLK_GATE.v|../Design/RST_SYNC.v|../Design/ClkDiv.v|../Design/RegFile.v|../Design/FIFO/WR_CONTRL.v|../Design/FIFO/RD_CONTRL.v|../Design/FIFO/FIFO_RAM.v|../Design/FIFO/F_DATA_SYNC.v|../Design/FIFO.v|../Design/TOP.v|
-R6
 !i113 0
+R6
 R7
-R8
 n@clk@div
 vDATA_SYNC
 R0
@@ -64,19 +87,19 @@ R1
 w1723133262
 8../Design/DATA_SYNC.v
 F../Design/DATA_SYNC.v
-!i122 7
+!i122 8
 L0 1 48
+R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@d@a@t@a_@s@y@n@c
 vDUAL_RAM
 R0
@@ -87,19 +110,19 @@ R1
 w1723337442
 8../Design/FIFO/FIFO_RAM.v
 F../Design/FIFO/FIFO_RAM.v
-!i122 7
+!i122 8
 L0 1 32
+R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@d@u@a@l_@r@a@m
 vF_DATA_SYNC
 R0
@@ -110,19 +133,19 @@ R1
 w1723569897
 8../Design/FIFO/F_DATA_SYNC.v
 F../Design/FIFO/F_DATA_SYNC.v
-!i122 7
+!i122 8
 L0 1 19
+R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@f_@d@a@t@a_@s@y@n@c
 vFIFO
 R0
@@ -133,19 +156,19 @@ R1
 w1723569911
 8../Design/FIFO.v
 F../Design/FIFO.v
-!i122 7
+!i122 8
 L0 1 79
+R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@f@i@f@o
 vRD_CONTRL
 R0
@@ -156,19 +179,19 @@ R1
 w1723417974
 8../Design/FIFO/RD_CONTRL.v
 F../Design/FIFO/RD_CONTRL.v
-!i122 7
+!i122 8
 L0 1 47
+R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@r@d_@c@o@n@t@r@l
 vRegFile
 R0
@@ -179,19 +202,19 @@ R1
 w1723493631
 8../Design/RegFile.v
 F../Design/RegFile.v
-!i122 7
+!i122 8
 L0 2 69
+R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@reg@file
 vRST_SYNC
 R0
@@ -202,42 +225,42 @@ R1
 w1722973583
 8../Design/RST_SYNC.v
 F../Design/RST_SYNC.v
-!i122 7
+!i122 8
+R8
 R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@r@s@t_@s@y@n@c
 vSYS_TOP
 R0
 !i10b 1
-!s100 T=VAVa<7UT[9Bz83HfU?B2
-IGAC@i5]gZaLcbOb5e@TLL3
+!s100 WOdI_I=C76M80>ZPfNCTb2
+Ib6;o5HF3Zem>7`d@?iQ5C0
 R1
-w1723569829
+w1723589213
 8../Design/TOP.v
 F../Design/TOP.v
-!i122 7
-L0 1 154
+!i122 8
+L0 1 179
+R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@s@y@s_@t@o@p
 vWR_CONTRL
 R0
@@ -248,17 +271,17 @@ R1
 w1723418507
 8../Design/FIFO/WR_CONTRL.v
 F../Design/FIFO/WR_CONTRL.v
-!i122 7
+!i122 8
 L0 1 46
+R2
 R3
-R4
 r1
 !s85 0
 31
-R5
+R4
 R9
-R6
+R5
 !i113 0
+R6
 R7
-R8
 n@w@r_@c@o@n@t@r@l
