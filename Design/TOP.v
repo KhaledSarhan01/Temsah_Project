@@ -12,16 +12,21 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     // System Control Datapath
     wire [DATA_WIDTH-1:0] SYS_UART_TX_IN , UART_TX_IN;
     wire [DATA_WIDTH-1:0] RegFile_WORD_IN,RegFile_WORD_OUT;
+    wire [DATA_WIDTH-1:0] COMMAND_IN,UART_RX_OUT;
+
+    // UART Siganls and Flags
+    wire COMMAND_IN_vaild,UART_RX_DATA_vaild;
 
     // FIFO Control and Flags
     wire F_RD_INC,F_WR_INC;
     wire F_FULL,F_EMPTY;
 
     // Clocks
-    wire TX_CLK,RX_CLK;
+    wire TX_CLK,RX_CLK,ALU_CLK;
 
     // ALU Datapath and Control
     wire [DATA_WIDTH-1:0] ALU_Op1,ALU_Op2;
+    wire ALU_CLK_EN;
 
     //Register File Control and Flags
     wire RegFile_Rd_En,RegFile_Wr_En;
@@ -77,6 +82,22 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
         .R_INC(F_RD_INC),
         .RD_DATA(UART_TX_IN),
         .EMPTY(F_EMPTY)
+    );
+// Clock Gating
+    CLK_GATE ALU_CLOCK (
+        .CLK(REF_CLK),
+        .CLK_EN(ALU_CLK_EN),
+        .GATED_CLK(ALU_CLK)
+    );
+
+// Clock Synchronizer
+    DATA_SYNC #(.NUM_STAGES(2),.BUS_WIDTH(DATA_WIDTH)) UART_RX_DATA_SYNC (
+        .CLK(REF_CLK),
+        .RST(RST_SYNC_REF),
+        .Unsync_bus(UART_RX_OUT),
+        .bus_enable(UART_RX_DATA_vaild),
+        .sync_bus(COMMAND_IN),
+        .enable_pulse(COMMAND_IN_vaild)
     );
 
 // Clock Dividers
