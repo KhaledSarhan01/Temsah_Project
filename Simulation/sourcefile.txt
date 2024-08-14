@@ -10,3 +10,4 @@
 ../Design/CLK_GATE.v
 ../Design/DATA_SYNC.v
 ../Design/ALU.v
+../Testbench/Testbench.sv
