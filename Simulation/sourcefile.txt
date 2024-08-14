@@ -10,4 +10,6 @@
 ../Design/CLK_GATE.v
 ../Design/DATA_SYNC.v
 ../Design/ALU.v
+../Design/UART.v
+../Design/PULSE_GEN.V
 ../Testbench/Testbench.sv
