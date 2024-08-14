@@ -25,6 +25,8 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 
     // UART Siganls and Flags
     wire COMMAND_IN_vaild,UART_RX_DATA_vaild;
+    wire UART_PAR_ERROR,UART_STOP_ERROR;
+    wire TX_BUSY;
 
     // FIFO Control and Flags
     wire F_RD_INC,F_WR_INC;
@@ -89,9 +91,42 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     .OUT_VALID(ALU_OUT_VALID)
 );
 
-
 ////---------- Clock Domain 2 ----------////
+    UART #(.DATA_WIDTH(DATA_WIDTH)) UART (
+    // Clocks and Active Low Reset
+    .TX_CLK(TX_CLK),
+    .RX_CLK(RX_CLK),
+    .UART_RST(RST_SYNC_UART),
 
+    // External Interface
+    .RX_IN(RX_IN),
+    .TX_OUT(TX_OUT),
+
+    // Internal Interface
+    .TX_DATA(UART_TX_IN),
+    .RX_DATA(UART_RX_OUT),
+    
+    // Configuration
+    .PAR_EN(UART_Config[0]),
+    .PAR_TYP(UART_Config[1]),
+    .PRESCALE(UART_Config[DATA_WIDTH-1:2]),
+
+    // TX Controls 
+    .TX_DATA_VALID(~(F_EMPTY)),
+    .TX_BUSY(TX_BUSY),
+    
+    // RX Controls and Configuration
+    .RX_DATA_VALID(UART_RX_DATA_vaild),
+    .RX_PAR_ERROR(UART_PAR_ERROR),
+    .RX_STOP_ERROR(UART_STOP_ERROR)
+    );
+
+    PULSE_GEN (
+    .CLK(TX_CLK),
+    .RST(RST_SYNC_UART),
+    .LVL_SIG(TX_BUSY),
+    .PULSE_GEN(F_RD_INC)
+    );
 ////---------- Synchronizers -----------////
 
 //FIFO    
