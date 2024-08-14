@@ -6,6 +6,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     //UART
     input wire RX_IN,
     output wire TX_OUT 
+    output wire RX_ERROR
 );
 ////------------ Parameters ------------////
     parameter  RegFile_MEM_SIZE   = 4 ;
