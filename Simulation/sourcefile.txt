@@ -10,6 +10,10 @@
 ../Design/CLK_GATE.v
 ../Design/DATA_SYNC.v
 ../Design/ALU.v
-../Design/UART.v
 ../Design/PULSE_GEN.V
+../Design/UART.v
+../Design/UART/FSM_Controller.v
+../Design/UART/Parity.v
+../Design/UART/Serializer.v
+../Design/UART/UART_TX.v
 ../Testbench/Testbench.sv
