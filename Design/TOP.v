@@ -5,7 +5,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     input wire RST,
     //UART
     input wire RX_IN,
-    output wire TX_OUT 
+    output wire TX_OUT, 
     output wire RX_ERROR
 );
 ////------------ Parameters ------------////
