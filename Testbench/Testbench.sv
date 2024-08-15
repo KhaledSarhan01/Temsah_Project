@@ -9,7 +9,8 @@ module tb_SYS_TOP ();
     reg tb_RST;
     //UART
     reg  tb_RX_IN;
-    wire tb_TX_OUT; 
+    wire tb_TX_OUT;
+    wire tb_RX_ERROR; 
 
 ////---------- Clock Generation ----------////
     // Reference Frequency = 100 MHz "Period = "
@@ -31,7 +32,8 @@ module tb_SYS_TOP ();
     .RST(tb_RST),
     //UART
     .RX_IN(tb_RX_IN),
-    .TX_OUT(tb_TX_OUT) 
+    .TX_OUT(tb_TX_OUT),
+    .RX_ERROR(tb_RX_ERROR) 
     );
 
 ////------------- Test Cases ------------////

@@ -74,6 +74,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     .RegFile_RdEn(RegFile_Rd_En),
     .RegFile_WrData(RegFile_WORD_IN),
     .RegFile_RdData(RegFile_WORD_OUT),
+    .RegFile_DATA_VAILD(RegFile_Data_Vaild),
 
     // UART RX Datapath and Control
     .RX_DATA_VALID(UART_RX_DATA_vaild),
