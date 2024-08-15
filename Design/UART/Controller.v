@@ -16,28 +16,28 @@ module UART_Rx_Controller(
 // BIT Counter
     reg [3:0] BIT_COUNT_reg;
     assign BIT_COUNT = BIT_COUNT_reg;
+
+    reg BIT_COUNT_CLR;
     always @(posedge clk or negedge rst_n ) begin
         if (!rst_n) begin
             BIT_COUNT_reg <= 4'b0;
         end else begin
-            if(BIT_TICK) begin
-                if 
-                (BIT_COUNT_reg == 4'd11 || Data_valid) begin
+            if (BIT_COUNT_CLR || Data_valid) begin
                     BIT_COUNT_reg <= 4'b0;
                 end else begin
-                    BIT_COUNT_reg <= BIT_COUNT_reg + 1;
+                    if(BIT_TICK) begin
+                        BIT_COUNT_reg <= BIT_COUNT_reg + 1;
+                     end
                 end
-            end
         end
     end
-
 // State Encoding: Gray Code Encoding 
     localparam [2:0] IDLE    = 3'b000  ,
                      START   = 3'b001  ,
-                     DATA    = 3'b011  ,
-                     PARITY  = 3'b010  ,
-                     STOP    = 3'b110  ,
-                     DONE    = 3'b100  ;
+                     DATA    = 3'b010  ,
+                     PARITY  = 3'b011  ,
+                     STOP    = 3'b100  ,
+                     DONE    = 3'b101  ;
 
 // Current State Seqential Logic
     reg [2:0] current_state , next_state;
@@ -55,30 +55,37 @@ module UART_Rx_Controller(
             IDLE  : begin
                 Data_valid = 1'b0;
                 block_enable_word =4'b0000; //= {sampler,parity,start,stop}
+                BIT_COUNT_CLR = 1'b1;
             end
             START : begin
                 Data_valid = 1'b0;
                 block_enable_word =4'b1100;
+                BIT_COUNT_CLR = 1'b0;
             end
             DATA  : begin
                 Data_valid = 1'b0;
                 block_enable_word =4'b1000;
+                BIT_COUNT_CLR = 1'b0;
             end 
             PARITY: begin
                 Data_valid = 1'b0;
                 block_enable_word =4'b1010;
+                BIT_COUNT_CLR = 1'b0;
             end 
             STOP  : begin
                 Data_valid = 1'b0;
                 block_enable_word =4'b1001;
+                BIT_COUNT_CLR = 1'b0;
             end
             DONE: begin
                 Data_valid = 1'b1;
                 block_enable_word =4'b0000;
+                BIT_COUNT_CLR = 1'b1;
             end
             default: begin
                 Data_valid = 1'b0;
                 block_enable_word =4'b0000;
+                BIT_COUNT_CLR = 1'b0;
             end
         endcase
     end
@@ -103,7 +110,7 @@ module UART_Rx_Controller(
                 end
             end
             DATA  : begin
-                if (!(error_flag_word) && PAR_EN && BIT_COUNT_reg == 4'd9) begin
+                if (!(error_flag_word) && PAR_EN && BIT_COUNT_reg == 4'd10) begin
                     next_state = PARITY;
                 end else if (!(error_flag_word)  && BIT_COUNT_reg == 4'd9) begin
                     next_state = STOP;
@@ -114,7 +121,7 @@ module UART_Rx_Controller(
                 end
             end 
             PARITY: begin
-                if (!(error_flag_word) && PAR_EN  && BIT_COUNT_reg == 4'd10) begin
+                if (!(error_flag_word) && PAR_EN  && BIT_COUNT_reg == 4'd11) begin
                     next_state = STOP;
                 end else if(error_flag_word) begin
                     next_state = IDLE;
@@ -123,9 +130,9 @@ module UART_Rx_Controller(
                 end
             end 
             STOP  : begin
-                if (!(error_flag_word) && PAR_EN  && BIT_COUNT_reg == 4'd11) begin
+                if (!(error_flag_word) && PAR_EN  && BIT_COUNT_reg == 4'd12) begin
                     next_state = DONE;
-                end else if (!(error_flag_word) && BIT_COUNT_reg == 4'd10) begin
+                end else if (!(error_flag_word) && BIT_COUNT_reg == 4'd11) begin
                     next_state = DONE;
                 end else if(error_flag_word) begin
                     next_state = IDLE;
@@ -134,11 +141,11 @@ module UART_Rx_Controller(
                 end
             end
             DONE: begin
-                if (BIT_TICK && !(error_flag_word) && ((PAR_EN && BIT_COUNT_reg == 4'd11)||(!(PAR_EN) && BIT_COUNT_reg == 4'd10)) ) begin
+                if (!(error_flag_word) && ((PAR_EN && BIT_COUNT_reg == 4'd11)||(!(PAR_EN) && BIT_COUNT_reg == 4'd10)) ) begin
                     next_state = IDLE;
                 end
                 else begin
-                    next_state = DONE;
+                    next_state = (BIT_COUNT_reg == 4'b0)? IDLE:DONE;
                 end
                 
             end
