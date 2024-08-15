@@ -1,4 +1,5 @@
 ../Design/TOP.v
+../Design/SYS_CONTRL.v
 ../Design/FIFO.v
 ../Design/FIFO/F_DATA_SYNC.v
 ../Design/FIFO/FIFO_RAM.v

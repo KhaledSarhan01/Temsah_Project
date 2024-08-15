@@ -9,8 +9,8 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     output wire RX_ERROR
 );
 ////------------ Parameters ------------////
-    parameter  RegFile_MEM_SIZE   = 4 ;
-    parameter  RegFile_ADDR_WIDTH = 16;
+    parameter  RegFile_MEM_SIZE   = 16 ;
+    parameter  RegFile_ADDR_WIDTH = 4;
     
     parameter ALU_FUNC_WIDTH = 4;
     
@@ -19,9 +19,9 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 
 ////--------- Internal Signals ---------////
     // System Control Datapath
-    wire [DATA_WIDTH-1:0] SYS_UART_TX_IN , UART_TX_IN;
+    wire [DATA_WIDTH-1:0] SYS_TX_DATA_OUT , UART_TX_IN;
     wire [DATA_WIDTH-1:0] RegFile_WORD_IN,RegFile_WORD_OUT;
-    wire [DATA_WIDTH-1:0] COMMAND_IN,UART_RX_OUT;
+    wire [DATA_WIDTH-1:0] SYS_RX_DATA_IN,UART_RX_OUT;
 
     // UART Siganls and Flags
     wire COMMAND_IN_vaild,UART_RX_DATA_vaild;
@@ -45,6 +45,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     //Register File Control and Flags
     wire RegFile_Rd_En,RegFile_Wr_En;
     wire RegFile_Data_Vaild;
+    wire [RegFile_ADDR_WIDTH-1:0] RegFile_ADDR;
 
     // Synchronizers
     wire RST_SYNC_REF,RST_SYNC_UART;
@@ -53,7 +54,37 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     wire [DATA_WIDTH-1:0] UART_Config,ClkDiv_Config;
 
 ////---------- Clock Domain 1 ----------////
+// System Control
+    SYS_CONTRL #(.DATA_WIDTH(DATA_WIDTH),.ALU_FUNC_WIDTH(ALU_FUNC_WIDTH),.RegFile_ADDR_WIDTH(RegFile_ADDR_WIDTH)) 
+    System_Control(   
+    // Clock and Active Low async Reset
+    .CLK(REF_CLK),
+    .RST(RST_SYNC_REF),
 
+    // ALU Datapath and Controls
+    .ALU_OUT(ALU_OUT),
+    .ALU_DATA_VALID(ALU_OUT_VALID),
+    .ALU_FUNC(ALU_FUNC),
+    .ALU_EN(ALU_EN),
+    .ALU_CLK_EN(ALU_CLK_EN),
+
+    // Register File Datapath and Control
+    .RegFile_ADDRESS(RegFile_ADDR),
+    .RegFile_WrEn(RegFile_Wr_En),
+    .RegFile_RdEn(RegFile_Rd_En),
+    .RegFile_WrData(RegFile_WORD_IN),
+    .RegFile_RdData(RegFile_WORD_OUT),
+
+    // UART RX Datapath and Control
+    .RX_DATA_VALID(UART_RX_DATA_vaild),
+    .RX_DATA_IN(SYS_RX_DATA_IN),
+
+    // UART TX Datapath and Control
+    .FIFO_WR(F_WR_INC), 
+    .FIFO_FULL(F_FULL),
+    .TX_DATA_OUT(SYS_TX_DATA_OUT) 
+    );
+    
 // Register File
     RegFile #(.DATA_WIDTH(DATA_WIDTH),.MEM_SIZE(RegFile_MEM_SIZE) ,.ADDR_WIDTH(RegFile_ADDR_WIDTH)) Register_File (
     //Clock and Active Low Reset
@@ -121,6 +152,8 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     .RX_STOP_ERROR(UART_STOP_ERROR)
     );
 
+    assign RX_ERROR = UART_PAR_ERROR | UART_STOP_ERROR;
+
     PULSE_GEN (
     .CLK(TX_CLK),
     .RST(RST_SYNC_UART),
@@ -135,7 +168,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
         .W_CLK(REF_CLK),
         .W_RST(RST_SYNC_REF),
         .W_INC(F_WR_INC),
-        .WR_DATA(SYS_UART_TX_IN),
+        .WR_DATA(SYS_TX_DATA_OUT),
         .FULL(F_FULL),
         //Read Part
         .R_CLK(TX_CLK),
@@ -157,7 +190,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
         .RST(RST_SYNC_REF),
         .Unsync_bus(UART_RX_OUT),
         .bus_enable(UART_RX_DATA_vaild),
-        .sync_bus(COMMAND_IN),
+        .sync_bus(SYS_RX_DATA_IN),
         .enable_pulse(COMMAND_IN_vaild)
     );
 
