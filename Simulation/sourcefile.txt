@@ -16,4 +16,9 @@
 ../Design/UART/Parity.v
 ../Design/UART/Serializer.v
 ../Design/UART/UART_TX.v
+../Design/UART/Configuration.v
+../Design/UART/Controller.v
+../Design/UART/Sampler.v
+../Design/UART/Sampling_Register.v
+../Design/UART/UART_RX.v
 ../Testbench/Testbench.sv
