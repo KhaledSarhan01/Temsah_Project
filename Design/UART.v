@@ -25,8 +25,8 @@ module UART #(parameter DATA_WIDTH = 8)(
     output wire RX_STOP_ERROR
 );
 
-UART_Tx #(.Width(DATA_WIDTH))(
-    .clk(TX_CLK), 
+UART_Tx #(.Width(DATA_WIDTH)) UART_TX(
+    .CLK(TX_CLK), 
     .rst(RX_CLK),
     .Tx_out(TX_OUT),
     .P_data(TX_DATA),
@@ -36,7 +36,7 @@ UART_Tx #(.Width(DATA_WIDTH))(
     .Busy(TX_BUSY)
 );
 
-UART_Rx #(.Width(DATA_WIDTH))(
+UART_Rx #(.Width(DATA_WIDTH)) UART_RX(
     //clock and active low async reset
     .CLK(RX_CLK),
     .RST(UART_RST),

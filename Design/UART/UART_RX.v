@@ -1,4 +1,4 @@
-module UART_Rx(
+module UART_Rx #(parameter Width = 8)(
     //clock and active low async reset
     input wire CLK,RST,
     //Main input 
@@ -7,7 +7,7 @@ module UART_Rx(
     input wire PAR_TYP,PAR_EN,
     input wire [5:0] Prescale,
     //outputs
-    output wire [7:0] P_DATA,
+    output wire [Width-1:0] P_DATA,
     output wire data_valid, 
     output wire Parity_Error,
     output wire Stop_Error
@@ -19,7 +19,7 @@ module UART_Rx(
 
 // Datapath
     wire sampled_bit_UART_Rx;
-    wire [7:0] Data_out_UART_Rx;
+    wire [Width-1:0] Data_out_UART_Rx;
     wire start_bit_UART_Rx;
     wire parity_bit_UART_Rx;
     wire stop_bit_UART_Rx;

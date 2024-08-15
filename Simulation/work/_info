@@ -1,6 +1,10 @@
 m255
 K4
 z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
 !s11f vlog 2021.1 2021.01, Jan 19 2021
 13
 !s112 1.1
@@ -8,580 +12,591 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dD:/Digital/Eltamseh Diplomia/Part 2/Projects/ASYNC_FIFO/Simulation
+Z1 dD:/Digital/Eltamseh Diplomia/Part 2/Projects/ASYNC_FIFO/Simulation
+T_opt
+!s110 1723751542
+VboCckDJAGh<R8@_RY4X[V3
+04 10 4 work tb_SYS_TOP fast 0
+=4-902e161d0c93-66be5c76-2e2-3488
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+R1
 vALU
-Z0 !s110 1723749131
+Z3 !s110 1723751795
 !i10b 1
 !s100 `d3KJfP94_L^XgjF[42c=3
 I;hOeAn1Zl6Lb14bV]mE?Q0
-Z1 dD:/Digital/Eltamseh Diplomia/System/Full System/Simulation
+Z4 dD:/Digital/Eltamseh Diplomia/System/Full System/Simulation
 w1723588504
 8../Design/ALU.v
 F../Design/ALU.v
-!i122 19
+!i122 29
 L0 1 75
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-Z3 OL;L;2021.1;73
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.1;73
 r1
 !s85 0
 31
-Z4 !s108 1723749131.000000
+Z7 !s108 1723751795.000000
 !s107 ../Testbench/Testbench.sv|../Design/UART/UART_RX.v|../Design/UART/Sampling_Register.v|../Design/UART/Sampler.v|../Design/UART/Controller.v|../Design/UART/Configuration.v|../Design/UART/UART_TX.v|../Design/UART/Serializer.v|../Design/UART/Parity.v|../Design/UART/FSM_Controller.v|../Design/UART.v|../Design/PULSE_GEN.V|../Design/ALU.v|../Design/DATA_SYNC.v|../Design/CLK_GATE.v|../Design/RST_SYNC.v|../Design/ClkDiv.v|../Design/RegFile.v|../Design/FIFO/WR_CONTRL.v|../Design/FIFO/RD_CONTRL.v|../Design/FIFO/FIFO_RAM.v|../Design/FIFO/F_DATA_SYNC.v|../Design/FIFO.v|../Design/SYS_CONTRL.v|../Design/TOP.v|
-Z5 !s90 -reportprogress|300|-f|sourcefile.txt|
+Z8 !s90 -reportprogress|300|-f|sourcefile.txt|
 !i113 0
-Z6 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z7 tCvgOpt 0
+Z9 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
 n@a@l@u
 vCLK_GATE
-R0
+R3
 !i10b 1
 !s100 1Y2T8c7c?LnQn`JI[jLOE1
 I=EBfAEmUh5@;iP6C3DIjT2
-R1
+R4
 w1723569299
 8../Design/CLK_GATE.v
 F../Design/CLK_GATE.v
-!i122 19
-Z8 L0 1 18
-R2
-R3
+!i122 29
+Z10 L0 1 18
+R5
+R6
 r1
 !s85 0
 31
-R4
-Z9 !s107 ../Testbench/Testbench.sv|../Design/UART/UART_RX.v|../Design/UART/Sampling_Register.v|../Design/UART/Sampler.v|../Design/UART/Controller.v|../Design/UART/Configuration.v|../Design/UART/UART_TX.v|../Design/UART/Serializer.v|../Design/UART/Parity.v|../Design/UART/FSM_Controller.v|../Design/UART.v|../Design/PULSE_GEN.V|../Design/ALU.v|../Design/DATA_SYNC.v|../Design/CLK_GATE.v|../Design/RST_SYNC.v|../Design/ClkDiv.v|../Design/RegFile.v|../Design/FIFO/WR_CONTRL.v|../Design/FIFO/RD_CONTRL.v|../Design/FIFO/FIFO_RAM.v|../Design/FIFO/F_DATA_SYNC.v|../Design/FIFO.v|../Design/SYS_CONTRL.v|../Design/TOP.v|
-R5
-!i113 0
-R6
 R7
+Z11 !s107 ../Testbench/Testbench.sv|../Design/UART/UART_RX.v|../Design/UART/Sampling_Register.v|../Design/UART/Sampler.v|../Design/UART/Controller.v|../Design/UART/Configuration.v|../Design/UART/UART_TX.v|../Design/UART/Serializer.v|../Design/UART/Parity.v|../Design/UART/FSM_Controller.v|../Design/UART.v|../Design/PULSE_GEN.V|../Design/ALU.v|../Design/DATA_SYNC.v|../Design/CLK_GATE.v|../Design/RST_SYNC.v|../Design/ClkDiv.v|../Design/RegFile.v|../Design/FIFO/WR_CONTRL.v|../Design/FIFO/RD_CONTRL.v|../Design/FIFO/FIFO_RAM.v|../Design/FIFO/F_DATA_SYNC.v|../Design/FIFO.v|../Design/SYS_CONTRL.v|../Design/TOP.v|
+R8
+!i113 0
+R9
+R2
 n@c@l@k_@g@a@t@e
 vClkDiv
-R0
+R3
 !i10b 1
 !s100 8>ggl8SU>_:lEhEd3iCFK2
 I;M;LLnoJ@JhK<bz>J<eN]1
-R1
+R4
 w1721555481
 8../Design/ClkDiv.v
 F../Design/ClkDiv.v
-!i122 19
+!i122 29
 L0 5 56
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@clk@div
 vConfiguration_block
-R0
+R3
 !i10b 1
 !s100 ?[>C?i5zR4KokZmVb1hA40
 InJXI1Zo0o:kRm24nlAGnW3
-R1
+R4
 w1723733366
 8../Design/UART/Configuration.v
 F../Design/UART/Configuration.v
-!i122 19
+!i122 29
 L0 1 201
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@configuration_block
 vDATA_SYNC
-R0
+R3
 !i10b 1
 !s100 a>U<N5G@fL^<21H8DS?]M0
 InimFYQR_WoMW4AZ4X@XT>1
-R1
+R4
 w1723133262
 8../Design/DATA_SYNC.v
 F../Design/DATA_SYNC.v
-!i122 19
+!i122 29
 L0 1 48
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@d@a@t@a_@s@y@n@c
 vDUAL_RAM
-R0
+R3
 !i10b 1
 !s100 5]djf>i<PN26TLS7Ra:;82
 IB_gHiE:N:7dTg^5bjI9EW0
-R1
+R4
 w1723337442
 8../Design/FIFO/FIFO_RAM.v
 F../Design/FIFO/FIFO_RAM.v
-!i122 19
+!i122 29
 L0 1 32
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@d@u@a@l_@r@a@m
 vF_DATA_SYNC
-R0
+R3
 !i10b 1
 !s100 =ajFG?`UL6?25kAfVg[VZ3
 I4A=?i0]=zbgcV[m7FhAAe0
-R1
+R4
 w1723569897
 8../Design/FIFO/F_DATA_SYNC.v
 F../Design/FIFO/F_DATA_SYNC.v
-!i122 19
+!i122 29
 L0 1 19
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@f_@d@a@t@a_@s@y@n@c
 vFIFO
-R0
+R3
 !i10b 1
 !s100 HKTZHU4]c[HcZZRPnFCcM3
 I=3=z9DZjiDd5a1L57QMF:3
-R1
+R4
 w1723569911
 8../Design/FIFO.v
 F../Design/FIFO.v
-!i122 19
+!i122 29
 L0 1 79
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@f@i@f@o
 vFSM_controller
-R0
+R3
 !i10b 1
 !s100 11FSJ^R<zd?^N5m5_n:@02
 IHNdLI098=a1zFKcNS[SD?2
-R1
+R4
 w1710444516
 8../Design/UART/FSM_Controller.v
 F../Design/UART/FSM_Controller.v
-!i122 19
+!i122 29
 L0 1 120
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@f@s@m_controller
 vParity_calc
-R0
+R3
 !i10b 1
 !s100 <=_HfeoDb^_7coG4W8`5T3
 Ij=N2UHo;ImYPO5GUWQ2=a2
-R1
+R4
 w1710445859
 8../Design/UART/Parity.v
 F../Design/UART/Parity.v
-!i122 19
+!i122 29
 L0 1 23
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@parity_calc
 vPULSE_GEN
-R0
+R3
 !i10b 1
 !s100 DYMk1G9`lmO`>La32NJjP3
 IDC^T<IXc47o8`SzjCYQiT3
-R1
+R4
 w1723667180
 8../Design/PULSE_GEN.V
 F../Design/PULSE_GEN.V
-!i122 19
-R8
-R2
-R3
+!i122 29
+R10
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@p@u@l@s@e_@g@e@n
 vRD_CONTRL
-R0
+R3
 !i10b 1
 !s100 6M2V<7@MUIM[8Dl6Sm]k;3
 Ii<5Y=0be_09a760gBCYbJ2
-R1
+R4
 w1723417974
 8../Design/FIFO/RD_CONTRL.v
 F../Design/FIFO/RD_CONTRL.v
-!i122 19
+!i122 29
 L0 1 47
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@r@d_@c@o@n@t@r@l
 vRegFile
-R0
+R3
 !i10b 1
 !s100 5jDb_<i;D?B60=bX^:Y9?0
 I>_UUYMc8e2GXlbWClUok<1
-R1
+R4
 w1723493631
 8../Design/RegFile.v
 F../Design/RegFile.v
-!i122 19
+!i122 29
 L0 2 69
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@reg@file
 vRST_SYNC
-R0
+R3
 !i10b 1
 !s100 _mfn5nV1LzM?;UPLOm^^j1
 I59:A?T@NNV6m:nH>n<O9Z1
-R1
+R4
 w1722973583
 8../Design/RST_SYNC.v
 F../Design/RST_SYNC.v
-!i122 19
-R8
-R2
-R3
+!i122 29
+R10
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@r@s@t_@s@y@n@c
 vSampler
-R0
+R3
 !i10b 1
 !s100 6Ok3l@6jZ8[b:bRG8A_o10
 IEChEiAE`BYgzoQdzCRgcj2
-R1
+R4
 w1721151213
 8../Design/UART/Sampler.v
 F../Design/UART/Sampler.v
-!i122 19
-Z10 L0 1 46
-R2
-R3
+!i122 29
+Z12 L0 1 46
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@sampler
 vSampling_Register
-R0
+R3
 !i10b 1
 !s100 ecKI>Ion>1_2fJj<FLelf0
 Ie<iaNnV>3J6fifVKnQ>f<3
-R1
+R4
 w1723685799
 8../Design/UART/Sampling_Register.v
 F../Design/UART/Sampling_Register.v
-!i122 19
+!i122 29
 L0 1 45
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@sampling_@register
 vserializer
-R0
+R3
 !i10b 1
 !s100 zFUB4Zdl0nIJidQFGT8SQ0
 I;2^_A2Li8TJ@Mo=CR`1oX2
-R1
+R4
 w1710445002
 8../Design/UART/Serializer.v
 F../Design/UART/Serializer.v
-!i122 19
+!i122 29
 L0 1 37
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 vSYS_CONTRL
-R0
+R3
 !i10b 1
 !s100 _7DlQ2JRhmR^3MnQf8bMz1
 IL[:hG2e?hPXCabG;EoGTc1
-R1
-w1723749127
+R4
+w1723749203
 8../Design/SYS_CONTRL.v
 F../Design/SYS_CONTRL.v
-!i122 19
+!i122 29
 L0 1 189
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@s@y@s_@c@o@n@t@r@l
 vSYS_TOP
-R0
+R3
 !i10b 1
-!s100 HA59IBo^GP6;O;hXBb5zD1
-I2;;T72:jeLT9zflX`Ic4]3
-R1
-w1723741797
+!s100 eMiU_W`=Yk;_=34AjTb971
+IR6]C]b`9@bl48aI[A5hGF2
+R4
+w1723750702
 8../Design/TOP.v
 F../Design/TOP.v
-!i122 19
+!i122 29
 L0 1 249
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@s@y@s_@t@o@p
 vtb_SYS_TOP
 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-R0
+!s110 1723751796
 !i10b 1
-!s100 WLT5oGPODj8z=h5H_CL^O2
-IZzEWeFTLN1XV^ARDcc]Ul0
+!s100 KTU14OLLWF4ASLJW3<OQB3
+I1d^<J@0515bT?:TAYZ8CF3
 S1
-R1
-w1723748943
+R4
+w1723751392
 8../Testbench/Testbench.sv
 F../Testbench/Testbench.sv
-!i122 19
-L0 2 68
-R2
-R3
+!i122 29
+L0 2 134
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 ntb_@s@y@s_@t@o@p
 vUART
-R0
+R3
 !i10b 1
-!s100 f;ZMW<^^QFC3@J;J2VF1S1
-Iz5^7GQ8i3m_7;Soc3WK>e1
-R1
-w1723665550
+!s100 ?UH1ND348XF][]J`L0IH83
+IAOR8jQaC75=1R_=2OhV_@0
+R4
+w1723750861
 8../Design/UART.v
 F../Design/UART.v
-!i122 19
+!i122 29
 L0 1 58
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@u@a@r@t
 vUART_Rx
-R0
+R3
 !i10b 1
-!s100 YQ2mR8YTh]7P<[2H>>X]K2
-IcCdnjcKFZzbO<7j]@=;Ed3
-R1
-w1723685851
+!s100 4mK]Y<Bz7OYZmI>z]:?S?0
+IL<eGV50GL0DdmkOGFU5U?1
+R4
+w1723750826
 8../Design/UART/UART_RX.v
 F../Design/UART/UART_RX.v
-!i122 19
+!i122 29
 L0 1 129
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@u@a@r@t_@rx
 vUART_Rx_Controller
-R0
+R3
 !i10b 1
 !s100 TiIH[d;]_A2z>@m6UfklE3
 IKGFCUUm^RfUYP8JEB]?zP0
-R1
+R4
 w1723733586
 8../Design/UART/Controller.v
 F../Design/UART/Controller.v
-!i122 19
+!i122 29
 L0 1 158
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@u@a@r@t_@rx_@controller
 vUART_Tx
-R0
+R3
 !i10b 1
 !s100 ]5UEAhFSgI1RnP_mkYDjV0
 I>iHQEF<]Mkm5LMomcS0Xe2
-R1
+R4
 w1721935194
 8../Design/UART/UART_TX.v
 F../Design/UART/UART_TX.v
-!i122 19
+!i122 29
 L0 1 72
-R2
-R3
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@u@a@r@t_@tx
 vWR_CONTRL
-R0
+R3
 !i10b 1
 !s100 Z8[54n=@VnchA6?4Z0iDK1
 IQ_Jhl_fUVe9=`L^GnL8n01
-R1
+R4
 w1723418507
 8../Design/FIFO/WR_CONTRL.v
 F../Design/FIFO/WR_CONTRL.v
-!i122 19
-R10
-R2
-R3
+!i122 29
+R12
+R5
+R6
 r1
 !s85 0
 31
-R4
-R9
-R5
-!i113 0
-R6
 R7
+R11
+R8
+!i113 0
+R9
+R2
 n@w@r_@c@o@n@t@r@l

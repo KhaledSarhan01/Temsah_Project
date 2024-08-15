@@ -107,7 +107,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 );
 
 // ALU
- ALU #(.DATA_WIDTH(DATA_WIDTH) ,.FUNC_WIDTH(ALU_FUNC_WIDTH))(
+ ALU #(.DATA_WIDTH(DATA_WIDTH) ,.FUNC_WIDTH(ALU_FUNC_WIDTH)) ALU (
     // Clock and Active low Async Reset
     .CLK(ALU_CLK),
     .RST(RST_SYNC_REF),
@@ -155,7 +155,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 
     assign RX_ERROR = UART_PAR_ERROR | UART_STOP_ERROR;
 
-    PULSE_GEN (
+    PULSE_GEN TX_BUSY_GEN(
     .CLK(TX_CLK),
     .RST(RST_SYNC_UART),
     .LVL_SIG(TX_BUSY),
