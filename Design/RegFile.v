@@ -19,7 +19,7 @@ module RegFile #(parameter DATA_WIDTH = 8, parameter MEM_SIZE = 16 ,parameter AD
 //Default Values of important Registers
 localparam REG0_Defualt = 'b0,
            REG1_Defualt = 'b0, 
-           REG2_Defualt = {5'd32,1'b0,1'b1}, // Prescale: REG[7:2]=32, Parity Type:REG[1]=0 ,Parity Enable:REG[0] = 1  
+           REG2_Defualt = {6'd32,1'b0,1'b1}, // Prescale: REG[7:2]=32, Parity Type:REG[1]=0 ,Parity Enable:REG[0] = 1  
            REG3_Defualt = 'd32;              // Prescale: REG[7:0]=32 
 
 //Memory Assignment 

@@ -17,6 +17,7 @@ module tb_SYS_TOP ();
     // UART Frequency = 3.6864 MHz   "Period = "
     localparam REF_Clock_Period  = 10;
     localparam UART_Clock_Period = 271.267361;
+    localparam STD_UART_Period   = UART_Clock_Period*32;
     always #(REF_Clock_Period/2)  tb_REF_CLK  =~tb_REF_CLK;
     always #(UART_Clock_Period/2) tb_UART_CLK =~tb_UART_CLK;
     initial begin
@@ -89,7 +90,7 @@ task Send_WR_CMD;
          Send_Frame(WR_Data,PAR_MODE); 
         
         // Wait to Make it work
-        #(UART_Clock_Period*4); 
+        #(STD_UART_Period *4); 
 
     end
 endtask    
@@ -102,34 +103,33 @@ task Send_Frame;
         @(posedge tb_UART_CLK);
        // Send Start BIT
             tb_RX_IN = 1'b0;
-            #(UART_Clock_Period);
+            #(STD_UART_Period );
        // Send Data BITS
             for ( i = 0; i <= DATA_WIDTH-1 ; i = i+1)begin
                tb_RX_IN = DATA[i];
-               #(UART_Clock_Period); 
+               #(STD_UART_Period ); 
             end 
        // Send STOP/Parity bits
            if (PAR_MODE == PAR_DISABLED) begin
                 // Send Stop Bit
                 tb_RX_IN = 1'b1;
-                #(UART_Clock_Period*2);
            end else begin
                 if (PAR_MODE == EVEN_PARITY) begin
                     // Send PARITY BIT
                     tb_RX_IN = ^(DATA);
-                    #(UART_Clock_Period);
+                    #(STD_UART_Period );
                     // Send Stop Bit
                     tb_RX_IN = 1'b1;
-                    #(UART_Clock_Period*2);
                 end else begin
                     // Send PARITY BIT
                     tb_RX_IN = ~^(DATA);
-                    #(UART_Clock_Period);
+                    #(STD_UART_Period );
                     // Send Stop Bit
                     tb_RX_IN = 1'b1;
-                    #(UART_Clock_Period*2);
+                   
                 end
            end
+            #(STD_UART_Period *4);
     end
 endtask
 endmodule

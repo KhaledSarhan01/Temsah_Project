@@ -124,6 +124,8 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 );
 
 ////---------- Clock Domain 2 ----------////
+
+// UART
     UART #(.DATA_WIDTH(DATA_WIDTH)) UART (
     // Clocks and Active Low Reset
     .TX_CLK(TX_CLK),
@@ -141,7 +143,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     // Configuration
     .PAR_EN(UART_Config[0]),
     .PAR_TYP(UART_Config[1]),
-    .PRESCALE(UART_Config[DATA_WIDTH-1:2]),
+    .PRESCALE(UART_Config[7:2]),
 
     // TX Controls 
     .TX_DATA_VALID(~(F_EMPTY)),
@@ -208,19 +210,19 @@ ClkDiv #(.Width(8)) UART_TX_Clock_Divider (
     .o_div_clk(TX_CLK)
 );
 
-reg [3:0] UART_RX_Prescale;
+reg [5:0] UART_RX_Prescale;
 always @(*) begin
     case (UART_Config)
-            'd32: UART_RX_Prescale = 4'd1;
-            'd16: UART_RX_Prescale = 4'd2;
-            'd8:  UART_RX_Prescale = 4'd4;
-            'd4:  UART_RX_Prescale = 4'd8; 
+            6'd32: UART_RX_Prescale = 4'd1;
+            6'd16: UART_RX_Prescale = 4'd2;
+            6'd8:  UART_RX_Prescale = 4'd4;
+            6'd4:  UART_RX_Prescale = 4'd8; 
         default: begin
             UART_RX_Prescale = 4'd1;
         end
     endcase    
 end
-ClkDiv #(.Width(4)) UART_RX_Clock_Divider (
+ClkDiv #(.Width(6)) UART_RX_Clock_Divider (
     // active low async reset 
     .i_rst_n(RST_SYNC_UART),
     // Reference Clock
