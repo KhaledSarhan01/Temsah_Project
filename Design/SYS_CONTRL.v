@@ -25,6 +25,15 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
     input  wire FIFO_FULL,
     output reg [DATA_WIDTH-1:0] TX_DATA_OUT 
 );
+////----------- Frame Counter ------------////
+/*reg [1:0] Frame_COUNTER;
+always @(posedge CLK or negedge RST) begin
+    if (!RST) begin
+        Frame_COUNTER <= 2'b0;
+    end else begin
+        pass
+    end
+end*/
 ////------------- Parameters -------------////
     localparam [DATA_WIDTH-1:0] WrRegFile_CMD = 8'hAA ;
 
@@ -71,7 +80,7 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
                     case (RX_DATA_IN)
                         WrRegFile_CMD: next_state = WrRegFile_WAIT_ADDR;
                         default: begin
-                            next_state = IDLE; 
+                            next_state = CMD; 
                         end
                     endcase
                 end

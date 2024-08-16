@@ -24,7 +24,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     wire [DATA_WIDTH-1:0] SYS_RX_DATA_IN,UART_RX_OUT;
 
     // UART Siganls and Flags
-    wire COMMAND_IN_vaild,UART_RX_DATA_vaild;
+    wire UART_RX_DATA_vaild;
     wire UART_PAR_ERROR,UART_STOP_ERROR;
     wire TX_BUSY;
 
@@ -194,7 +194,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
         .Unsync_bus(UART_RX_OUT),
         .bus_enable(UART_RX_DATA_vaild),
         .sync_bus(SYS_RX_DATA_IN),
-        .enable_pulse(COMMAND_IN_vaild)
+        .enable_pulse(UART_RX_DATA_vaild)
     );
 
 // Clock Dividers
