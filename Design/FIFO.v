@@ -28,6 +28,7 @@ module FIFO #(parameter DATA_WIDTH = 8 ,parameter ADDR_WIDTH = 3,parameter MEM_S
 DUAL_RAM #(.DATA_WIDTH(DATA_WIDTH),.ADDR_WIDTH(ADDR_WIDTH),.MEM_SIZE(MEM_SIZE)) FIFO_MEMORY(
     //Write Part
     .w_clk(W_CLK),.w_rst(W_RST),
+    .r_clk(R_CLK),.r_rst(R_RST),
     .wrdata(WR_DATA),
     .waddr(Wr_ADDR),
     .wclken(Wr_CLK_En),
