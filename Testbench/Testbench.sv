@@ -55,6 +55,9 @@ initial begin
     // Register File Write Command 
         Send_WR_CMD(8'h05,8'hA6,EVEN_PARITY);
 
+    // Register File Read Command 
+        Send_RD_CMD(8'h05,EVEN_PARITY);    
+
     // Testbench Ended
     $display("------------ Testbench Ended ------------");
     #50; $stop;
@@ -93,7 +96,22 @@ task Send_WR_CMD;
         #(STD_UART_Period *4); 
 
     end
-endtask    
+endtask 
+
+task Send_RD_CMD;
+    input [DATA_WIDTH-1:0] RD_Address;
+    input [2:0] PAR_MODE;
+    begin
+        // Frame 0 : Command Frame
+         Send_Frame(8'hBB,PAR_MODE);
+        // Frame 1 : Address Frame
+         Send_Frame(RD_Address,PAR_MODE);   
+        
+        // Wait to Make it work
+        #(STD_UART_Period *17); 
+
+    end
+endtask 
 
 task Send_Frame;
     input [DATA_WIDTH-1:0] DATA;

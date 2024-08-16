@@ -35,7 +35,8 @@ always @(posedge CLK or negedge RST) begin
     end
 end*/
 ////------------- Parameters -------------////
-    localparam [DATA_WIDTH-1:0] WrRegFile_CMD = 8'hAA ;
+    localparam [DATA_WIDTH-1:0] WrRegFile_CMD = 8'hAA,
+                                RdRegFile_CMD = 8'hBB ;
 
 ////----------- State Encoding -----------////
     // USING BINARY ENCODING "Easy Debugging" 
@@ -49,6 +50,11 @@ end*/
     localparam  [3:0]   WrRegFile_WAIT_ADDR = 4'b0010,
                         WrRegFile_WAIT_DATA = 4'b0011, 
                         WrRegFile_OPERATE   = 4'b0100;
+
+    // Register File Read Command
+    localparam  [3:0]   RdRegFile_WAIT_ADDR = 4'b0101,
+                        RdRegFile_READ_DATA = 4'b0110,
+                        RdRegFile_SEND_DATA   = 4'b0111;
 
 ////---------- Next State Logic ----------////
 /*
@@ -79,6 +85,7 @@ end*/
             CMD: begin
                     case (RX_DATA_IN)
                         WrRegFile_CMD: next_state = WrRegFile_WAIT_ADDR;
+                        RdRegFile_CMD: next_state = RdRegFile_WAIT_ADDR;
                         default: begin
                             next_state = CMD; 
                         end
@@ -105,6 +112,25 @@ end*/
                     next_state = IDLE;
                 end 
 
+            RdRegFile_WAIT_ADDR:begin
+                    if (RX_DATA_VALID) begin
+                        next_state = RdRegFile_SEND_DATA;
+                    end else begin
+                        next_state = RdRegFile_WAIT_ADDR;
+                    end
+            end
+
+            RdRegFile_READ_DATA:begin
+                    if (RegFile_DATA_VAILD) begin
+                        next_state = RdRegFile_SEND_DATA;
+                    end else begin
+                        next_state = RdRegFile_READ_DATA;
+                    end 
+            end
+
+            RdRegFile_SEND_DATA:begin
+                    next_state = IDLE;
+            end 
             default: begin
                 next_state = IDLE;
             end
@@ -129,16 +155,17 @@ end*/
         output reg [RegFile_ADDR_WIDTH-1:0] RegFile_ADDRESS,    
 */
 // Data Input Operations
-    reg [DATA_WIDTH-1:0] RegFile_ADDR_Register,RegFile_WrData_Register,RegFile_RdData_Register;
+    reg [DATA_WIDTH-1:0] RegFile_ADDR_Register,RegFile_Data_Register;
     always @(posedge CLK or negedge RST ) begin
         if (!RST) begin
             RegFile_ADDR_Register   <= 'b0;
-            RegFile_WrData_Register <= 'b0;
-            //RegFile_RdData_Register <= 'b0;
+            RegFile_Data_Register   <= 'b0;
         end else begin
             case (current_state)
               WrRegFile_WAIT_ADDR  : RegFile_ADDR_Register   <= RX_DATA_IN ;
-              WrRegFile_WAIT_DATA  : RegFile_WrData_Register <= RX_DATA_IN ; 
+              WrRegFile_WAIT_DATA  : RegFile_Data_Register   <= RX_DATA_IN ;
+              RdRegFile_WAIT_ADDR  : RegFile_ADDR_Register   <= RX_DATA_IN ;
+              RdRegFile_READ_DATA  : RegFile_Data_Register   <= RegFile_RdData;
             endcase
         end        
     end
@@ -146,15 +173,21 @@ end*/
     always @(*) begin
         RegFile_WrData  = 'b0; 
         RegFile_ADDRESS = 'b0;
+        TX_DATA_OUT     = 'hff;
         case (current_state)
             WrRegFile_OPERATE: begin
-                    RegFile_WrData  = RegFile_WrData_Register;
+                    RegFile_WrData  = RegFile_Data_Register ;
                     RegFile_ADDRESS = RegFile_ADDR_Register; 
                 end 
 
+            RdRegFile_SEND_DATA: begin
+                    RegFile_ADDRESS = RegFile_ADDR_Register;
+                    TX_DATA_OUT     = RegFile_Data_Register;
+            end
             default: begin
                 RegFile_WrData = 'b0;
                 RegFile_ADDRESS = 'b0; 
+                TX_DATA_OUT     = 'hff;
             end
         endcase
     end
@@ -171,17 +204,28 @@ end*/
         output reg FIFO_WR,
 */
     always @(*) begin
-        RegFile_WrEn = 'b0;
-        RegFile_RdEn = 'b0;
+        RegFile_WrEn = 1'b0;
+        RegFile_RdEn = 1'b0;
+        FIFO_WR      = 1'b0;   
         case (current_state)
             WrRegFile_OPERATE: begin
-                    RegFile_WrEn = 'b1;
-                    RegFile_RdEn = 'b0; 
+                    RegFile_WrEn = 1'b1;
+                    RegFile_RdEn = 1'b0; 
                 end 
 
+            RdRegFile_READ_DATA: begin
+                    RegFile_WrEn = 1'b0;
+                    RegFile_RdEn = 1'b1; 
+            end
+
+            RdRegFile_SEND_DATA: begin
+                    FIFO_WR = 1'b1;  
+            end 
+
             default: begin
-                RegFile_WrEn = 'b0;
-                RegFile_RdEn = 'b0; 
+                RegFile_WrEn = 1'b0;
+                RegFile_RdEn = 1'b0;
+                FIFO_WR      = 1'b0; 
             end
         endcase
     end
@@ -207,4 +251,16 @@ endmodule
             - When Address came "RX_Flag HIGH", Store the Address inside the Register and wait for Data.
             - When Data came "RX_Flag HIGH", make the operation on the Register file.
             - Finally return back to IDLE. 
+
+    Second Command : Register File Read 
+        Expected Input: (Frame 0: Command "0xBB") - (Frame 1: Read Address)
+        Expected Output: (Output Data Reg[Rd_ADDR])
+        Behavouir: IDLE --> CMD --> RdRegFile_WAIT_ADDR --> RdRegFile_READ_DATA --> RdRegFile_SEND_DATA --> IDLE 
+            - IDLE State is default.
+            - When Command came "RX_Flag HIGH" then check the Command.
+            - if Command Decoder is Read RegFile , wait for Second Frame "Read Address"
+            - When Address came "RX_Flag HIGH", Store the Address inside the Register and make the Operation.
+            - After Getting the Data, Send it to FIFO.
+            - Finally return back to IDLE. 
+                
 */
