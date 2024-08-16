@@ -4,7 +4,7 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
 
     // ALU Datapath and Controls
     input  wire [DATA_WIDTH*2-1:0] ALU_OUT,
-    input  wire [DATA_WIDTH-1:0] ALU_DATA_VALID,
+    input  wire ALU_DATA_VALID,
     output reg [ALU_FUNC_WIDTH-1:0] ALU_FUNC,
     output reg ALU_EN,
     output reg ALU_CLK_EN,

@@ -70,3 +70,9 @@ FSM_controller FSM_control_block
          
 
 endmodule
+/*
+../Design/UART/FSM_Controller.v
+../Design/UART/Parity.v
+../Design/UART/Serializer.v
+../Design/UART/UART_TX.v
+*/
