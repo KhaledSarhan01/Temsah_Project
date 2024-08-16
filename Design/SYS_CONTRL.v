@@ -28,35 +28,36 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
 ////------------- Parameters -------------////
     localparam [DATA_WIDTH-1:0] WrRegFile_CMD = 8'hAA,
                                 RdRegFile_CMD = 8'hBB,
-                                ALUOP_CMD     = 8'hCC;
+                                ALUOP_CMD     = 8'hCC,
+                                ALUNOP_CMD    = 8'hDD;
 
 ////----------- State Encoding -----------////
     // USING BINARY ENCODING "Easy Debugging" 
-    reg [4:0] current_state , next_state;
+    reg [3:0] current_state , next_state;
     
     //General
-    localparam  [4:0] IDLE = 'b0,
+    localparam  [3:0] IDLE = 'b0,
                       CMD  = 'b1;
     
     // Register File Write Command
-    localparam  [4:0]   WrRegFile_WAIT_ADDR = 'b10,
+    localparam  [3:0]   WrRegFile_WAIT_ADDR = 'b10,
                         WrRegFile_WAIT_DATA = 'b11, 
                         WrRegFile_OPERATE   = 'b100;
 
     // Register File Read Command
-    localparam  [4:0]   RdRegFile_WAIT_ADDR = 'b101,
+    localparam  [3:0]   RdRegFile_WAIT_ADDR = 'b101,
                         RdRegFile_READ_DATA = 'b110,
                         RdRegFile_SEND_DATA = 'b111;
 
     // ALU Opreation with Opreands
-    localparam  [4:0]   ALUOP_WAIT_OP_1  = 'b1000,
-                        ALUOP_STORE_OP1  = 'b1001,
-                        ALUOP_WAIT_OP_2  = 'b1010,
-                        ALUOP_STORE_OP2  = 'b1011,
-                        ALUOP_WAIT_FUNC  = 'b1100,
-                        ALUOP_OPREATION  = 'b1101,
-                        ALUOP_SEND_OUT_1 = 'b1110,
-                        ALUOP_SEND_OUT_2 = 'b1111;                    
+    localparam  [3:0]   ALU_WAIT_OP_1  = 'b1000,
+                        ALU_STORE_OP1  = 'b1001,
+                        ALU_WAIT_OP_2  = 'b1010,
+                        ALU_STORE_OP2  = 'b1011,
+                        ALU_WAIT_FUNC  = 'b1100,
+                        ALU_OPREATION  = 'b1101,
+                        ALU_SEND_OUT_1 = 'b1110,
+                        ALU_SEND_OUT_2 = 'b1111;                    
 
 ////---------- Next State Logic ----------////
     always @(*) begin
@@ -73,7 +74,8 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
                     case (RX_DATA_IN)
                         WrRegFile_CMD: next_state = WrRegFile_WAIT_ADDR;
                         RdRegFile_CMD: next_state = RdRegFile_WAIT_ADDR;
-                        ALUOP_CMD    : next_state = ALUOP_WAIT_OP_1;   
+                        ALUOP_CMD    : next_state = ALU_WAIT_OP_1;
+                        ALUNOP_CMD   : next_state = ALU_WAIT_FUNC;  
                         default: begin
                             next_state = CMD; 
                         end
@@ -123,50 +125,50 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
             end 
 
     // ALU Opreation with Oprends
-            ALUOP_WAIT_OP_1:begin
+            ALU_WAIT_OP_1:begin
                 if (RX_DATA_VALID) begin
-                    next_state = ALUOP_STORE_OP1;
+                    next_state = ALU_STORE_OP1;
                 end else begin
-                    next_state = ALUOP_WAIT_OP_1;
+                    next_state = ALU_WAIT_OP_1;
                 end 
             end
-            ALUOP_STORE_OP1: begin
-                next_state = ALUOP_WAIT_OP_2;
+            ALU_STORE_OP1: begin
+                next_state = ALU_WAIT_OP_2;
             end
 
-            ALUOP_STORE_OP2: begin
-                next_state = ALUOP_WAIT_FUNC;
+            ALU_STORE_OP2: begin
+                next_state = ALU_WAIT_FUNC;
             end
 
-            ALUOP_WAIT_OP_2:begin
+            ALU_WAIT_OP_2:begin
                 if (RX_DATA_VALID) begin
-                    next_state = ALUOP_STORE_OP2;
+                    next_state = ALU_STORE_OP2;
                 end else begin
-                    next_state = ALUOP_WAIT_OP_2;
-                end 
-            end
-
-            ALUOP_WAIT_FUNC:begin
-                if (RX_DATA_VALID) begin
-                    next_state = ALUOP_OPREATION;
-                end else begin
-                    next_state = ALUOP_WAIT_FUNC;
+                    next_state = ALU_WAIT_OP_2;
                 end 
             end
 
-            ALUOP_OPREATION:begin
+            ALU_WAIT_FUNC:begin
+                if (RX_DATA_VALID) begin
+                    next_state = ALU_OPREATION;
+                end else begin
+                    next_state = ALU_WAIT_FUNC;
+                end 
+            end
+
+            ALU_OPREATION:begin
                 if (ALU_DATA_VALID) begin
-                    next_state = ALUOP_SEND_OUT_1;
+                    next_state = ALU_SEND_OUT_1;
                 end else begin
-                    next_state = ALUOP_OPREATION;
+                    next_state = ALU_OPREATION;
                 end
             end
 
-            ALUOP_SEND_OUT_1:begin
-                next_state = ALUOP_SEND_OUT_2;
+            ALU_SEND_OUT_1:begin
+                next_state = ALU_SEND_OUT_2;
             end
 
-            ALUOP_SEND_OUT_2:begin
+            ALU_SEND_OUT_2:begin
                 next_state = IDLE;
             end
 
@@ -194,10 +196,10 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
               RdRegFile_WAIT_ADDR  : RegFile_ADDR_Register <= RX_DATA_IN ;
               RdRegFile_READ_DATA  : RX_Data_Register      <= RegFile_RdData;
             // ALU Operation with Opreands  
-              ALUOP_WAIT_OP_1      : RX_Data_Register    <= RX_DATA_IN ;
-              ALUOP_WAIT_OP_2      : RX_Data_Register    <= RX_DATA_IN ;
-              ALUOP_WAIT_FUNC      : RX_Data_Register    <= RX_DATA_IN ;
-              ALUOP_OPREATION      : ALU_Result          <= ALU_OUT   ;
+              ALU_WAIT_OP_1      : RX_Data_Register    <= RX_DATA_IN ;
+              ALU_WAIT_OP_2      : RX_Data_Register    <= RX_DATA_IN ;
+              ALU_WAIT_FUNC      : RX_Data_Register    <= RX_DATA_IN ;
+              ALU_OPREATION      : ALU_Result          <= ALU_OUT   ;
             endcase
         end        
     end
@@ -219,21 +221,21 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
                 RegFile_ADDRESS = RegFile_ADDR_Register;
             end
         // ALU Operation with Opreands
-            ALUOP_STORE_OP1: begin
+            ALU_STORE_OP1: begin
                 RegFile_WrData  = RX_Data_Register ;
                 RegFile_ADDRESS = 'b0;
             end
-            ALUOP_STORE_OP2: begin
+            ALU_STORE_OP2: begin
                 RegFile_WrData  = RX_Data_Register ;
                 RegFile_ADDRESS = 'b1;
             end
-            ALUOP_OPREATION : begin
+            ALU_OPREATION : begin
                 ALU_FUNC = RX_Data_Register[ALU_FUNC_WIDTH-1:0]; 
             end 
-            ALUOP_SEND_OUT_1: begin
+            ALU_SEND_OUT_1: begin
                 TX_DATA_OUT = ALU_Result[DATA_WIDTH-1:0];
             end
-            ALUOP_SEND_OUT_2: begin
+            ALU_SEND_OUT_2: begin
                 TX_DATA_OUT = ALU_Result[DATA_WIDTH*2-1:DATA_WIDTH];
             end
 
@@ -269,24 +271,24 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
                 FIFO_WR = 1'b1;  
             end
         // ALU Operation with Opreands
-            ALUOP_STORE_OP1: begin
+            ALU_STORE_OP1: begin
                 RegFile_WrEn = 1'b1;
                 RegFile_RdEn = 1'b0;
                 ALU_CLK_EN   = 1'b1;
             end
-            ALUOP_STORE_OP2: begin
+            ALU_STORE_OP2: begin
                 RegFile_WrEn = 1'b1;
                 RegFile_RdEn = 1'b0;
                 ALU_CLK_EN   = 1'b1; 
             end  
-            ALUOP_OPREATION : begin
+            ALU_OPREATION : begin
                 ALU_EN       = 1'b1;
                 ALU_CLK_EN   = 1'b1;
             end
-            ALUOP_SEND_OUT_1 :begin
+            ALU_SEND_OUT_1 :begin
                 FIFO_WR = 1'b1; 
             end     
-            ALUOP_SEND_OUT_2 :begin
+            ALU_SEND_OUT_2 :begin
                 FIFO_WR = 1'b1; 
             end
 
@@ -337,7 +339,7 @@ endmodule
         Expected Input: (Frame 0: Command "0xCC") - (Frame 1: ALU OP 1) - (Frame 2: ALU OP 2) - (Frame 3: ALU FUNC)
         Expected Output: (Frame 0: ALU OUT LSB) - (Frame 1: ALU OUT MSB)
         Behavouir: 
-            IDLE --> CMD --> ALUOP_WAIT_OP_1 --> ALUOP_WAIT_OP_2 --> ALUOP_WAIT_FUNC 
-            --> ALUOP_OPREATION --> ALUOP_SEND_OUT_1 --> ALUOP_SEND_OUT_2 --> IDLE   
+            IDLE --> CMD --> ALU_WAIT_OP_1 --> ALU_WAIT_OP_2 --> ALU_WAIT_FUNC 
+            --> ALU_OPREATION --> ALU_SEND_OUT_1 --> ALU_SEND_OUT_2 --> IDLE   
                 
 */

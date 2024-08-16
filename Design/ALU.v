@@ -66,7 +66,7 @@ module ALU #(parameter DATA_WIDTH = 8 ,parameter FUNC_WIDTH = 4)(
         if (!RST) begin
             VALID_REG <= 2'b0;
         end else begin
-            VALID_REG <= {VALID_REG[0],Enable};
+            VALID_REG <= {VALID_REG[0],Enable & ~(VALID_REG[0])};
         end
     end
     assign OUT_VALID = VALID_REG[1];
