@@ -56,7 +56,10 @@ initial begin
         Send_WR_CMD(8'h05,8'hA6,EVEN_PARITY);
 
     // Register File Read Command 
-        Send_RD_CMD(8'h05,EVEN_PARITY);    
+        Send_RD_CMD(8'h05,EVEN_PARITY);  
+
+    // ALU Operation With Opreands
+        Send_ALU_WITH_OPR(8'd40,8'd30,8'b1,EVEN_PARITY); // Subrtraction: 40-30 = 10 "0x00,0x0A"      
 
     // Testbench Ended
     $display("------------ Testbench Ended ------------");
@@ -109,6 +112,27 @@ task Send_RD_CMD;
         
         // Wait to Make it work
         #(STD_UART_Period *17); 
+
+    end
+endtask 
+
+task Send_ALU_WITH_OPR;
+    input [DATA_WIDTH-1:0] ALU_OP_1;
+    input [DATA_WIDTH-1:0] ALU_OP_2;
+    input [DATA_WIDTH-1:0] ALU_FUNC;
+    input [2:0] PAR_MODE;
+    begin
+        // Frame 0 : Command Frame
+         Send_Frame(8'hCC,PAR_MODE);
+        // Frame 1 : ALU OPREND 1
+         Send_Frame(ALU_OP_1,PAR_MODE);
+        // Frame 2 : ALU OPREND 2
+         Send_Frame(ALU_OP_2,PAR_MODE);
+        // Frame 3 : ALU FUNCTION
+         Send_Frame(ALU_FUNC,PAR_MODE);     
+    
+        // Wait to Make it work
+        #(STD_UART_Period *35); 
 
     end
 endtask 

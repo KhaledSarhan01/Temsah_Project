@@ -25,53 +25,40 @@ module SYS_CONTRL #(parameter DATA_WIDTH = 8 , parameter ALU_FUNC_WIDTH = 4 , pa
     input  wire FIFO_FULL,
     output reg [DATA_WIDTH-1:0] TX_DATA_OUT 
 );
-////----------- Frame Counter ------------////
-/*reg [1:0] Frame_COUNTER;
-always @(posedge CLK or negedge RST) begin
-    if (!RST) begin
-        Frame_COUNTER <= 2'b0;
-    end else begin
-        pass
-    end
-end*/
 ////------------- Parameters -------------////
     localparam [DATA_WIDTH-1:0] WrRegFile_CMD = 8'hAA,
-                                RdRegFile_CMD = 8'hBB ;
+                                RdRegFile_CMD = 8'hBB,
+                                ALUOP_CMD     = 8'hCC;
 
 ////----------- State Encoding -----------////
     // USING BINARY ENCODING "Easy Debugging" 
-    reg [3:0] current_state , next_state;
+    reg [4:0] current_state , next_state;
     
     //General
-    localparam  [3:0] IDLE = 4'b0000,
-                      CMD  = 4'b0001;
+    localparam  [4:0] IDLE = 'b0,
+                      CMD  = 'b1;
     
     // Register File Write Command
-    localparam  [3:0]   WrRegFile_WAIT_ADDR = 4'b0010,
-                        WrRegFile_WAIT_DATA = 4'b0011, 
-                        WrRegFile_OPERATE   = 4'b0100;
+    localparam  [4:0]   WrRegFile_WAIT_ADDR = 'b10,
+                        WrRegFile_WAIT_DATA = 'b11, 
+                        WrRegFile_OPERATE   = 'b100;
 
     // Register File Read Command
-    localparam  [3:0]   RdRegFile_WAIT_ADDR = 4'b0101,
-                        RdRegFile_READ_DATA = 4'b0110,
-                        RdRegFile_SEND_DATA   = 4'b0111;
+    localparam  [4:0]   RdRegFile_WAIT_ADDR = 'b101,
+                        RdRegFile_READ_DATA = 'b110,
+                        RdRegFile_SEND_DATA = 'b111;
+
+    // ALU Opreation with Opreands
+    localparam  [4:0]   ALUOP_WAIT_OP_1  = 'b1000,
+                        ALUOP_STORE_OP1  = 'b1001,
+                        ALUOP_WAIT_OP_2  = 'b1010,
+                        ALUOP_STORE_OP2  = 'b1011,
+                        ALUOP_WAIT_FUNC  = 'b1100,
+                        ALUOP_OPREATION  = 'b1101,
+                        ALUOP_SEND_OUT_1 = 'b1110,
+                        ALUOP_SEND_OUT_2 = 'b1111;                    
 
 ////---------- Next State Logic ----------////
-/*
-    COMMANDS:
-        // UART RX
-        input wire [DATA_WIDTH-1:0] RX_DATA_IN,
-
-    FALGS:
-        // ALU
-        input  wire [DATA_WIDTH-1:0] ALU_DATA_VALID,
-        // Register File
-        input  wire RegFile_DATA_VAILD,
-        // UART RX 
-        input wire RX_DATA_VALID,
-        // UART TX 
-        input  wire FIFO_FULL,    
-*/
     always @(*) begin
         case (current_state)
             IDLE: begin
@@ -86,12 +73,14 @@ end*/
                     case (RX_DATA_IN)
                         WrRegFile_CMD: next_state = WrRegFile_WAIT_ADDR;
                         RdRegFile_CMD: next_state = RdRegFile_WAIT_ADDR;
+                        ALUOP_CMD    : next_state = ALUOP_WAIT_OP_1;   
                         default: begin
                             next_state = CMD; 
                         end
                     endcase
                 end
 
+    // Write Data in Register File
             WrRegFile_WAIT_ADDR: begin
                     if (RX_DATA_VALID) begin
                         next_state = WrRegFile_WAIT_DATA;
@@ -112,6 +101,7 @@ end*/
                     next_state = IDLE;
                 end 
 
+    // Read Data From Register File
             RdRegFile_WAIT_ADDR:begin
                     if (RX_DATA_VALID) begin
                         next_state = RdRegFile_SEND_DATA;
@@ -121,7 +111,7 @@ end*/
             end
 
             RdRegFile_READ_DATA:begin
-                    if (RegFile_DATA_VAILD) begin
+                    if (RegFile_DATA_VAILD && ~(FIFO_FULL)) begin
                         next_state = RdRegFile_SEND_DATA;
                     end else begin
                         next_state = RdRegFile_READ_DATA;
@@ -131,6 +121,55 @@ end*/
             RdRegFile_SEND_DATA:begin
                     next_state = IDLE;
             end 
+
+    // ALU Opreation with Oprends
+            ALUOP_WAIT_OP_1:begin
+                if (RX_DATA_VALID) begin
+                    next_state = ALUOP_STORE_OP1;
+                end else begin
+                    next_state = ALUOP_WAIT_OP_1;
+                end 
+            end
+            ALUOP_STORE_OP1: begin
+                next_state = ALUOP_WAIT_OP_2;
+            end
+
+            ALUOP_STORE_OP2: begin
+                next_state = ALUOP_WAIT_FUNC;
+            end
+
+            ALUOP_WAIT_OP_2:begin
+                if (RX_DATA_VALID) begin
+                    next_state = ALUOP_STORE_OP2;
+                end else begin
+                    next_state = ALUOP_WAIT_OP_2;
+                end 
+            end
+
+            ALUOP_WAIT_FUNC:begin
+                if (RX_DATA_VALID) begin
+                    next_state = ALUOP_OPREATION;
+                end else begin
+                    next_state = ALUOP_WAIT_FUNC;
+                end 
+            end
+
+            ALUOP_OPREATION:begin
+                if (ALU_DATA_VALID) begin
+                    next_state = ALUOP_SEND_OUT_1;
+                end else begin
+                    next_state = ALUOP_OPREATION;
+                end
+            end
+
+            ALUOP_SEND_OUT_1:begin
+                next_state = ALUOP_SEND_OUT_2;
+            end
+
+            ALUOP_SEND_OUT_2:begin
+                next_state = IDLE;
+            end
+
             default: begin
                 next_state = IDLE;
             end
@@ -138,34 +177,27 @@ end*/
     end
 
 ////----------- Datapath Logic -----------////
-/*
-    DATAPATH: 
-        // ALU 
-        input  wire [DATA_WIDTH*2-1:0] ALU_OUT,
-        // Register File
-        output reg [DATA_WIDTH-1:0] RegFile_WrData,
-        input  wire [DATA_WIDTH-1:0] RegFile_RdData,
-        // UART TX Datapath and Control
-        output reg [DATA_WIDTH-1:0] TX_DATA_OUT
-
-    COMMANDS:
-        //ALU
-        output reg [ALU_FUNC_WIDTH-1:0] ALU_FUNC, 
-        // Register File 
-        output reg [RegFile_ADDR_WIDTH-1:0] RegFile_ADDRESS,    
-*/
 // Data Input Operations
-    reg [DATA_WIDTH-1:0] RegFile_ADDR_Register,RegFile_Data_Register;
-    always @(posedge CLK or negedge RST ) begin
+    reg [DATA_WIDTH-1:0] RegFile_ADDR_Register,RX_Data_Register;
+    reg [DATA_WIDTH*2-1:0] ALU_Result ;
+    always @(posedge CLK or negedge RST) begin
         if (!RST) begin
             RegFile_ADDR_Register   <= 'b0;
-            RegFile_Data_Register   <= 'b0;
+            RX_Data_Register        <= 'b0;
+            ALU_Result              <= 'b0;
         end else begin
             case (current_state)
+            // Write Command
               WrRegFile_WAIT_ADDR  : RegFile_ADDR_Register   <= RX_DATA_IN ;
-              WrRegFile_WAIT_DATA  : RegFile_Data_Register   <= RX_DATA_IN ;
-              RdRegFile_WAIT_ADDR  : RegFile_ADDR_Register   <= RX_DATA_IN ;
-              RdRegFile_READ_DATA  : RegFile_Data_Register   <= RegFile_RdData;
+              WrRegFile_WAIT_DATA  : RX_Data_Register        <= RX_DATA_IN ;
+            // Read Command   
+              RdRegFile_WAIT_ADDR  : RegFile_ADDR_Register <= RX_DATA_IN ;
+              RdRegFile_READ_DATA  : RX_Data_Register      <= RegFile_RdData;
+            // ALU Operation with Opreands  
+              ALUOP_WAIT_OP_1      : RX_Data_Register    <= RX_DATA_IN ;
+              ALUOP_WAIT_OP_2      : RX_Data_Register    <= RX_DATA_IN ;
+              ALUOP_WAIT_FUNC      : RX_Data_Register    <= RX_DATA_IN ;
+              ALUOP_OPREATION      : ALU_Result          <= ALU_OUT   ;
             endcase
         end        
     end
@@ -173,59 +205,97 @@ end*/
     always @(*) begin
         RegFile_WrData  = 'b0; 
         RegFile_ADDRESS = 'b0;
-        TX_DATA_OUT     = 'hff;
+        TX_DATA_OUT     = 'hffff;
+        ALU_FUNC        = 'b0;
         case (current_state)
+        // Write Command
             WrRegFile_OPERATE: begin
-                    RegFile_WrData  = RegFile_Data_Register ;
-                    RegFile_ADDRESS = RegFile_ADDR_Register; 
-                end 
-
+                RegFile_WrData  = RX_Data_Register ;
+                RegFile_ADDRESS = RegFile_ADDR_Register; 
+            end 
+        // Read Command
             RdRegFile_SEND_DATA: begin
-                    RegFile_ADDRESS = RegFile_ADDR_Register;
-                    TX_DATA_OUT     = RegFile_Data_Register;
+                TX_DATA_OUT     = RX_Data_Register ;
+                RegFile_ADDRESS = RegFile_ADDR_Register;
             end
+        // ALU Operation with Opreands
+            ALUOP_STORE_OP1: begin
+                RegFile_WrData  = RX_Data_Register ;
+                RegFile_ADDRESS = 'b0;
+            end
+            ALUOP_STORE_OP2: begin
+                RegFile_WrData  = RX_Data_Register ;
+                RegFile_ADDRESS = 'b1;
+            end
+            ALUOP_OPREATION : begin
+                ALU_FUNC = RX_Data_Register[ALU_FUNC_WIDTH-1:0]; 
+            end 
+            ALUOP_SEND_OUT_1: begin
+                TX_DATA_OUT = ALU_Result[DATA_WIDTH-1:0];
+            end
+            ALUOP_SEND_OUT_2: begin
+                TX_DATA_OUT = ALU_Result[DATA_WIDTH*2-1:DATA_WIDTH];
+            end
+
             default: begin
                 RegFile_WrData = 'b0;
                 RegFile_ADDRESS = 'b0; 
                 TX_DATA_OUT     = 'hff;
+                ALU_FUNC        = 'b0;
             end
         endcase
     end
 
 ////-------- Control output Logic --------////
-/*
-    CONTROLS:
-        //ALU
-        output reg ALU_EN,
-        output reg ALU_CLK_EN,
-        // Register File
-        output reg RegFile_WrEn,RegFile_RdEn,
-        // UART TX 
-        output reg FIFO_WR,
-*/
     always @(*) begin
         RegFile_WrEn = 1'b0;
         RegFile_RdEn = 1'b0;
-        FIFO_WR      = 1'b0;   
+        FIFO_WR      = 1'b0;
+        ALU_EN       = 1'b0;
+        ALU_CLK_EN   = 1'b0;
+
         case (current_state)
+        // Write Command
             WrRegFile_OPERATE: begin
-                    RegFile_WrEn = 1'b1;
-                    RegFile_RdEn = 1'b0; 
-                end 
-
-            RdRegFile_READ_DATA: begin
-                    RegFile_WrEn = 1'b0;
-                    RegFile_RdEn = 1'b1; 
-            end
-
-            RdRegFile_SEND_DATA: begin
-                    FIFO_WR = 1'b1;  
+                RegFile_WrEn = 1'b1;
+                RegFile_RdEn = 1'b0; 
             end 
+        // Read Command 
+            RdRegFile_READ_DATA: begin
+                RegFile_WrEn = 1'b0;
+                RegFile_RdEn = 1'b1; 
+            end
+            RdRegFile_SEND_DATA: begin
+                FIFO_WR = 1'b1;  
+            end
+        // ALU Operation with Opreands
+            ALUOP_STORE_OP1: begin
+                RegFile_WrEn = 1'b1;
+                RegFile_RdEn = 1'b0;
+                ALU_CLK_EN   = 1'b1;
+            end
+            ALUOP_STORE_OP2: begin
+                RegFile_WrEn = 1'b1;
+                RegFile_RdEn = 1'b0;
+                ALU_CLK_EN   = 1'b1; 
+            end  
+            ALUOP_OPREATION : begin
+                ALU_EN       = 1'b1;
+                ALU_CLK_EN   = 1'b1;
+            end
+            ALUOP_SEND_OUT_1 :begin
+                FIFO_WR = 1'b1; 
+            end     
+            ALUOP_SEND_OUT_2 :begin
+                FIFO_WR = 1'b1; 
+            end
 
             default: begin
                 RegFile_WrEn = 1'b0;
                 RegFile_RdEn = 1'b0;
                 FIFO_WR      = 1'b0; 
+                ALU_EN       = 1'b0;
+                ALU_CLK_EN   = 1'b0;
             end
         endcase
     end
@@ -262,5 +332,12 @@ endmodule
             - When Address came "RX_Flag HIGH", Store the Address inside the Register and make the Operation.
             - After Getting the Data, Send it to FIFO.
             - Finally return back to IDLE. 
+
+    Third Command : ALU Operation Command With Opreand 
+        Expected Input: (Frame 0: Command "0xCC") - (Frame 1: ALU OP 1) - (Frame 2: ALU OP 2) - (Frame 3: ALU FUNC)
+        Expected Output: (Frame 0: ALU OUT LSB) - (Frame 1: ALU OUT MSB)
+        Behavouir: 
+            IDLE --> CMD --> ALUOP_WAIT_OP_1 --> ALUOP_WAIT_OP_2 --> ALUOP_WAIT_FUNC 
+            --> ALUOP_OPREATION --> ALUOP_SEND_OUT_1 --> ALUOP_SEND_OUT_2 --> IDLE   
                 
 */

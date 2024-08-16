@@ -160,7 +160,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     PULSE_GEN TX_BUSY_GEN(
     .CLK(TX_CLK),
     .RST(RST_SYNC_UART),
-    .LVL_SIG(TX_BUSY),
+    .LVL_SIG(~(TX_BUSY)&&~(F_EMPTY)),
     .PULSE_GEN(F_RD_INC)
     );
 ////---------- Synchronizers -----------////
