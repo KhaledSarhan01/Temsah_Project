@@ -39,7 +39,7 @@ module Sampling_Register(
     end
 // getting the output from data
     assign start_bit    = sampled_data_register[0];
-    assign Data_out     = (Data_valid)? sampled_data_register[8:1]:8'b0;
+    assign Data_out     = sampled_data_register[8:1];
     assign parity_bit   = (PAR_EN)? sampled_data_register[9]:1'b0;
     assign stop_bit     = (PAR_EN)? sampled_data_register[10]:sampled_data_register[9];
 endmodule

@@ -10,7 +10,7 @@ module tb_SYS_TOP ();
     //UART
     reg  tb_RX_IN;
     wire tb_TX_OUT;
-    wire tb_RX_ERROR; 
+    wire tb_PAR_ERROR,tb_STOP_ERROR; 
 
 ////---------- Clock Generation ----------////
     // Reference Frequency = 100 MHz "Period = 10 ns"
@@ -34,7 +34,8 @@ module tb_SYS_TOP ();
     //UART
     .RX_IN(tb_RX_IN),
     .TX_OUT(tb_TX_OUT),
-    .RX_ERROR(tb_RX_ERROR) 
+    .PAR_ERROR(tb_PAR_ERROR),
+    .STOP_ERROR(tb_STOP_ERROR) 
     );
 
 ////-------------- Parameter -------------////
@@ -152,7 +153,7 @@ task Send_Frame;
     input [2:0] PAR_MODE;
     integer i;
     begin
-        #(STD_UART_Period);
+        @(posedge DUT.TX_CLK);
        // Send Start BIT
             tb_RX_IN = 1'b0;
             #(STD_UART_Period);
@@ -181,7 +182,7 @@ task Send_Frame;
                    
                 end
            end
-            #(STD_UART_Period);
+            #(STD_UART_Period*2);
     end
 endtask
 endmodule

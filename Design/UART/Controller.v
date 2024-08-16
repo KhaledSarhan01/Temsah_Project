@@ -31,7 +31,7 @@ module UART_Rx_Controller(
                 end
         end
     end
-// State Encoding: Gray Code Encoding 
+// State Encoding: Binary Code Encoding 
     localparam [2:0] IDLE    = 3'b000  ,
                      START   = 3'b001  ,
                      DATA    = 3'b010  ,
@@ -54,7 +54,7 @@ module UART_Rx_Controller(
         case (current_state)
             IDLE  : begin
                 Data_valid = 1'b0;
-                block_enable_word =4'b0000; //= {sampler,parity,start,stop}
+                block_enable_word =4'b0000; //= {sampler,start,parity,stop}
                 BIT_COUNT_CLR = 1'b1;
             end
             START : begin
@@ -110,7 +110,7 @@ module UART_Rx_Controller(
                 end
             end
             DATA  : begin
-                if (!(error_flag_word) && PAR_EN && BIT_COUNT_reg == 4'd10) begin
+                if (!(error_flag_word) && PAR_EN && BIT_COUNT_reg == 4'd9) begin
                     next_state = PARITY;
                 end else if (!(error_flag_word)  && BIT_COUNT_reg == 4'd9) begin
                     next_state = STOP;
@@ -121,7 +121,7 @@ module UART_Rx_Controller(
                 end
             end 
             PARITY: begin
-                if (!(error_flag_word) && PAR_EN  && BIT_COUNT_reg == 4'd11) begin
+                if (!(error_flag_word) && PAR_EN  && BIT_COUNT_reg == 4'd10) begin
                     next_state = STOP;
                 end else if(error_flag_word) begin
                     next_state = IDLE;
@@ -130,9 +130,9 @@ module UART_Rx_Controller(
                 end
             end 
             STOP  : begin
-                if (!(error_flag_word) && PAR_EN  && BIT_COUNT_reg == 4'd12) begin
+                if (!(error_flag_word) && PAR_EN  && BIT_COUNT_reg == 4'd11) begin
                     next_state = DONE;
-                end else if (!(error_flag_word) && BIT_COUNT_reg == 4'd11) begin
+                end else if (!(error_flag_word) && BIT_COUNT_reg == 4'd10) begin
                     next_state = DONE;
                 end else if(error_flag_word) begin
                     next_state = IDLE;
@@ -141,7 +141,7 @@ module UART_Rx_Controller(
                 end
             end
             DONE: begin
-                if (!(error_flag_word) && ((PAR_EN && BIT_COUNT_reg == 4'd11)||(!(PAR_EN) && BIT_COUNT_reg == 4'd10)) ) begin
+                if (!(error_flag_word) && ((PAR_EN && BIT_COUNT_reg == 4'd12)||(!(PAR_EN) && BIT_COUNT_reg == 4'd11)) ) begin
                     next_state = IDLE;
                 end
                 else begin

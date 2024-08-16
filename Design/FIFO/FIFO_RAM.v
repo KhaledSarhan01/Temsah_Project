@@ -5,7 +5,7 @@ module DUAL_RAM #(parameter DATA_WIDTH =8,parameter ADDR_WIDTH= 4 ,parameter MEM
     input wire [DATA_WIDTH-1:0] wrdata,
     input wire [ADDR_WIDTH-1:0] waddr, 
     //Read Part
-    output wire [DATA_WIDTH-1:0] rdata,
+    output reg [DATA_WIDTH-1:0] rdata,
     input wire  [ADDR_WIDTH-1:0] raddr
 );
 
@@ -23,10 +23,11 @@ module DUAL_RAM #(parameter DATA_WIDTH =8,parameter ADDR_WIDTH= 4 ,parameter MEM
             //Write Part logic 
             if (wclken) begin
                 MEM[waddr] <= wrdata;
-            end  
+            end 
+            //Read Part Logic 
+                rdata = MEM[raddr];
+ 
         end
     end    
-//Read Part Logic 
-assign rdata = MEM[raddr];
 
 endmodule

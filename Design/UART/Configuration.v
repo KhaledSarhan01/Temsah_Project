@@ -20,9 +20,25 @@ module Configuration_block(
     input [7:0] data_out
 );
 
-// enable signal analyze "for easy control"
-    wire sampler_enable,start_enable,parity_enable,stop_enable ;
-    assign {sampler_enable,start_enable,parity_enable,stop_enable} = block_enable_word;
+// enable signal analyze "for easy control" Registered
+    reg sampler_enable,start_enable,parity_enable,stop_enable ;
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            {sampler_enable,start_enable,parity_enable,stop_enable} <= 'b0;
+        end else begin
+            {sampler_enable,start_enable,parity_enable,stop_enable} <= block_enable_word;       
+        end
+    end
+// registered Sample_one_bit and Sample_three_bit
+    reg SAMPLE_CMD;
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            SAMPLE_CMD <= 'b0;
+        end else begin
+            SAMPLE_CMD <= (sample_one_bit | sample_three_bit);
+        end
+    end
+     
     //assign {stop_enable,parity_enable,start_enable,sampler_enable} = block_enable_word;
     reg start_error , parity_error , stop_error;
     assign error_flag_word = {start_error , parity_error , stop_error};
@@ -143,7 +159,7 @@ module Configuration_block(
 
 // Start Checker Block
     always @(*) begin
-        if (start_enable) begin
+        if (start_enable & SAMPLE_CMD) begin
             if (start_bit != 1'b0) begin
                 start_error = 1'b1;
             end else begin
@@ -160,7 +176,7 @@ module Configuration_block(
     assign obtained_odd_parity_bit      = ~^(data_out);
     
     always @(*) begin
-        if(parity_enable)begin
+        if(parity_enable & SAMPLE_CMD)begin
             case (PAR_TYP)
                 1'b0: begin //even Parity
                     if (parity_bit != obtained_even_parity_bit) begin
@@ -187,7 +203,7 @@ module Configuration_block(
 
 // Stop Checker Block
     always @(*) begin
-        if (stop_enable) begin
+        if (stop_enable & SAMPLE_CMD) begin
             if (stop_bit != 1'b1) begin
                 stop_error = 1'b1;
             end else begin
