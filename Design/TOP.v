@@ -6,7 +6,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     //UART
     input wire RX_IN,
     output wire TX_OUT, 
-    output wire RX_ERROR
+    output wire PAR_ERROR,STOP_ERROR
 );
 ////------------ Parameters ------------////
     parameter  RegFile_MEM_SIZE   = 16 ;
@@ -25,7 +25,6 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 
     // UART Siganls and Flags
     wire SYS_RX_DATA_VALID,UART_RX_DATA_vaild;
-    wire UART_PAR_ERROR,UART_STOP_ERROR;
     wire TX_BUSY;
 
     // FIFO Control and Flags
@@ -87,7 +86,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     );
     
 // Register File
-    RegFile #(.DATA_WIDTH(DATA_WIDTH),.MEM_SIZE(RegFile_MEM_SIZE) ,.ADDR_WIDTH(RegFile_ADDR_WIDTH)) Register_File (
+    RegFile #(.DATA_WIDTH(DATA_WIDTH),.MEM_SIZE(RegFile_MEM_SIZE) ,.ADDR_WIDTH(RegFile_ADDR_WIDTH)) U0_RegFile (
     //Clock and Active Low Reset
     .CLK(REF_CLK),
     .RST(RST_SYNC_REF),
@@ -126,7 +125,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
 ////---------- Clock Domain 2 ----------////
 
 // UART
-    UART #(.DATA_WIDTH(DATA_WIDTH)) UART (
+    UART #(.DATA_WIDTH(DATA_WIDTH)) U0_UART (
     // Clocks and Active Low Reset
     .TX_CLK(TX_CLK),
     .RX_CLK(RX_CLK),
@@ -151,11 +150,9 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     
     // RX Controls and Configuration
     .RX_DATA_VALID(UART_RX_DATA_vaild),
-    .RX_PAR_ERROR(UART_PAR_ERROR),
-    .RX_STOP_ERROR(UART_STOP_ERROR)
+    .RX_PAR_ERROR(PAR_ERROR),
+    .RX_STOP_ERROR(STOP_ERROR)
     );
-
-    assign RX_ERROR = UART_PAR_ERROR | UART_STOP_ERROR;
 
     PULSE_GEN TX_BUSY_GEN(
     .CLK(TX_CLK),

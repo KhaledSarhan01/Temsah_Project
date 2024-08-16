@@ -72,7 +72,7 @@ Configuration_block UART_Config_block(
     // sampled data 
     .start_bit(start_bit_UART_Rx),
     .parity_bit(parity_bit_UART_Rx),
-    .stop_bit(stop_bit),
+    .stop_bit(stop_bit_UART_Rx),
     .data_out(Data_out_UART_Rx)
 );
 
