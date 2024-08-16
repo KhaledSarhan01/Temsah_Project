@@ -13,11 +13,10 @@
 ../Design/ALU.v
 ../Design/PULSE_GEN.V
 ../Design/UART.v
-../Design/UART/UART_TX/mux.v
-../Design/UART/UART_TX/parity_calc.v
-../Design/UART/UART_TX/Serializer.v
-../Design/UART/UART_TX/uart_tx_fsm.v
-../Design/UART/UART_TX/UART_TX.v
+../Design/UART/FSM_Controller.v
+../Design/UART/Parity.v
+../Design/UART/Serializer.v
+../Design/UART/UART_TX.v
 ../Design/UART/UART_RX/uart_rx_fsm.v
 ../Design/UART/UART_RX/strt_chk.v
 ../Design/UART/UART_RX/stp_chk.v

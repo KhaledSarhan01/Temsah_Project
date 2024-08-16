@@ -24,10 +24,10 @@ module UART #(parameter DATA_WIDTH = 8)(
     output wire RX_PAR_ERROR,
     output wire RX_STOP_ERROR
 );
-/*
+
 UART_Tx #(.Width(DATA_WIDTH)) UART_TX(
     .CLK(TX_CLK), 
-    .rst(RX_CLK),
+    .rst(UART_RST),
     .Tx_out(TX_OUT),
     .P_data(TX_DATA),
     .PAR_TYP(PAR_TYP), 
@@ -35,7 +35,8 @@ UART_Tx #(.Width(DATA_WIDTH)) UART_TX(
     .Data_valid(TX_DATA_VALID), 
     .Busy(TX_BUSY)
 );
-*/
+    //source file
+
 /*
 UART_Rx #(.Width(DATA_WIDTH)) UART_RX(
     //clock and active low async reset
@@ -56,11 +57,11 @@ UART_Rx #(.Width(DATA_WIDTH)) UART_RX(
     .Stop_Error(RX_STOP_ERROR)
     );
     // source file
-    ../Design/UART/Configuration.v
-    ../Design/UART/Controller.v
-    ../Design/UART/Sampler.v
-    ../Design/UART/Sampling_Register.v
-    ../Design/UART/UART_RX.v
+../Design/UART/Configuration.v
+../Design/UART/Controller.v
+../Design/UART/Sampler.v
+../Design/UART/Sampling_Register.v
+../Design/UART/UART_RX.v
 */
 
 //El Temash UART RX
@@ -79,18 +80,6 @@ UART_Rx #(.Width(DATA_WIDTH)) UART_RX(
         .data_valid(RX_DATA_VALID),
         .parity_error(RX_PAR_ERROR),
         .framing_error(RX_STOP_ERROR)
-    );
-
-//El Temsah UART Tx
-    UART_TX  #(.DATA_WIDTH(DATA_WIDTH)) UART_Tx(
-    .CLK(TX_CLK),
-    .RST(UART_RST),
-    .P_DATA(TX_DATA),
-    .Data_Valid(TX_DATA_VALID),
-    .parity_enable(PAR_EN),
-    .parity_type(PAR_TYP), 
-    .TX_OUT(TX_OUT),
-    .busy(TX_BUSY)
     );
 
 endmodule

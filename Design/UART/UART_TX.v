@@ -46,6 +46,8 @@ serializer  #(.Width(Width)) ser_block
 
 Parity_calc  #(.Width(Width)) parity_block
 (   
+    .clk(CLK),
+    .rst(rst),
     //control data
     .Data_valid(Data_valid),
     .parity_type(PAR_TYP),
@@ -70,9 +72,3 @@ FSM_controller FSM_control_block
          
 
 endmodule
-/*
-../Design/UART/FSM_Controller.v
-../Design/UART/Parity.v
-../Design/UART/Serializer.v
-../Design/UART/UART_TX.v
-*/

@@ -1,5 +1,6 @@
 module Parity_calc #(parameter Width = 8)
-(
+(   
+    input wire              clk,rst,
     input wire              Data_valid,
     input wire              parity_type,
     input wire [Width-1:0]  in_data,
@@ -8,8 +9,14 @@ module Parity_calc #(parameter Width = 8)
 
     //Taking the input
     reg [Width-1:0]  internal_reg;   
-    always @(posedge Data_valid)begin
-        internal_reg <= in_data;
+    always @(posedge clk or negedge rst)begin
+        if (!rst) begin
+            internal_reg <= 'b0;
+        end else begin
+            if (Data_valid) begin
+               internal_reg <= in_data; 
+            end
+        end
     end
 
     //Calculating the Parity Bit 
