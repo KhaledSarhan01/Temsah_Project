@@ -11,7 +11,7 @@
 ../Design/CLK_GATE.v
 ../Design/DATA_SYNC.v
 ../Design/ALU.v
-../Design/PULSE_GEN.V
+../Design/PULSE_GEN.v
 ../Design/UART.v
 ../Design/UART/FSM_Controller.v
 ../Design/UART/Parity.v

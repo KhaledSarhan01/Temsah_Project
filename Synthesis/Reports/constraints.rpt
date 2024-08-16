@@ -1,0 +1,21 @@
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : SYS_TOP
+Version: K-2015.06
+Date   : Sat Aug 17 01:13:14 2024
+****************************************
+
+
+   max_delay/setup ('TX_CLK' group)
+
+                             Required        Actual
+   Endpoint                 Path Delay     Path Delay        Slack
+   -----------------------------------------------------------------
+   PAR_ERROR                -1465.04           1.01 f     -1466.05  (VIOLATED)
+   STOP_ERROR               -1465.04           0.72 r     -1465.76  (VIOLATED)
+
+
+1
