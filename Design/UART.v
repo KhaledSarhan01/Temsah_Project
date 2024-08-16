@@ -36,6 +36,7 @@ UART_Tx #(.Width(DATA_WIDTH)) UART_TX(
     .Busy(TX_BUSY)
 );
 
+/*
 UART_Rx #(.Width(DATA_WIDTH)) UART_RX(
     //clock and active low async reset
     .CLK(RX_CLK),
@@ -53,6 +54,31 @@ UART_Rx #(.Width(DATA_WIDTH)) UART_RX(
     .data_valid(RX_DATA_VALID), 
     .Parity_Error(RX_PAR_ERROR),
     .Stop_Error(RX_STOP_ERROR)
+    );
+    // source file
+    ../Design/UART/Configuration.v
+    ../Design/UART/Controller.v
+    ../Design/UART/Sampler.v
+    ../Design/UART/Sampling_Register.v
+    ../Design/UART/UART_RX.v
+*/
+
+    //El Temash UART RX
+        UART_RX #(.DATA_WIDTH(DATA_WIDTH)) UART_RX(
+    // Clock and Active Low Async Reset
+        .CLK(RX_CLK),
+        .RST(UART_RST),
+    // Datapath
+        .RX_IN(RX_IN),
+        .P_DATA(RX_DATA),
+    // Configuration
+        .parity_enable(PAR_EN),
+        .parity_type(PAR_TYP),
+        .Prescale(PRESCALE), 
+    // Flags 
+        .data_valid(RX_DATA_VALID),
+        .parity_error(RX_PAR_ERROR),
+        .framing_error(RX_STOP_ERROR)
     );
 
 endmodule

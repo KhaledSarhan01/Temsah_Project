@@ -17,9 +17,12 @@
 ../Design/UART/Parity.v
 ../Design/UART/Serializer.v
 ../Design/UART/UART_TX.v
-../Design/UART/Configuration.v
-../Design/UART/Controller.v
-../Design/UART/Sampler.v
-../Design/UART/Sampling_Register.v
-../Design/UART/UART_RX.v
+../Design/UART/UART_RX/uart_rx_fsm.v
+../Design/UART/UART_RX/strt_chk.v
+../Design/UART/UART_RX/stp_chk.v
+../Design/UART/UART_RX/par_chk.v
+../Design/UART/UART_RX/edge_bit_counter.v
+../Design/UART/UART_RX/deserializer.v
+../Design/UART/UART_RX/data_sampling.v
+../Design/UART/UART_RX/UART_RX.v
 ../Testbench/Testbench.sv
