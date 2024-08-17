@@ -149,16 +149,17 @@ set_dont_touch_network $RX_CLK_NAME
            #########################################################
 ####################################################################################
 
-set in_delay  [expr 0.2*$RX_CLK_PER]
-set out_delay [expr 0.2*$TX_CLK_PER]
+set in_delay  [expr 0.2*$REF_CLK_PER]
+set out_delay [expr 0.2*$REF_CLK_PER]
 
 #Constrain Input Paths
 set input_src_list [list "RX_IN"]
 set_input_delay $in_delay -clock $RX_CLK_NAME [get_port $input_src_list]
 
 #Constrain Output Paths
-set output_src_list [list "TX_OUT" "PAR_ERROR" "STOP_ERROR"]
-set_output_delay $out_delay -clock $TX_CLK_NAME [get_port $output_src_list]
+set output_src_list [list "PAR_ERROR" "STOP_ERROR"]
+set_output_delay $out_delay -clock $RX_CLK_NAME [get_port $output_src_list]
+set_output_delay $out_delay -clock $TX_CLK_NAME [get_port "TX_OUT"]
 
 ####################################################################################
            #########################################################
@@ -179,7 +180,7 @@ set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M
 ####################################################################################
 
 #functional ports
-set_load 0.1  [get_ports $output_src_list]
+set_load 0.05  [get_ports "PAR_ERROR" "STOP_ERROR" "TX_OUT"]
 
 ####################################################################################
            #########################################################

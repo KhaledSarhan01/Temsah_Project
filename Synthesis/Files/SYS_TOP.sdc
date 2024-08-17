@@ -1,6 +1,6 @@
 ###################################################################
 
-# Created by write_sdc on Sat Aug 17 01:13:15 2024
+# Created by write_sdc on Sat Aug 17 06:12:16 2024
 
 ###################################################################
 set sdc_version 2.0
@@ -18,9 +18,6 @@ set_driving_cell -lib_cell BUFX2M -library                                     \
 scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports RST]
 set_driving_cell -lib_cell BUFX2M -library                                     \
 scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -pin Y [get_ports RX_IN]
-set_load -pin_load 0.1 [get_ports TX_OUT]
-set_load -pin_load 0.1 [get_ports PAR_ERROR]
-set_load -pin_load 0.1 [get_ports STOP_ERROR]
 create_clock [get_ports REF_CLK]  -period 10  -waveform {0 5}
 set_clock_latency 0  [get_clocks REF_CLK]
 set_clock_uncertainty -setup 0.2  [get_clocks REF_CLK]
@@ -61,10 +58,10 @@ set_clock_transition -max -rise 0 [get_clocks RX_CLK]
 set_clock_transition -min -rise 0 [get_clocks RX_CLK]
 set_clock_transition -max -fall 0 [get_clocks RX_CLK]
 set_clock_transition -min -fall 0 [get_clocks RX_CLK]
-set_input_delay -clock RX_CLK  54.2534  [get_ports RX_IN]
-set_output_delay -clock TX_CLK  1736.11  [get_ports TX_OUT]
-set_output_delay -clock TX_CLK  1736.11  [get_ports PAR_ERROR]
-set_output_delay -clock TX_CLK  1736.11  [get_ports STOP_ERROR]
+set_input_delay -clock RX_CLK  2  [get_ports RX_IN]
+set_output_delay -clock RX_CLK  2  [get_ports PAR_ERROR]
+set_output_delay -clock RX_CLK  2  [get_ports STOP_ERROR]
+set_output_delay -clock TX_CLK  2  [get_ports TX_OUT]
 set_clock_groups  -asynchronous -name REF_CLK_1  -group [list [get_clocks      \
 REF_CLK] [get_clocks ALU_CLK]] -group [list [get_clocks UART_CLK] [get_clocks  \
 TX_CLK] [get_clocks RX_CLK]]

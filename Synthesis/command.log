@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version K-2015.06 for linux64 -- May 28, 2015
-#@ # Date:   Sat Aug 17 01:12:56 2024
+#@ # Date:   Sat Aug 17 06:12:01 2024
 #@ # Run by: IC@IC
 #@ 
 
@@ -3989,16 +3989,17 @@ source -echo -verbose /home/IC/Projects/Full_System/Synthesis/syn_script.tcl
 #@ #########################################################
 #@ ####################################################################################
 #@ 
-#@ set in_delay  [expr 0.2*$RX_CLK_PER]
-#@ set out_delay [expr 0.2*$TX_CLK_PER]
+#@ set in_delay  [expr 0.2*$REF_CLK_PER]
+#@ set out_delay [expr 0.2*$REF_CLK_PER]
 #@ 
 #@ #Constrain Input Paths
 #@ set input_src_list [list "RX_IN"]
 #@ set_input_delay $in_delay -clock $RX_CLK_NAME [get_port $input_src_list]
 #@ 
 #@ #Constrain Output Paths
-#@ set output_src_list [list "TX_OUT" "PAR_ERROR" "STOP_ERROR"]
-#@ set_output_delay $out_delay -clock $TX_CLK_NAME [get_port $output_src_list]
+#@ set output_src_list [list "PAR_ERROR" "STOP_ERROR"]
+#@ set_output_delay $out_delay -clock $RX_CLK_NAME [get_port $output_src_list]
+#@ set_output_delay $out_delay -clock $TX_CLK_NAME [get_port "TX_OUT"]
 #@ 
 #@ ####################################################################################
 #@ #########################################################
@@ -4019,7 +4020,7 @@ source -echo -verbose /home/IC/Projects/Full_System/Synthesis/syn_script.tcl
 #@ ####################################################################################
 #@ 
 #@ #functional ports
-#@ set_load 0.1  [get_ports $output_src_list]
+#@ set_load 0.05  [get_ports "PAR_ERROR" "STOP_ERROR" "TX_OUT"]
 #@ 
 #@ ####################################################################################
 #@ #########################################################
@@ -4068,8 +4069,8 @@ source -echo -verbose /home/IC/Projects/Full_System/Synthesis/syn_script.tcl
 #@ report_timing -max_paths 100 -delay_type min > hold.rpt
 #@ report_timing -max_paths 100 -delay_type max > setup.rpt
 #@ report_clock -attributes > clocks.rpt
-#@ cd ..
 #@ report_constraint -all_violators > constraints.rpt
+#@ cd ..
 #@ 
 #@ ############################################
 #@ ###### Writing synthesis output files ######

@@ -14,7 +14,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8)(
     
     parameter ALU_FUNC_WIDTH = 4;
     
-    parameter FIFO_ADDR_WIDTH = 6;
+    parameter FIFO_ADDR_WIDTH = 5;
     parameter FIFO_MEM_SIZE = 32;
 
 ////--------- Internal Signals ---------////
