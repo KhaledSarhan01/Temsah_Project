@@ -73,467 +73,44 @@ Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/standard.sldb'
   Loading link library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
   Loading link library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
   Loading link library 'gtech'
-Loading verilog files: '/home/IC/Projects/Full_System/DFT/DFT_Design/TOP_DFT.v' '/home/IC/Projects/Full_System/Design/SYS_CONTRL.v' '/home/IC/Projects/Full_System/Design/RegFile.v' '/home/IC/Projects/Full_System/Design/ClkDiv.v' '/home/IC/Projects/Full_System/Design/RST_SYNC.v' '/home/IC/Projects/Full_System/Design/CLK_GATE.v' '/home/IC/Projects/Full_System/Design/DATA_SYNC.v' '/home/IC/Projects/Full_System/Design/ALU.v' '/home/IC/Projects/Full_System/Design/PULSE_GEN.v' '/home/IC/Projects/Full_System/Design/FIFO/F_DATA_SYNC.v' '/home/IC/Projects/Full_System/Design/FIFO/FIFO_RAM.v' '/home/IC/Projects/Full_System/Design/FIFO/RD_CONTRL.v' '/home/IC/Projects/Full_System/Design/FIFO/WR_CONTRL.v' '/home/IC/Projects/Full_System/Design/FIFO.v' '/home/IC/Projects/Full_System/Design/UART.v' '/home/IC/Projects/Full_System/Design/UART/FSM_Controller.v' '/home/IC/Projects/Full_System/Design/UART/Parity.v' '/home/IC/Projects/Full_System/Design/UART/Serializer.v' '/home/IC/Projects/Full_System/Design/UART/UART_TX.v' '/home/IC/Projects/Full_System/Design/UART/Configuration.v' '/home/IC/Projects/Full_System/Design/UART/Controller.v' '/home/IC/Projects/Full_System/Design/UART/Sampler.v' '/home/IC/Projects/Full_System/Design/UART/Sampling_Register.v' '/home/IC/Projects/Full_System/Design/UART/UART_RX.v' 
+Loading verilog files: '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/DFT/DFT_Design/TOP_DFT.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/SYS_CONTRL.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/RegFile.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/ClkDiv.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/RST_SYNC.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/CLK_GATE.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/DATA_SYNC.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/ALU.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/PULSE_GEN.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/F_DATA_SYNC.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/FIFO_RAM.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/RD_CONTRL.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/WR_CONTRL.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/FSM_Controller.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Parity.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Serializer.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/UART_TX.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Configuration.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Controller.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Sampler.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Sampling_Register.v' '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/UART_RX.v' 
 Detecting input file type automatically (-rtl or -netlist).
 Reading with Presto HDL Compiler (equivalent to -rtl option).
 Running PRESTO HDLC
-Compiling source file /home/IC/Projects/Full_System/DFT/DFT_Design/TOP_DFT.v
-Warning:  /home/IC/Projects/Full_System/DFT/DFT_Design/TOP_DFT.v:19: Parameter keyword used in local parameter declaration. (VER-329)
-Compiling source file /home/IC/Projects/Full_System/Design/SYS_CONTRL.v
-Compiling source file /home/IC/Projects/Full_System/Design/RegFile.v
-Compiling source file /home/IC/Projects/Full_System/Design/ClkDiv.v
-Compiling source file /home/IC/Projects/Full_System/Design/RST_SYNC.v
-Compiling source file /home/IC/Projects/Full_System/Design/CLK_GATE.v
-Compiling source file /home/IC/Projects/Full_System/Design/DATA_SYNC.v
-Compiling source file /home/IC/Projects/Full_System/Design/ALU.v
-Compiling source file /home/IC/Projects/Full_System/Design/PULSE_GEN.v
-Compiling source file /home/IC/Projects/Full_System/Design/FIFO/F_DATA_SYNC.v
-Compiling source file /home/IC/Projects/Full_System/Design/FIFO/FIFO_RAM.v
-Compiling source file /home/IC/Projects/Full_System/Design/FIFO/RD_CONTRL.v
-Compiling source file /home/IC/Projects/Full_System/Design/FIFO/WR_CONTRL.v
-Compiling source file /home/IC/Projects/Full_System/Design/FIFO.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/FSM_Controller.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/Parity.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/Serializer.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/UART_TX.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/Configuration.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/Controller.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/Sampler.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/Sampling_Register.v
-Compiling source file /home/IC/Projects/Full_System/Design/UART/UART_RX.v
-
-Statistics for case statements in always block at line 250 in file
-	'/home/IC/Projects/Full_System/DFT/DFT_Design/TOP_DFT.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           251            |    auto/auto     |
-===============================================
-Warning:  /home/IC/Projects/Full_System/Design/SYS_CONTRL.v:64: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
-
-Statistics for case statements in always block at line 63 in file
-	'/home/IC/Projects/Full_System/Design/SYS_CONTRL.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            64            |    auto/auto     |
-|            74            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 185 in file
-	'/home/IC/Projects/Full_System/Design/SYS_CONTRL.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           191            |     no/auto      |
-===============================================
-
-Statistics for case statements in always block at line 207 in file
-	'/home/IC/Projects/Full_System/Design/SYS_CONTRL.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           212            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 252 in file
-	'/home/IC/Projects/Full_System/Design/SYS_CONTRL.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           259            |    auto/auto     |
-===============================================
-
-Inferred memory devices in process
-	in routine SYS_CONTRL line 185 in file
-		'/home/IC/Projects/Full_System/Design/SYS_CONTRL.v'.
-=====================================================================================
-|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-=====================================================================================
-|      ALU_Result_reg       | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
-|   RX_Data_Register_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-| RegFile_ADDR_Register_reg | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
-=====================================================================================
-
-Inferred memory devices in process
-	in routine SYS_CONTRL line 306 in file
-		'/home/IC/Projects/Full_System/Design/SYS_CONTRL.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  current_state_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine RegFile line 32 in file
-		'/home/IC/Projects/Full_System/Design/RegFile.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  RdData_Vaild_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    Register_reg     | Flip-flop |  125  |  Y  | N  | Y  | N  | N  | N  | N  |
-|    Register_reg     | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
-|     RdData_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
-===============================================================================
-Statistics for MUX_OPs
-===========================================================
-| block name/line  | Inputs | Outputs | # sel inputs | MB |
-===========================================================
-|    RegFile/51    |   16   |    8    |      4       | N  |
-===========================================================
-
-Inferred memory devices in process
-	in routine ClkDiv line 25 in file
-		'/home/IC/Projects/Full_System/Design/ClkDiv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   edge_count_reg    | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine ClkDiv line 43 in file
-		'/home/IC/Projects/Full_System/Design/ClkDiv.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   reg_div_clk_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine RST_SYNC line 7 in file
-		'/home/IC/Projects/Full_System/Design/RST_SYNC.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  synchronizer_reg   | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine DATA_SYNC line 11 in file
-		'/home/IC/Projects/Full_System/Design/DATA_SYNC.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  synchronizer_reg   | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-| sync_bus_enable_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine DATA_SYNC line 26 in file
-		'/home/IC/Projects/Full_System/Design/DATA_SYNC.v'.
-=====================================================================================
-|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-=====================================================================================
-| enable_pulse_flipflop_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-=====================================================================================
-
-Inferred memory devices in process
-	in routine DATA_SYNC line 37 in file
-		'/home/IC/Projects/Full_System/Design/DATA_SYNC.v'.
-=================================================================================
-|     Register Name     |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-=================================================================================
-| sync_bus_register_reg | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-=================================================================================
-
-Statistics for case statements in always block at line 30 in file
-	'/home/IC/Projects/Full_System/Design/ALU.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            35            |    auto/auto     |
-===============================================
-
-Inferred memory devices in process
-	in routine ALU line 18 in file
-		'/home/IC/Projects/Full_System/Design/ALU.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    ALU_OP_1_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|    ALU_OP_2_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine ALU line 30 in file
-		'/home/IC/Projects/Full_System/Design/ALU.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   ALU_OUT_REG_reg   | Flip-flop |  16   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine ALU line 65 in file
-		'/home/IC/Projects/Full_System/Design/ALU.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    VALID_REG_reg    | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine PULSE_GEN line 9 in file
-		'/home/IC/Projects/Full_System/Design/PULSE_GEN.v'.
-==================================================================================
-|     Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-==================================================================================
-| PULSE_GEN_flipflop_reg | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-==================================================================================
-
-Inferred memory devices in process
-	in routine F_DATA_SYNC line 11 in file
-		'/home/IC/Projects/Full_System/Design/FIFO/F_DATA_SYNC.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  synchronizer_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|    sync_bus_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine DUAL_RAM line 18 in file
-		'/home/IC/Projects/Full_System/Design/FIFO/FIFO_RAM.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|       MEM_reg       |   Latch   |  128  |  Y  | N  | Y  | N  | -  | -  | -  |
-|       MEM_reg       | Flip-flop |  128  |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine DUAL_RAM line 32 in file
-		'/home/IC/Projects/Full_System/Design/FIFO/FIFO_RAM.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|      rdata_reg      | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-Statistics for MUX_OPs
-===========================================================
-| block name/line  | Inputs | Outputs | # sel inputs | MB |
-===========================================================
-|   DUAL_RAM/37    |   32   |    8    |      5       | N  |
-===========================================================
-
-Inferred memory devices in process
-	in routine RD_CONTRL line 19 in file
-		'/home/IC/Projects/Full_System/Design/FIFO/RD_CONTRL.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     bn_ptr_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine RD_CONTRL line 31 in file
-		'/home/IC/Projects/Full_System/Design/FIFO/RD_CONTRL.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   empty_flag_reg    | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine WR_CONTRL line 18 in file
-		'/home/IC/Projects/Full_System/Design/FIFO/WR_CONTRL.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|     bn_ptr_reg      | Flip-flop |   5   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine WR_CONTRL line 30 in file
-		'/home/IC/Projects/Full_System/Design/FIFO/WR_CONTRL.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|    full_flag_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Statistics for case statements in always block at line 30 in file
-	'/home/IC/Projects/Full_System/Design/UART/FSM_Controller.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            31            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 78 in file
-	'/home/IC/Projects/Full_System/Design/UART/FSM_Controller.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            82            |    auto/auto     |
-===============================================
-
-Inferred memory devices in process
-	in routine FSM_controller line 21 in file
-		'/home/IC/Projects/Full_System/Design/UART/FSM_Controller.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  current_state_reg  | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
-|  current_state_reg  | Flip-flop |   2   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine Parity_calc line 12 in file
-		'/home/IC/Projects/Full_System/Design/UART/Parity.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  internal_reg_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine serializer line 17 in file
-		'/home/IC/Projects/Full_System/Design/UART/Serializer.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   serial_out_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|    data_reg_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-|     Counter_reg     | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Statistics for case statements in always block at line 22 in file
-	'/home/IC/Projects/Full_System/Design/UART/UART_TX.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            23            |    auto/auto     |
-===============================================
-Warning:  /home/IC/Projects/Full_System/Design/UART/Configuration.v:54: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
-Warning:  /home/IC/Projects/Full_System/Design/UART/Configuration.v:98: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
-Warning:  /home/IC/Projects/Full_System/Design/UART/Configuration.v:114: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
-Warning:  /home/IC/Projects/Full_System/Design/UART/Configuration.v:180: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
-
-Statistics for case statements in always block at line 49 in file
-	'/home/IC/Projects/Full_System/Design/UART/Configuration.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            54            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 97 in file
-	'/home/IC/Projects/Full_System/Design/UART/Configuration.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            98            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 113 in file
-	'/home/IC/Projects/Full_System/Design/UART/Configuration.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           114            |    auto/auto     |
-===============================================
-
-Statistics for case statements in always block at line 178 in file
-	'/home/IC/Projects/Full_System/Design/UART/Configuration.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           180            |    auto/auto     |
-===============================================
-
-Inferred memory devices in process
-	in routine Configuration_block line 25 in file
-		'/home/IC/Projects/Full_System/Design/UART/Configuration.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   stop_enable_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|  parity_enable_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-|  start_enable_reg   | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-| sampler_enable_reg  | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine Configuration_block line 34 in file
-		'/home/IC/Projects/Full_System/Design/UART/Configuration.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|   SAMPLE_CMD_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine Configuration_block line 49 in file
-		'/home/IC/Projects/Full_System/Design/UART/Configuration.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  Edge_counter_reg   | Flip-flop |   8   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Statistics for case statements in always block at line 94 in file
-	'/home/IC/Projects/Full_System/Design/UART/Controller.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|            95            |    auto/auto     |
-===============================================
-
-Inferred memory devices in process
-	in routine UART_Rx_Controller line 21 in file
-		'/home/IC/Projects/Full_System/Design/UART/Controller.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  BIT_COUNT_reg_reg  | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine UART_Rx_Controller line 44 in file
-		'/home/IC/Projects/Full_System/Design/UART/Controller.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  current_state_reg  | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine Sampler line 18 in file
-		'/home/IC/Projects/Full_System/Design/UART/Sampler.v'.
-===============================================================================
-|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-===============================================================================
-|  Data_Storage_reg   | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
-===============================================================================
-
-Inferred memory devices in process
-	in routine Sampling_Register line 31 in file
-		'/home/IC/Projects/Full_System/Design/UART/Sampling_Register.v'.
-=====================================================================================
-|       Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
-=====================================================================================
-| sampled_data_register_reg | Flip-flop |  11   |  Y  | N  | Y  | N  | N  | N  | N  |
-=====================================================================================
-
-Statistics for case statements in always block at line 117 in file
-	'/home/IC/Projects/Full_System/Design/UART/UART_RX.v'
-===============================================
-|           Line           |  full/ parallel  |
-===============================================
-|           118            |    auto/auto     |
-===============================================
-Presto compilation completed successfully.
-Current design is now '/home/IC/Projects/Full_System/Design/UART/SYS_TOP.db:SYS_TOP'
-Loaded 24 designs.
-Current design is 'SYS_TOP'.
-SYS_TOP SYS_CONTRL RegFile ClkDiv RST_SYNC CLK_GATE DATA_SYNC ALU PULSE_GEN F_DATA_SYNC DUAL_RAM RD_CONTRL WR_CONTRL FIFO UART FSM_controller Parity_calc serializer UART_Tx Configuration_block UART_Rx_Controller Sampler Sampling_Register UART_Rx
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/DFT/DFT_Design/TOP_DFT.v
+Warning:  /mnt/hgfs/Eltamseh Diplomia/System/Full_System/DFT/DFT_Design/TOP_DFT.v:19: Parameter keyword used in local parameter declaration. (VER-329)
+Warning:  /mnt/hgfs/Eltamseh Diplomia/System/Full_System/DFT/DFT_Design/TOP_DFT.v:317: the undeclared symbol 'RST' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/SYS_CONTRL.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/RegFile.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/ClkDiv.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/RST_SYNC.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/CLK_GATE.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/DATA_SYNC.v
+Error:  /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/CLK_GATE.v:9: The event depends on both edge and nonedge expressions, which synthesis does not support. (ELAB-91)
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/ALU.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/PULSE_GEN.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/F_DATA_SYNC.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/FIFO_RAM.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/RD_CONTRL.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/WR_CONTRL.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/FSM_Controller.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Parity.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Serializer.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/UART_TX.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Configuration.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Controller.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Sampler.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Sampling_Register.v
+Compiling source file /mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/UART_RX.v
+*** Presto compilation terminated with 1 errors. ***
+Error: Can't read 'verilog' files '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/DFT/DFT_Design/TOP_DFT.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/SYS_CONTRL.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/RegFile.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/ClkDiv.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/RST_SYNC.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/CLK_GATE.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/DATA_SYNC.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/ALU.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/PULSE_GEN.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/F_DATA_SYNC.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/FIFO_RAM.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/RD_CONTRL.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO/WR_CONTRL.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/FIFO.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/FSM_Controller.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Parity.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Serializer.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/UART_TX.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Configuration.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Controller.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Sampler.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/Sampling_Register.v', '/mnt/hgfs/Eltamseh Diplomia/System/Full_System/Design/UART/UART_RX.v'. (UID-9)
+No designs were read
 ###################### Defining toplevel ###################################
 current_design $top_module
-Current design is 'SYS_TOP'.
-{SYS_TOP}
+Error: Can't find design 'SYS_TOP'. (UID-109)
+Error: Current design is not defined. (UID-4)
 #################### Liniking All The Design Parts #########################
 puts "###############################################"
 ###############################################
@@ -542,23 +119,7 @@ puts "######## Liniking All The Design Parts ########"
 puts "###############################################"
 ###############################################
 link 
-
-  Linking design 'SYS_TOP'
-  Using the following designs and libraries:
-  --------------------------------------------------------------------------
-  * (24 designs)              /home/IC/Projects/Full_System/Design/UART/SYS_TOP.db, etc
-  scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (library) /home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
-  scmetro_tsmc_cl013g_rvt_tt_1p2v_25c (library) /home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
-  scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c (library) /home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
-
-Information: Building the design 'FIFO' instantiated from design 'SYS_TOP' with
-	the parameters "DATA_WIDTH=8,ADDR_WIDTH=4,MEM_SIZE=16". (HDL-193)
-Warning: Cannot find the design 'FIFO' in the library 'WORK'. (LBR-1)
-Information: Building the design 'ClkDiv' instantiated from design 'SYS_TOP' with
-	the parameters "Width=6". (HDL-193)
-Warning: Cannot find the design 'ClkDiv' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'FIFO' in 'SYS_TOP'. (LINK-5)
-Warning: Unable to resolve reference 'ClkDiv' in 'SYS_TOP'. (LINK-5)
+Error: Current design is not defined. (UID-4)
 0
 #################### Liniking All The Design Parts #########################
 puts "###############################################"
@@ -568,84 +129,8 @@ puts "######## checking design consistency ##########"
 puts "###############################################"
 ###############################################
 check_design
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
- 
-****************************************
-check_design summary:
-Version:     K-2015.06
-Date:        Fri Aug 23 19:51:04 2024
-****************************************
-
-                   Name                                            Total
---------------------------------------------------------------------------------
-Inputs/Outputs                                                     14
-    Unconnected ports (LINT-28)                                    14
-
-Cells                                                              15
-    Cells do not drive (LINT-1)                                    14
-    Connected to power or ground (LINT-32)                          1
-
-Nets                                                                2
-    Multiply driven net with constant driver (LINT-54)              2
-
-Tristate                                                           21
-    A tristate bus has a non tri-state driver (LINT-34)            21
---------------------------------------------------------------------------------
-
-Warning: In design 'ALU', cell 'C398' does not drive any nets. (LINT-1)
-Warning: In design 'ALU', cell 'C399' does not drive any nets. (LINT-1)
-Warning: In design 'ALU', cell 'C400' does not drive any nets. (LINT-1)
-Warning: In design 'ALU', cell 'C401' does not drive any nets. (LINT-1)
-Warning: In design 'ALU', cell 'C426' does not drive any nets. (LINT-1)
-Warning: In design 'ALU', cell 'C428' does not drive any nets. (LINT-1)
-Warning: In design 'ClkDiv', cell 'C126' does not drive any nets. (LINT-1)
-Warning: In design 'ClkDiv', cell 'C143' does not drive any nets. (LINT-1)
-Warning: In design 'serializer', cell 'C120' does not drive any nets. (LINT-1)
-Warning: In design 'Configuration_block', cell 'C396' does not drive any nets. (LINT-1)
-Warning: In design 'Configuration_block', cell 'C400' does not drive any nets. (LINT-1)
-Warning: In design 'Configuration_block', cell 'C404' does not drive any nets. (LINT-1)
-Warning: In design 'Configuration_block', cell 'C408' does not drive any nets. (LINT-1)
-Warning: In design 'UART_Rx_Controller', cell 'C307' does not drive any nets. (LINT-1)
-Warning: In design 'SYS_TOP', port 'SE' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SI[5]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SI[4]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SI[3]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SI[2]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SI[1]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SI[0]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SO[5]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SO[4]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SO[3]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SO[2]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SO[1]' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', port 'SO[0]' is not connected to any nets. (LINT-28)
-Warning: In design 'Sampling_Register', port 'Data_valid' is not connected to any nets. (LINT-28)
-Warning: In design 'SYS_TOP', a pin on submodule 'UART_TX_Clock_Divider' is connected to logic 1 or logic 0. (LINT-32)
-   Pin 'i_clk_en' is connected to logic 1. 
-Warning: In design 'SYS_TOP', three-state bus 'RST_SYNC_2/CLK' has non three-state driver 'C109/Z_0'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'UART_RX_Prescale[0]' has non three-state driver 'C117/Z_0'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'UART_RX_Prescale[1]' has non three-state driver 'C117/Z_1'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'UART_RX_Prescale[2]' has non three-state driver 'C117/Z_2'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'UART_RX_Prescale[3]' has non three-state driver 'C117/Z_3'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'F_RD_INC' has non three-state driver 'TX_BUSY_GEN/PULSE_GEN_flipflop_reg/Q'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'SYS_TX_DATA_OUT[0]' has non three-state driver 'System_Control/C671/Z_0'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'SYS_TX_DATA_OUT[1]' has non three-state driver 'System_Control/C671/Z_1'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'SYS_TX_DATA_OUT[2]' has non three-state driver 'System_Control/C671/Z_2'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'SYS_TX_DATA_OUT[3]' has non three-state driver 'System_Control/C671/Z_3'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'SYS_TX_DATA_OUT[4]' has non three-state driver 'System_Control/C671/Z_4'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'SYS_TX_DATA_OUT[5]' has non three-state driver 'System_Control/C671/Z_5'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'SYS_TX_DATA_OUT[6]' has non three-state driver 'System_Control/C671/Z_6'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'SYS_TX_DATA_OUT[7]' has non three-state driver 'System_Control/C671/Z_7'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'F_WR_INC' has non three-state driver 'System_Control/C674/Z_0'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'RST_SYNC_UART_m' has non three-state driver 'C115/Z_0'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'RST_SYNC_REF_m' has non three-state driver 'C114/Z_0'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'TX_CLK_m' has non three-state driver 'C111/Z_0'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus 'REF_CLK_m' has non three-state driver 'C108/Z_0'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus '*Logic0*' has non three-state driver 'U2/**logic_0**'. (LINT-34)
-Warning: In design 'SYS_TOP', three-state bus '*Logic1*' has non three-state driver 'U1/**logic_1**'. (LINT-34)
-Warning: In design 'SYS_TOP', multiply-driven net '*Logic0*' is driven by constant 0. (LINT-54)
-Warning: In design 'SYS_TOP', multiply-driven net '*Logic1*' is driven by constant 1. (LINT-54)
-1
+Error: Current design is not defined. (UID-4)
+0
 #################### Define Design Constraints #########################
 puts "###############################################"
 ###############################################
@@ -682,6 +167,7 @@ source -echo ./cons.tcl
 #################################################################################### 
 # Prevent assign statements in the generated netlist (must be applied before compile command)
 set_fix_multiple_port_nets -all -buffer_constants -feedthroughs
+Error: Current design is not defined. (UID-4)
 #################################################################################### 
 #########################################################
 #### Section 1 : Clock Definition ####
@@ -702,24 +188,33 @@ set REF_CLK_LAT 0
 set REF_CLK_RISE 0
 set REF_CLK_FALL 0
 create_clock -name $REF_CLK_NAME -period $REF_CLK_PER -waveform "0 [expr $REF_CLK_PER/2]" [get_ports "REF_CLK"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'REF_CLK'. (UID-109)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
 set_clock_uncertainty -setup $REF_CLK_SETUP_SKEW [get_clocks $REF_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'REF_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_uncertainty -hold $REF_CLK_HOLD_SKEW  [get_clocks $REF_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'REF_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_transition -rise $REF_CLK_RISE  [get_clocks $REF_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'REF_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_transition -fall $REF_CLK_FALL  [get_clocks $REF_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'REF_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_latency $REF_CLK_LAT [get_clocks $REF_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'REF_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_dont_touch_network $REF_CLK_NAME
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'REF_CLK'. (UID-109)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
 ## UART Clock "Frequency = 3.6864 MHz" 
 set UART_CLK_NAME "UART_CLK"
 set UART_CLK_PER 271.267
@@ -729,24 +224,33 @@ set UART_CLK_LAT 0
 set UART_CLK_RISE 0
 set UART_CLK_FALL 0
 create_clock -name $UART_CLK_NAME -period $UART_CLK_PER -waveform "0 [expr $UART_CLK_PER/2]" [get_ports "UART_CLK"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_CLK'. (UID-109)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
 set_clock_uncertainty -setup $UART_CLK_SETUP_SKEW [get_clocks $UART_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_uncertainty -hold $UART_CLK_HOLD_SKEW  [get_clocks $UART_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_transition -rise $UART_CLK_RISE  [get_clocks $UART_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_transition -fall $UART_CLK_FALL  [get_clocks $UART_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_latency $UART_CLK_LAT [get_clocks $UART_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_dont_touch_network $UART_CLK_NAME
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'UART_CLK'. (UID-109)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
 ## Scan Clock "Frequency = 10 MHz" 
 set SCAN_CLK_NAME "SCAN_CLK"
 set SCAN_CLK_PER 100
@@ -756,24 +260,33 @@ set SCAN_CLK_LAT 0
 set SCAN_CLK_RISE 0
 set SCAN_CLK_FALL 0
 create_clock -name $SCAN_CLK_NAME -period $SCAN_CLK_PER -waveform "0 [expr $SCAN_CLK_PER/2]" [get_ports "scan_clk"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'scan_clk'. (UID-109)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
 set_clock_uncertainty -setup $SCAN_CLK_SETUP_SKEW [get_clocks $SCAN_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_uncertainty -hold $SCAN_CLK_HOLD_SKEW  [get_clocks $SCAN_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_transition -rise $SCAN_CLK_RISE  [get_clocks $SCAN_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_transition -fall $SCAN_CLK_FALL  [get_clocks $SCAN_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_latency $SCAN_CLK_LAT [get_clocks $SCAN_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_dont_touch_network $SCAN_CLK_NAME
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'SCAN_CLK'. (UID-109)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
 ## ALU CLK
 set ALU_CLK_NAME "ALU_CLK"
 set ALU_DIVIDE_FACTOR 1
@@ -783,24 +296,39 @@ set ALU_CLK_LAT 0
 set ALU_CLK_RISE 0
 set ALU_CLK_FALL 0
 create_generated_clock -master_clock $REF_CLK_NAME -source [get_ports "REF_CLK"] -name $ALU_CLK_NAME -divide_by $ALU_DIVIDE_FACTOR [get_ports "ALU_CLOCK/GATED_CLK"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'REF_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'ALU_CLOCK/GATED_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'REF_CLK'. (UID-109)
+Error: Value for list '-master_clock' must have 1 elements. (CMD-036)
+Error: Value for list '-source' must have 1 elements. (CMD-036)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
 set_clock_uncertainty -setup $ALU_CLK_SETUP_SKEW [get_clocks $ALU_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'ALU_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_uncertainty -hold $ALU_CLK_HOLD_SKEW  [get_clocks $ALU_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'ALU_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_transition -rise $ALU_CLK_RISE  [get_clocks $ALU_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'ALU_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_transition -fall $ALU_CLK_FALL  [get_clocks $ALU_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'ALU_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_latency $ALU_CLK_LAT [get_clocks $ALU_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'ALU_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_dont_touch_network $ALU_CLK_NAME
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'ALU_CLK'. (UID-109)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
 ## TX CLK
 set TX_CLK_NAME "TX_CLK"
 set TX_DIVIDE_FACTOR 32
@@ -811,24 +339,39 @@ set TX_CLK_LAT 0
 set TX_CLK_RISE 0
 set TX_CLK_FALL 0
 create_generated_clock -master_clock $UART_CLK_NAME -source [get_ports "UART_CLK"] -name $TX_CLK_NAME -divide_by $TX_DIVIDE_FACTOR [get_port "UART_TX_Clock_Divider/o_div_clk"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_TX_Clock_Divider/o_div_clk'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Value for list '-master_clock' must have 1 elements. (CMD-036)
+Error: Value for list '-source' must have 1 elements. (CMD-036)
+Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
 set_clock_uncertainty -setup $TX_CLK_SETUP_SKEW [get_clocks $TX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'TX_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_uncertainty -hold $TX_CLK_HOLD_SKEW  [get_clocks $TX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'TX_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_transition -rise $TX_CLK_RISE  [get_clocks $TX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'TX_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_transition -fall $TX_CLK_FALL  [get_clocks $TX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'TX_CLK'. (UID-109)
+Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_latency $TX_CLK_LAT [get_clocks $TX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'TX_CLK'. (UID-109)
+Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_dont_touch_network $TX_CLK_NAME
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'TX_CLK'. (UID-109)
+Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
 ## RX CLK
 set RX_CLK_NAME "RX_CLK"
 set RX_DIVIDE_FACTOR 1
@@ -839,30 +382,38 @@ set RX_CLK_LAT 0
 set RX_CLK_RISE 0
 set RX_CLK_FALL 0
 create_generated_clock -master_clock $UART_CLK_NAME -source [get_ports "UART_CLK"] -name $RX_CLK_NAME -divide_by $RX_DIVIDE_FACTOR [get_port "UART_RX_Clock_Divider/o_div_clk"]
-Warning: Can't find port 'UART_RX_Clock_Divider/o_div_clk' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_RX_Clock_Divider/o_div_clk'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Value for list '-master_clock' must have 1 elements. (CMD-036)
+Error: Value for list '-source' must have 1 elements. (CMD-036)
 Error: Value for list 'source_objects' must have 1 elements. (CMD-036)
 set_clock_uncertainty -setup $RX_CLK_SETUP_SKEW [get_clocks $RX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
 Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_uncertainty -hold $RX_CLK_HOLD_SKEW  [get_clocks $RX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
 Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_clock_transition -rise $RX_CLK_RISE  [get_clocks $RX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
 Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_transition -fall $RX_CLK_FALL  [get_clocks $RX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
 Error: Value for list 'clock_list' must have 1 elements. (CMD-036)
 set_clock_latency $RX_CLK_LAT [get_clocks $RX_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
 Error: Value for list 'object_list' must have 1 elements. (CMD-036)
 set_dont_touch_network $RX_CLK_NAME
-Warning: Can't find object 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find object 'RX_CLK'. (UID-109)
 Error: Value for list '<object_list>' must have 1 elements. (CMD-036)
 ####################################################################################
 #########################################################
@@ -879,21 +430,56 @@ set out_delay [expr 0.2*$REF_CLK_PER]
 set scan_in_src [list "test_mode" "scan_clk" "scan_rst" "SI" "SE"]
 #Constrain Input Paths
 set_input_delay $in_delay -clock $RX_CLK_NAME [get_ports "UART_RX_IN"]
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_RX_IN'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
 Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
 set_input_delay $in_delay -clock $SCAN_CLK_NAME [get_ports $scan_in_src]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'test_mode'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'scan_clk'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'scan_rst'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SI'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SE'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
 #Constrain Output Paths
 set_output_delay $out_delay -clock $RX_CLK_NAME [get_ports "parity_error"]
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'parity_error'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
 Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
 set_output_delay $out_delay -clock $RX_CLK_NAME [get_ports "framing_error"]
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'framing_error'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
 Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
 set_output_delay $out_delay -clock $TX_CLK_NAME [get_ports "UART_TX_O"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_TX_O'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'TX_CLK'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
 set_output_delay $out_delay -clock $SCAN_CLK_NAME [get_ports "SO"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SO'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list '-clock' must have 1 elements. (CMD-036)
+Error: Value for list 'port_pin_list' must have 1 elements. (CMD-036)
 ####################################################################################
 #########################################################
 #### Section 4 : Driving cells ####
@@ -901,39 +487,29 @@ Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed infor
 ####################################################################################
 #functional ports
 set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports "REF_CLK"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'REF_CLK'. (UID-109)
+Error: Value for list 'port_list' must have 1 elements. (CMD-036)
 set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports "UART_CLK"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_CLK'. (UID-109)
+Error: Value for list 'port_list' must have 1 elements. (CMD-036)
 set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports "UART_RX_IN"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_RX_IN'. (UID-109)
+Error: Value for list 'port_list' must have 1 elements. (CMD-036)
 set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports $scan_in_src]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
-Warning: Design rule attributes from the driving cell will be
-	set on the port. (UID-401)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'test_mode'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'scan_clk'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'scan_rst'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SI'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SE'. (UID-109)
+Error: Value for list 'port_list' must have 1 elements. (CMD-036)
 ####################################################################################
 #########################################################
 #### Section 5 : Output load ####
@@ -941,9 +517,21 @@ Warning: Design rule attributes from the driving cell will be
 ####################################################################################
 #functional ports
 set_load 0.1  [get_ports "parity_error"]
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'parity_error'. (UID-109)
+Error: Value for list 'objects' must have 1 elements. (CMD-036)
 set_load 0.1  [get_ports "framing_error"]
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'framing_error'. (UID-109)
+Error: Value for list 'objects' must have 1 elements. (CMD-036)
 set_load 0.1  [get_ports "UART_TX_O"]
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'UART_TX_O'. (UID-109)
+Error: Value for list 'objects' must have 1 elements. (CMD-036)
 set_load 0.1  [get_ports "SO"]
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SO'. (UID-109)
+Error: Value for list 'objects' must have 1 elements. (CMD-036)
 ####################################################################################
 #########################################################
 #### Section 6 : Operating Condition ####
@@ -952,8 +540,7 @@ set_load 0.1  [get_ports "SO"]
 # Define the Worst Library for Max(#setup) analysis
 # Define the Best Library for Min(hold) analysis
 set_operating_conditions -min_library "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -min "scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c" -max_library "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c" -max "scmetro_tsmc_cl013g_rvt_ss_1p08v_125c"
-Using operating conditions 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' found in library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c'.
-Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'.
+Error: Current design is not defined. (UID-4)
 ####################################################################################
 #########################################################
 #### Section 7 : wireload Model ####
@@ -966,19 +553,35 @@ Using operating conditions 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c' found in libr
 #########################################################
 ####################################################################################
 set_clock_groups -asynchronous -group [get_clocks "$REF_CLK_NAME $ALU_CLK_NAME"] -group [get_clocks "$UART_CLK_NAME $TX_CLK_NAME $RX_CLK_NAME"]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'REF_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'ALU_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'TX_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
+Error: Value for list '-group' must have 1 elements. (CMD-036)
 set_clock_groups -asynchronous -group [get_clocks "$REF_CLK_NAME $ALU_CLK_NAME"] -group [get_clocks $SCAN_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'REF_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'ALU_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list '-group' must have 1 elements. (CMD-036)
 set_clock_groups -asynchronous -group [get_clocks "$UART_CLK_NAME $TX_CLK_NAME $RX_CLK_NAME"] -group [get_clocks $SCAN_CLK_NAME]
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Can't find clock 'RX_CLK' in design 'SYS_TOP'. (UID-95)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'UART_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'TX_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'RX_CLK'. (UID-109)
+Error: Current design is not defined. (UID-4)
+Error: Can't find clock 'SCAN_CLK'. (UID-109)
+Error: Value for list '-group' must have 1 elements. (CMD-036)
 ####################################################################################
 #################### Archirecture Scan Chains #########################
 puts "###############################################"
@@ -988,9 +591,9 @@ puts "############ Configure scan chains ############"
 puts "###############################################"
 ###############################################
 set_scan_configuration -max_length 100 -clock_mixing no_mix -style multiplexed_flip_flop -replace true
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Accepted scan configuration for modes: all_dft
-1
+Error: Current design is not defined. (UID-4)
+Discarded scan specification.
+0
 ###################### Mapping and optimization ########################
 puts "###############################################"
 ###############################################
@@ -999,317 +602,8 @@ puts "########## Mapping & Optimization #############"
 puts "###############################################"
 ###############################################
 compile_ultra -scan
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Information: Performing power optimization. (PWR-850)
-Alib files are up-to-date.
-Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
-Loading db file '/opt/Synopsys/Synplify2015/libraries/syn/dw_foundation.sldb'
-Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
-Information: Evaluating DesignWare library utilization. (UISN-27)
-
-============================================================================
-| DesignWare Building Block Library  |         Version         | Available |
-============================================================================
-| Basic DW Building Blocks           | K-2015.06-DWBB_201506.0 |     *     |
-| Licensed DW Building Blocks        | K-2015.06-DWBB_201506.0 |     *     |
-============================================================================
-
-Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
-
-Information: There are 52 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
-
-
-  Loading target library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
-  Loading target library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
-Information: Building the design 'FIFO' instantiated from design 'SYS_TOP' with
-	the parameters "DATA_WIDTH=8,ADDR_WIDTH=4,MEM_SIZE=16". (HDL-193)
-Warning: Cannot find the design 'FIFO' in the library 'WORK'. (LBR-1)
-Information: Building the design 'ClkDiv' instantiated from design 'SYS_TOP' with
-	the parameters "Width=6". (HDL-193)
-Warning: Cannot find the design 'ClkDiv' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'FIFO' in 'SYS_TOP'. (LINK-5)
-Warning: Unable to resolve reference 'ClkDiv' in 'SYS_TOP'. (LINK-5)
-Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db.alib'
-Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db.alib'
-Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db.alib'
-Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design SYS_TOP has different process,
-voltage and temperatures parameters than the parameters at which target library 
-scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
-  Building model 'DW01_NAND2'
-Information: Ungrouping hierarchy U0_UART/UART_TX before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy U0_UART/UART_RX before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy U0_UART/UART_TX/ser_block before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy U0_UART/UART_TX/parity_block before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy U0_UART/UART_TX/FSM_control_block before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy U0_UART/UART_RX/UART_Sampling_Register before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy U0_UART/UART_RX/UART_Config_block before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy U0_UART/UART_RX/UART_Sampler before Pass 1 (OPT-776)
-Information: Ungrouping hierarchy U0_UART/UART_RX/UART_FSM_Controller before Pass 1 (OPT-776)
-Information: Ungrouping 9 of 20 hierarchies before Pass 1 (OPT-775)
-Information: State dependent leakage is now switched from on to off.
-
-  Beginning Pass 1 Mapping
-  ------------------------
-  Processing 'UART'
-Information: Added key list 'DesignWare' to design 'UART'. (DDB-72)
- Implement Synthetic for 'UART'.
-  Processing 'RegFile'
- Implement Synthetic for 'RegFile'.
-  Processing 'SYS_CONTRL'
- Implement Synthetic for 'SYS_CONTRL'.
-  Processing 'ALU'
-Information: Added key list 'DesignWare' to design 'ALU'. (DDB-72)
- Implement Synthetic for 'ALU'.
-  Processing 'ALU_DW_div_uns_J1_0'
-  Processing 'SYS_TOP'
- Implement Synthetic for 'SYS_TOP'.
-  Processing 'ClkDiv'
-Information: Added key list 'DesignWare' to design 'ClkDiv'. (DDB-72)
- Implement Synthetic for 'ClkDiv'.
-  Processing 'DATA_SYNC'
-  Processing 'RST_SYNC_0'
-  Processing 'PULSE_GEN'
-  Processing 'CLK_GATE'
-Memory usage for J1 task 418 Mbytes -- main task 418 Mbytes.
-Information: Building the design 'FIFO' instantiated from design 'SYS_TOP' with
-	the parameters "DATA_WIDTH=8,ADDR_WIDTH=4,MEM_SIZE=16". (HDL-193)
-Warning: Cannot find the design 'FIFO' in the library 'WORK'. (LBR-1)
-Information: Building the design 'ClkDiv' instantiated from design 'SYS_TOP' with
-	the parameters "Width=6". (HDL-193)
-Warning: Cannot find the design 'ClkDiv' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'FIFO' in 'SYS_TOP'. (LINK-5)
-Warning: Unable to resolve reference 'ClkDiv' in 'SYS_TOP'. (LINK-5)
-
-  Updating timing information
-Information: Updating design information... (UID-85)
-Information: There are 256 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
-Information: The library cell 'HOLDX1M' in the library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' is not characterized for internal power. (PWR-536)
-Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
-Information: Automatic shift-register identification is enabled for scan. Not all registers will be scan-replaced. (OPT-467)
-
-  Beginning Mapping Optimizations  (Ultra High effort)
-  -------------------------------
-  Structuring 'ALU_DW_div_uns_0'
-  Mapping 'ALU_DW_div_uns_0'
-  Mapping 'DW01_add'
-  Mapping 'DW01_add'
-  Mapping 'DW01_add'
-  Mapping 'DW01_add'
-  Mapping 'ALU_DW01_add_7'
-  Mapping 'ALU_DW01_add_8'
-  Mapping 'ALU_DW01_add_9'
-  Structuring 'ALU_DW_div_uns_1'
-  Mapping 'ALU_DW_div_uns_1'
-  Mapping 'ALU_DW01_add_10'
-  Mapping 'DW01_add'
-  Mapping 'DW01_add'
-  Mapping 'DW01_add'
-  Mapping 'DW01_add'
-  Mapping 'DW01_add'
-  Mapping 'DW01_add'
-  Mapping 'ALU_DW01_add_11'
-  Mapping 'ALU_DW01_add_12'
-  Mapping 'ALU_DW01_add_13'
-  Structuring 'ALU_DW_div_uns_2'
-  Mapping 'ALU_DW_div_uns_2'
-  Mapping 'ALU_DW01_add_14'
-  Mapping 'ALU_DW01_add_15'
-  Mapping 'ALU_DW01_add_16'
-  Mapping 'ALU_DW01_sub_0'
-  Mapping 'ALU_DW01_add_17'
-  Mapping 'ALU_DW01_add_18'
-  Mapping 'ALU_DW01_add_19'
-  Mapping 'ALU_DW01_add_24'
-  Mapping 'ALU_DW01_add_25'
-  Mapping 'ALU_DW01_add_26'
-  Mapping 'ALU_DW01_add_27'
-  Mapping 'ALU_DW01_add_28'
-  Mapping 'ALU_DW01_add_29'
-  Mapping 'ALU_DW01_add_30'
-  Mapping 'ALU_DW01_add_31'
-  Mapping 'ALU_DW01_add_32'
-  Mapping 'ALU_DW01_add_33'
-  Mapping 'ALU_DW01_add_34'
-  Mapping 'ALU_DW01_add_35'
-  Mapping 'ALU_DW01_add_36'
-  Mapping 'ALU_DW01_add_37'
-  Mapping Optimization (Phase 1)
-
-  Beginning Constant Register Removal
-  -----------------------------------
-
-  Beginning Global Optimizations
-  ------------------------------
-  Numerical Synthesis (Phase 1)
-  Numerical Synthesis (Phase 2)
-  Global Optimization (Phase 1)
-  Global Optimization (Phase 2)
-  Global Optimization (Phase 3)
-  Global Optimization (Phase 4)
-  Global Optimization (Phase 5)
-  Global Optimization (Phase 6)
-  Global Optimization (Phase 7)
-  Global Optimization (Phase 8)
-  Global Optimization (Phase 9)
-  Global Optimization (Phase 10)
-  Global Optimization (Phase 11)
-  Global Optimization (Phase 12)
-  Global Optimization (Phase 13)
-  Global Optimization (Phase 14)
-  Global Optimization (Phase 15)
-  Global Optimization (Phase 16)
-  Global Optimization (Phase 17)
-  Global Optimization (Phase 18)
-  Global Optimization (Phase 19)
-  Global Optimization (Phase 20)
-  Global Optimization (Phase 21)
-  Global Optimization (Phase 22)
-  Global Optimization (Phase 23)
-  Global Optimization (Phase 24)
-  Global Optimization (Phase 25)
-  Global Optimization (Phase 26)
-  Global Optimization (Phase 27)
-  Global Optimization (Phase 28)
-  Global Optimization (Phase 29)
-  Global Optimization (Phase 30)
-  Global Optimization (Phase 31)
-
-  Beginning Isolate Ports
-  -----------------------
-
-  Beginning Delay Optimization
-  ----------------------------
-
-                                  TOTAL                                                
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
-  --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:23   19521.5      0.00       0.0      16.0                           10866676.0000
-    0:00:23   19521.5      0.00       0.0      16.0                           10866676.0000
-    0:00:23   19521.5      0.00       0.0      16.0                           10866676.0000
-    0:00:25   19539.1      0.00       0.0      15.8                           10942961.0000
-
-  Beginning WLM Backend Optimization
-  --------------------------------------
-    0:00:26   19449.7      0.00       0.0      15.7                           10791108.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-
-
-  Beginning Design Rule Fixing  (max_transition)  (max_capacitance)
-  ----------------------------
-
-                                  TOTAL                                                
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
-  --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:26   19448.5      0.00       0.0      15.7                           10362011.0000
-  Global Optimization (Phase 32)
-  Global Optimization (Phase 33)
-  Global Optimization (Phase 34)
-    0:00:27   19467.3      0.00       0.0       0.0                           10394824.0000
-    0:00:27   19467.3      0.00       0.0       0.0                           10394824.0000
-
-
-  Beginning Leakage Power Optimization  (max_leakage_power 0)
-  ------------------------------------
-
-                                  TOTAL                                                
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
-  --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:27   19467.3      0.00       0.0       0.0                           10394824.0000
-  Global Optimization (Phase 35)
-  Global Optimization (Phase 36)
-  Global Optimization (Phase 37)
-  Global Optimization (Phase 38)
-  Global Optimization (Phase 39)
-  Global Optimization (Phase 40)
-  Global Optimization (Phase 41)
-  Global Optimization (Phase 42)
-  Global Optimization (Phase 43)
-  Global Optimization (Phase 44)
-  Global Optimization (Phase 45)
-  Global Optimization (Phase 46)
-  Global Optimization (Phase 47)
-    0:00:27   19490.9      0.00       0.0       0.0                           10011748.0000
-    0:00:27   19490.9      0.00       0.0       0.0                           10011748.0000
-    0:00:27   19490.9      0.00       0.0       0.0                           10011748.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-
-                                  TOTAL                                                
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
-  --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:28   19490.9      0.00       0.0       0.0                           10010819.0000
-    0:00:28   19460.3      0.00       0.0       0.0                           9936629.0000
-    0:00:28   19460.3      0.00       0.0       0.0                           9936629.0000
-    0:00:28   19460.3      0.00       0.0       0.0                           9936629.0000
-    0:00:28   19461.4      0.00       0.0       0.0                           9933208.0000
-    0:00:29   19449.7      0.00       0.0       0.0                           9916092.0000
-    0:00:29   19449.7      0.00       0.0       0.0                           9916092.0000
-    0:00:29   19449.7      0.00       0.0       0.0                           9916092.0000
-    0:00:29   19449.7      0.00       0.0       0.0                           9916092.0000
-    0:00:29   19443.8      0.00       0.0       0.0                           9907243.0000
-Loading db file '/home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
-Loading db file '/home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
-Loading db file '/home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
-
-
-Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
-
-
-  Optimization Complete
-  ---------------------
-  Loading target library 'scmetro_tsmc_cl013g_rvt_tt_1p2v_25c'
-  Loading target library 'scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c'
-Information: Building the design 'FIFO' instantiated from design 'SYS_TOP' with
-	the parameters "DATA_WIDTH=8,ADDR_WIDTH=4,MEM_SIZE=16". (HDL-193)
-Warning: Cannot find the design 'FIFO' in the library 'WORK'. (LBR-1)
-Information: Building the design 'ClkDiv' instantiated from design 'SYS_TOP' with
-	the parameters "Width=6". (HDL-193)
-Warning: Cannot find the design 'ClkDiv' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'FIFO' in 'SYS_TOP'. (LINK-5)
-Warning: Unable to resolve reference 'ClkDiv' in 'SYS_TOP'. (LINK-5)
-Information: State dependent leakage is now switched from off to on.
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: Design has unannotated black box outputs. (PWR-428)
-1
+Error: Current design is not defined. (UID-4)
+0
 ################################################################### 
 # Setting Test Timing Variables
 ################################################################### 
@@ -1326,1165 +620,80 @@ set test_default_strobe_width 0
 0
 ########################## Define DFT Signals ##########################
 set_dft_signal -port [get_ports scan_clk]  -type ScanClock   -view existing_dft -timing {30 60}
-Information: Building the design 'FIFO' instantiated from design 'SYS_TOP' with
-	the parameters "DATA_WIDTH=8,ADDR_WIDTH=4,MEM_SIZE=16". (HDL-193)
-Warning: Cannot find the design 'FIFO' in the library 'WORK'. (LBR-1)
-Information: Building the design 'ClkDiv' instantiated from design 'SYS_TOP' with
-	the parameters "Width=6". (HDL-193)
-Warning: Cannot find the design 'ClkDiv' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'FIFO' in 'SYS_TOP'. (LINK-5)
-Warning: Unable to resolve reference 'ClkDiv' in 'SYS_TOP'. (LINK-5)
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Accepted dft signal specification for modes: all_dft
-1
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'scan_clk'. (UID-109)
+Error: Value for list '-port' must have 1 elements. (CMD-036)
+0
 set_dft_signal -port [get_ports scan_rst]  -type Reset       -view existing_dft -active_state 0
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Accepted dft signal specification for modes: all_dft
-1
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'scan_rst'. (UID-109)
+Error: Value for list '-port' must have 1 elements. (CMD-036)
+0
 set_dft_signal -port [get_ports test_mode] -type Constant    -view existing_dft -active_state 1
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Accepted dft signal specification for modes: all_dft
-1
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'test_mode'. (UID-109)
+Error: Value for list '-port' must have 1 elements. (CMD-036)
+0
 set_dft_signal -port [get_ports test_mode] -type TestMode    -view spec 	-active_state 1
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Accepted dft signal specification for modes: all_dft
-1
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'test_mode'. (UID-109)
+Error: Value for list '-port' must have 1 elements. (CMD-036)
+0
 set_dft_signal -port [get_ports SE] 	   -type ScanEnable  -view spec 	-active_state 1 -usage scan
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Accepted dft signal specification for modes: all_dft
-1
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SE'. (UID-109)
+Error: Value for list '-port' must have 1 elements. (CMD-036)
+0
 set_dft_signal -port [get_ports SI] 	   -type ScanDataIn  -view spec 	
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Accepted dft signal specification for modes: all_dft
-1
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SI'. (UID-109)
+Error: Value for list '-port' must have 1 elements. (CMD-036)
+0
 set_dft_signal -port [get_ports SO] 	   -type ScanDataOut -view spec 	
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Accepted dft signal specification for modes: all_dft
-1
+Error: Current design is not defined. (UID-4)
+Error: Can't find port 'SO'. (UID-109)
+Error: Value for list '-port' must have 1 elements. (CMD-036)
+0
 ############################# Create Test Protocol #####################
 create_test_protocol
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-In mode: all_dft...
-
-Information: Starting test protocol creation. (TEST-219)
-  ...reading user specified clock signals...
-Information: Identified system/test clock port scan_clk (30.0,60.0). (TEST-265)
-  ...reading user specified asynchronous signals...
-Information: Identified active low asynchronous control port scan_rst. (TEST-266)
-1
+Error: Current design is not defined. (UID-4)
+0
 ###################### Pre-DFT Design Rule Checking ####################
 dft_drc -verbose
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-In mode: all_dft...
-  Pre-DFT DRC enabled
-Information: There are 256 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
-
-Information: Starting test design rule checking. (TEST-222)
-  Loading test protocol
-  ...basic checks...
-  ...basic sequential cell checks...
-  	...checking for scan equivalents...
-  ...checking vector rules...
-  ...checking pre-dft rules...
-
------------------------------------------------------------------
-Begin Modeling violations...
-
-Warning: Cell Async_FIFO (FIFO) is unknown (black box) because functionality for output pin W_CLK is bad or incomplete. (TEST-451)
-Information: Cells with this violation : Async_FIFO, UART_RX_Clock_Divider. (TEST-283)
-
-Modeling violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-Begin Topology violations...
-
-Warning: Three-state net REF_CLK_m is not properly driven. (TEST-115)
-Information: Nets with this violation : REF_CLK_m, RST_SYNC_REF_m, RST_SYNC_UART_m, System_Control/FIFO_WR, System_Control/TX_DATA_OUT[0], System_Control/TX_DATA_OUT[1], System_Control/TX_DATA_OUT[2], System_Control/TX_DATA_OUT[3], System_Control/TX_DATA_OUT[4], System_Control/TX_DATA_OUT[5], System_Control/TX_DATA_OUT[6], System_Control/TX_DATA_OUT[7], TX_BUSY_GEN/PULSE_GEN, TX_CLK_m, UART_CLK_m, UART_RX_Prescale[0], UART_RX_Prescale[1], UART_RX_Prescale[2], UART_RX_Prescale[3], n7, n8. (TEST-287)
-
-Topology violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-Begin Pre-DFT violations...
-
- Warning: Clock scan_rst connects to data input (D) of DFF U0_RegFile/RdData_reg[7]. (D10-1)
- Warning: Clock scan_rst connects to data input (D) of DFF U0_RegFile/RdData_reg[6]. (D10-2)
- Warning: Clock scan_rst connects to data input (D) of DFF U0_RegFile/RdData_reg[5]. (D10-3)
- Warning: Clock scan_rst connects to data input (D) of DFF U0_RegFile/RdData_reg[4]. (D10-4)
- Warning: Clock scan_rst connects to data input (D) of DFF U0_RegFile/RdData_reg[3]. (D10-5)
- Warning: Clock scan_rst connects to data input (D) of DFF U0_RegFile/RdData_reg[2]. (D10-6)
- Warning: Clock scan_rst connects to data input (D) of DFF U0_RegFile/RdData_reg[1]. (D10-7)
- Warning: Clock scan_rst connects to data input (D) of DFF U0_RegFile/RdData_reg[0]. (D10-8)
-
-Pre-DFT violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-Begin Other violations...
-
-Warning: Cell ALU_CLOCK/LATCHED_CLK has constant 1 value. (TEST-505)
-
-Other violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-  DRC Report
-
-  Total violations: 32
-
------------------------------------------------------------------
-
-2 MODELING VIOLATIONS
-     2 Cell has unknown model violations (TEST-451)
-
-21 TOPOLOGY VIOLATIONS
-    21 Improperly driven three-state net violations (TEST-115)
-
-8 PRE-DFT VIOLATIONS
-     8 Clock feeding data input violations (D10)
-
-1 OTHER VIOLATION
-     1 Cell is constant 1 violation (TEST-505)
-
-
-Warning: Violations occurred during test design rule checking. (TEST-124)
-
------------------------------------------------------------------
-  Sequential Cell Report
-
-  2 out of 292 sequential cells have violations
-
------------------------------------------------------------------
-
-SEQUENTIAL CELLS WITH VIOLATIONS
-      *   1 cell has test design rule violations
-         TX_BUSY_GEN/PULSE_GEN_flipflop_reg
-      *   1 cell has constant 1 value
-         ALU_CLOCK/LATCHED_CLK
-SEQUENTIAL CELLS WITHOUT VIOLATIONS
-      * 287 cells are valid scan cells
-         System_Control/current_state_reg[1]
-         System_Control/RegFile_ADDR_Register_reg[0]
-         System_Control/RegFile_ADDR_Register_reg[1]
-         System_Control/RegFile_ADDR_Register_reg[2]
-         System_Control/RegFile_ADDR_Register_reg[3]
-         System_Control/ALU_Result_reg[0]
-         System_Control/ALU_Result_reg[1]
-         System_Control/ALU_Result_reg[2]
-         System_Control/ALU_Result_reg[3]
-         System_Control/ALU_Result_reg[4]
-         System_Control/ALU_Result_reg[5]
-         System_Control/ALU_Result_reg[6]
-         System_Control/ALU_Result_reg[7]
-         System_Control/ALU_Result_reg[8]
-         System_Control/ALU_Result_reg[9]
-         System_Control/ALU_Result_reg[10]
-         System_Control/ALU_Result_reg[11]
-         System_Control/ALU_Result_reg[12]
-         System_Control/ALU_Result_reg[13]
-         System_Control/ALU_Result_reg[14]
-         System_Control/ALU_Result_reg[15]
-         System_Control/RX_Data_Register_reg[0]
-         System_Control/RX_Data_Register_reg[1]
-         System_Control/RX_Data_Register_reg[2]
-         System_Control/RX_Data_Register_reg[3]
-         System_Control/RX_Data_Register_reg[4]
-         System_Control/RX_Data_Register_reg[5]
-         System_Control/RX_Data_Register_reg[6]
-         System_Control/RX_Data_Register_reg[7]
-         System_Control/current_state_reg[2]
-         System_Control/current_state_reg[3]
-         System_Control/current_state_reg[0]
-         U0_RegFile/RdData_Vaild_reg
-         U0_RegFile/Register_reg[15][7]
-         U0_RegFile/Register_reg[15][6]
-         U0_RegFile/Register_reg[15][5]
-         U0_RegFile/Register_reg[15][4]
-         U0_RegFile/Register_reg[15][3]
-         U0_RegFile/Register_reg[15][2]
-         U0_RegFile/Register_reg[15][1]
-         U0_RegFile/Register_reg[15][0]
-         U0_RegFile/Register_reg[14][7]
-         U0_RegFile/Register_reg[14][6]
-         U0_RegFile/Register_reg[14][5]
-         U0_RegFile/Register_reg[14][4]
-         U0_RegFile/Register_reg[14][3]
-         U0_RegFile/Register_reg[14][2]
-         U0_RegFile/Register_reg[14][1]
-         U0_RegFile/Register_reg[14][0]
-         U0_RegFile/Register_reg[13][7]
-         U0_RegFile/Register_reg[13][6]
-         U0_RegFile/Register_reg[13][5]
-         U0_RegFile/Register_reg[13][4]
-         U0_RegFile/Register_reg[13][3]
-         U0_RegFile/Register_reg[13][2]
-         U0_RegFile/Register_reg[13][1]
-         U0_RegFile/Register_reg[13][0]
-         U0_RegFile/Register_reg[12][7]
-         U0_RegFile/Register_reg[12][6]
-         U0_RegFile/Register_reg[12][5]
-         U0_RegFile/Register_reg[12][4]
-         U0_RegFile/Register_reg[12][3]
-         U0_RegFile/Register_reg[12][2]
-         U0_RegFile/Register_reg[12][1]
-         U0_RegFile/Register_reg[12][0]
-         U0_RegFile/Register_reg[11][7]
-         U0_RegFile/Register_reg[11][6]
-         U0_RegFile/Register_reg[11][5]
-         U0_RegFile/Register_reg[11][4]
-         U0_RegFile/Register_reg[11][3]
-         U0_RegFile/Register_reg[11][2]
-         U0_RegFile/Register_reg[11][1]
-         U0_RegFile/Register_reg[11][0]
-         U0_RegFile/Register_reg[10][7]
-         U0_RegFile/Register_reg[10][6]
-         U0_RegFile/Register_reg[10][5]
-         U0_RegFile/Register_reg[10][4]
-         U0_RegFile/Register_reg[10][3]
-         U0_RegFile/Register_reg[10][2]
-         U0_RegFile/Register_reg[10][1]
-         U0_RegFile/Register_reg[10][0]
-         U0_RegFile/Register_reg[9][7]
-         U0_RegFile/Register_reg[9][6]
-         U0_RegFile/Register_reg[9][5]
-         U0_RegFile/Register_reg[9][4]
-         U0_RegFile/Register_reg[9][3]
-         U0_RegFile/Register_reg[9][2]
-         U0_RegFile/Register_reg[9][1]
-         U0_RegFile/Register_reg[9][0]
-         U0_RegFile/Register_reg[8][7]
-         U0_RegFile/Register_reg[8][6]
-         U0_RegFile/Register_reg[8][5]
-         U0_RegFile/Register_reg[8][4]
-         U0_RegFile/Register_reg[8][3]
-         U0_RegFile/Register_reg[8][2]
-         U0_RegFile/Register_reg[8][1]
-         U0_RegFile/Register_reg[8][0]
-         U0_RegFile/Register_reg[7][7]
-         U0_RegFile/Register_reg[7][6]
-         U0_RegFile/Register_reg[7][5]
-         U0_RegFile/Register_reg[7][4]
-         U0_RegFile/Register_reg[7][3]
-         U0_RegFile/Register_reg[7][2]
-         U0_RegFile/Register_reg[7][1]
-         U0_RegFile/Register_reg[7][0]
-         U0_RegFile/Register_reg[6][7]
-         U0_RegFile/Register_reg[6][6]
-         U0_RegFile/Register_reg[6][5]
-         U0_RegFile/Register_reg[6][4]
-         U0_RegFile/Register_reg[6][3]
-         U0_RegFile/Register_reg[6][2]
-         U0_RegFile/Register_reg[6][1]
-         U0_RegFile/Register_reg[6][0]
-         U0_RegFile/Register_reg[5][7]
-         U0_RegFile/Register_reg[5][6]
-         U0_RegFile/Register_reg[5][5]
-         U0_RegFile/Register_reg[5][4]
-         U0_RegFile/Register_reg[5][3]
-         U0_RegFile/Register_reg[5][2]
-         U0_RegFile/Register_reg[5][1]
-         U0_RegFile/Register_reg[5][0]
-         U0_RegFile/Register_reg[4][7]
-         U0_RegFile/Register_reg[4][6]
-         U0_RegFile/Register_reg[4][5]
-         U0_RegFile/Register_reg[4][4]
-         U0_RegFile/Register_reg[4][3]
-         U0_RegFile/Register_reg[4][2]
-         U0_RegFile/Register_reg[4][1]
-         U0_RegFile/Register_reg[4][0]
-         U0_RegFile/Register_reg[3][7]
-         U0_RegFile/Register_reg[3][6]
-         U0_RegFile/Register_reg[3][4]
-         U0_RegFile/Register_reg[3][3]
-         U0_RegFile/Register_reg[3][2]
-         U0_RegFile/Register_reg[3][1]
-         U0_RegFile/Register_reg[3][0]
-         U0_RegFile/Register_reg[2][6]
-         U0_RegFile/Register_reg[2][5]
-         U0_RegFile/Register_reg[2][4]
-         U0_RegFile/Register_reg[2][3]
-         U0_RegFile/Register_reg[2][2]
-         U0_RegFile/Register_reg[1][7]
-         U0_RegFile/Register_reg[1][6]
-         U0_RegFile/Register_reg[1][5]
-         U0_RegFile/Register_reg[1][4]
-         U0_RegFile/Register_reg[1][3]
-         U0_RegFile/Register_reg[1][2]
-         U0_RegFile/Register_reg[1][1]
-         U0_RegFile/Register_reg[1][0]
-         U0_RegFile/Register_reg[0][7]
-         U0_RegFile/Register_reg[0][6]
-         U0_RegFile/Register_reg[0][5]
-         U0_RegFile/Register_reg[0][4]
-         U0_RegFile/Register_reg[0][3]
-         U0_RegFile/Register_reg[0][2]
-         U0_RegFile/Register_reg[0][1]
-         U0_RegFile/Register_reg[0][0]
-         U0_RegFile/Register_reg[3][5]
-         U0_RegFile/Register_reg[2][7]
-         U0_RegFile/Register_reg[2][0]
-         U0_RegFile/Register_reg[2][1]
-         U0_RegFile/RdData_reg[7]
-         U0_RegFile/RdData_reg[6]
-         U0_RegFile/RdData_reg[5]
-         U0_RegFile/RdData_reg[4]
-         U0_RegFile/RdData_reg[3]
-         U0_RegFile/RdData_reg[2]
-         U0_RegFile/RdData_reg[1]
-         U0_RegFile/RdData_reg[0]
-         ALU/ALU_OP_2_reg[0]
-         ALU/VALID_REG_reg[0]
-         ALU/ALU_OUT_REG_reg[15]
-         ALU/ALU_OUT_REG_reg[14]
-         ALU/ALU_OUT_REG_reg[13]
-         ALU/ALU_OUT_REG_reg[12]
-         ALU/ALU_OUT_REG_reg[11]
-         ALU/ALU_OUT_REG_reg[10]
-         ALU/ALU_OUT_REG_reg[9]
-         ALU/ALU_OUT_REG_reg[8]
-         ALU/ALU_OUT_REG_reg[7]
-         ALU/ALU_OUT_REG_reg[6]
-         ALU/ALU_OUT_REG_reg[5]
-         ALU/ALU_OUT_REG_reg[4]
-         ALU/ALU_OUT_REG_reg[3]
-         ALU/ALU_OUT_REG_reg[2]
-         ALU/ALU_OUT_REG_reg[1]
-         ALU/ALU_OUT_REG_reg[0]
-         ALU/ALU_OP_1_reg[4]
-         ALU/ALU_OP_1_reg[3]
-         ALU/ALU_OP_1_reg[2]
-         ALU/ALU_OP_1_reg[1]
-         ALU/ALU_OP_1_reg[0]
-         ALU/ALU_OP_2_reg[3]
-         ALU/ALU_OP_1_reg[5]
-         ALU/ALU_OP_2_reg[5]
-         ALU/ALU_OP_2_reg[4]
-         ALU/ALU_OP_1_reg[6]
-         ALU/ALU_OP_1_reg[7]
-         ALU/ALU_OP_2_reg[7]
-         ALU/ALU_OP_2_reg[2]
-         ALU/ALU_OP_2_reg[1]
-         ALU/ALU_OP_2_reg[6]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[0]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[1]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[2]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[3]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[4]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[5]
-         U0_UART/UART_TX/ser_block/Counter_reg[7]
-         U0_UART/UART_TX/ser_block/Counter_reg[0]
-         U0_UART/UART_TX/ser_block/Counter_reg[1]
-         U0_UART/UART_TX/ser_block/Counter_reg[2]
-         U0_UART/UART_TX/ser_block/Counter_reg[3]
-         U0_UART/UART_TX/ser_block/Counter_reg[4]
-         U0_UART/UART_TX/ser_block/Counter_reg[5]
-         U0_UART/UART_TX/ser_block/Counter_reg[6]
-         U0_UART/UART_TX/ser_block/data_reg_reg[7]
-         U0_UART/UART_TX/ser_block/data_reg_reg[6]
-         U0_UART/UART_TX/ser_block/data_reg_reg[5]
-         U0_UART/UART_TX/ser_block/data_reg_reg[4]
-         U0_UART/UART_TX/ser_block/data_reg_reg[3]
-         U0_UART/UART_TX/ser_block/data_reg_reg[2]
-         U0_UART/UART_TX/ser_block/data_reg_reg[1]
-         U0_UART/UART_TX/ser_block/data_reg_reg[0]
-         U0_UART/UART_TX/ser_block/serial_out_reg
-         U0_UART/UART_RX/UART_Config_block/SAMPLE_CMD_reg
-         U0_UART/UART_RX/UART_Config_block/sampler_enable_reg
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[0]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[1]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[2]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[3]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[4]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[5]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[6]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[7]
-         U0_UART/UART_RX/UART_Config_block/start_enable_reg
-         U0_UART/UART_RX/UART_Config_block/parity_enable_reg
-         U0_UART/UART_RX/UART_Config_block/stop_enable_reg
-         U0_UART/UART_RX/UART_FSM_Controller/current_state_reg[0]
-         U0_UART/UART_RX/UART_FSM_Controller/current_state_reg[1]
-         U0_UART/UART_RX/UART_FSM_Controller/current_state_reg[2]
-         U0_UART/UART_RX/UART_FSM_Controller/BIT_COUNT_reg_reg[0]
-         U0_UART/UART_RX/UART_FSM_Controller/BIT_COUNT_reg_reg[1]
-         U0_UART/UART_RX/UART_FSM_Controller/BIT_COUNT_reg_reg[2]
-         U0_UART/UART_RX/UART_FSM_Controller/BIT_COUNT_reg_reg[3]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[0]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[1]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[2]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[3]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[4]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[5]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[6]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[7]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[8]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[9]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[10]
-         U0_UART/UART_RX/UART_Sampler/Data_Storage_reg[0]
-         U0_UART/UART_RX/UART_Sampler/Data_Storage_reg[1]
-         U0_UART/UART_RX/UART_Sampler/Data_Storage_reg[2]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[7]
-         U0_UART/UART_TX/FSM_control_block/current_state_reg[1]
-         U0_UART/UART_TX/FSM_control_block/current_state_reg[2]
-         U0_UART/UART_TX/FSM_control_block/current_state_reg[0]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[6]
-         UART_RX_DATA_SYNC/synchronizer_reg[0]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[7]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[6]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[5]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[4]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[3]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[2]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[1]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[0]
-         UART_RX_DATA_SYNC/enable_pulse_flipflop_reg
-         UART_TX_Clock_Divider/edge_count_reg[7]
-         UART_TX_Clock_Divider/edge_count_reg[6]
-         UART_TX_Clock_Divider/edge_count_reg[5]
-         UART_TX_Clock_Divider/edge_count_reg[4]
-         UART_TX_Clock_Divider/edge_count_reg[3]
-         UART_TX_Clock_Divider/edge_count_reg[2]
-         UART_TX_Clock_Divider/edge_count_reg[1]
-         UART_TX_Clock_Divider/edge_count_reg[0]
-         UART_TX_Clock_Divider/reg_div_clk_reg
-         RST_SYNC_1/synchronizer_reg[0]
-         RST_SYNC_1/synchronizer_reg[1]
-         RST_SYNC_2/synchronizer_reg[0]
-         RST_SYNC_2/synchronizer_reg[1]
-      *   3 cells are non-scan shift-register cells
-         ALU/VALID_REG_reg[1]
-         UART_RX_DATA_SYNC/synchronizer_reg[1]
-         UART_RX_DATA_SYNC/sync_bus_enable_reg
-
-Information: Test design rule checking completed. (TEST-123)
-1
+Error: Current design is not defined. (UID-4)
+0
 ############################# Preview DFT ##############################
 preview_dft -show scan_summary
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-  Information: Using test design rule information from previous dft_drc run.
-  Architecting Scan Chains
-
-****************************************
-Preview_dft report
-For    : 'Insert_dft' command
-Design : SYS_TOP
-Version: K-2015.06
-Date   : Fri Aug 23 19:51:51 2024
-****************************************
-
-Number of chains: 3
-Scan methodology: full_scan
-Scan style: multiplexed_flip_flop
-Clock domain: no_mix
-
-Chain      Scan Ports (si --> so)        # of Cells   Inst/Chain               Clock (port, time, edge)
------      ----------------------        ----------   ----------               ------------------------
-S 1        SI[5] -->  SO[5]                      97   ALU/ALU_OP_1_reg[0]      (scan_clk, 30.0, rising) 
-S 2        SI[4] -->  SO[4]                      97   U0_RegFile/Register_reg[1][7]
-                            (scan_clk, 30.0, rising) 
-S 3        SI[3] -->  SO[3]                      96   U0_RegFile/Register_reg[14][0]
-                            (scan_clk, 30.0, rising) 
-1
+Error: Current design is not defined. (UID-4)
+0
 ############################# Insert DFT ###############################
 insert_dft
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-  Information: Using test design rule information from previous dft_drc run.
-  Architecting Scan Chains
-  Routing Scan Chains
-  Routing Global Signals
-  Mapping New Logic
-Resetting current test mode
-Information: There are 258 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
-  Beginning Mapping Optimizations
-  -------------------------------
-
-                                  TOTAL                                      
-   ELAPSED            WORST NEG   SETUP    DESIGN                            
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
-  --------- --------- --------- --------- --------- -------------------------
-
-
-  Beginning Phase 1 Design Rule Fixing  (max_transition)  (max_capacitance)
-  ------------------------------------
-
-                                  TOTAL                                      
-   ELAPSED            WORST NEG   SETUP    DESIGN                            
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
-  --------- --------- --------- --------- --------- -------------------------
-    0:00:46   19462.6      0.00       0.0       6.2 UART_TX_Clock_Divider/reg_div_clk
-    0:00:46   19462.6      0.00       0.0       6.2 UART_TX_Clock_Divider/reg_div_clk
-    0:00:46   19462.6      0.00       0.0       6.2 UART_TX_Clock_Divider/reg_div_clk
-    0:00:46   19462.6      0.00       0.0       6.2 UART_TX_Clock_Divider/reg_div_clk
-    0:00:46   19472.0      0.00       0.0       6.4 U0_RegFile/Register[13][7]
-    0:00:46   19481.4      0.00       0.0       6.6 UART_RX_DATA_SYNC/sync_bus_enable
-    0:00:46   19499.1      0.00       0.0      12.0 SE                       
-    0:00:46   19499.1      0.00       0.0      12.0 SE                       
-    0:00:46   19499.1      0.00       0.0      12.0 SE                       
-    0:00:46   19499.1      0.00       0.0      12.0 SE                       
-    0:00:46   19506.2      0.00       0.0      12.0 net13239                 
-    0:00:46   19515.6      0.00       0.0       9.8 net13248                 
-    0:00:46   19515.6      0.00       0.0       6.4 net13238                 
-    0:00:46   19515.6      0.00       0.0       6.4 net13238                 
-    0:00:46   19526.2      0.00       0.0       6.2 net13241                 
-    0:00:46   19526.2      0.00       0.0       6.2 net13241                 
-    0:00:46   19526.2      0.00       0.0       6.2 net13241                 
-    0:00:46   19535.6      0.00       0.0       5.8 net13255                 
-    0:00:46   19535.6      0.00       0.0       5.7 net13239                 
-    0:00:46   19542.6      0.00       0.0       5.7 net13240                 
-    0:00:46   19552.0      0.00       0.0       5.3 net13262                 
-    0:00:46   19552.0      0.00       0.0       3.9 net13251                 
-    0:00:46   19542.6      0.00       0.0       3.7 UART_TX_Clock_Divider/net13229
-    0:00:46   19533.2      0.00       0.0       3.5 UART_RX_DATA_SYNC/net13235
-    0:00:46   19523.8      0.00       0.0       3.3 U0_RegFile/net13233      
-    0:00:47   19536.8      0.00       0.0       3.3 ALU/ALU_OUT_REG_reg[0]/D 
-    0:00:47   19536.8      0.00       0.0       3.3 ALU/ALU_OUT_REG_reg[0]/D 
-    0:00:47   19536.8      0.00       0.0       3.3 ALU/ALU_OUT_REG_reg[0]/D 
-    0:00:47   19536.8      0.00       0.0       3.3 ALU/ALU_OUT_REG_reg[0]/D 
-    0:00:47   19536.8      0.00       0.0       3.3 ALU/ALU_OUT_REG_reg[0]/D 
-    0:00:47   19536.8      0.00       0.0       3.3 ALU/ALU_OUT_REG_reg[0]/D 
-    0:00:47   19536.8      0.00       0.0       3.3 ALU/ALU_OUT_REG_reg[0]/D 
-    0:00:47   19536.8      0.00       0.0       3.3 ALU/ALU_OUT_REG_reg[0]/D 
-    0:00:47   19574.4      0.00       0.0       1.3 U0_RegFile/test_se       
-    0:00:47   19574.4      0.00       0.0       1.3 U0_RegFile/test_se       
-    0:00:47   19574.4      0.00       0.0       1.3 U0_RegFile/test_se       
-    0:00:47   19583.8      0.00       0.0       0.1 U0_UART/test_se          
-    0:00:47   19583.8      0.00       0.0       0.1 U0_RegFile/Register[13][7]
-    0:00:47   19590.9      0.00       0.0       0.1 UART_TX_Clock_Divider/reg_div_clk
-    0:00:47   19581.5      0.00       0.0       0.0 U0_RegFile/net13278      
-
-
-  Beginning Phase 2 Design Rule Fixing  (max_capacitance)
-  ------------------------------------
-
-                                  TOTAL                                      
-   ELAPSED            WORST NEG   SETUP    DESIGN                            
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
-  --------- --------- --------- --------- --------- -------------------------
-    0:00:47   19609.7      0.00       0.0       0.2 U0_RegFile/Register[13][7]
-    0:00:47   19609.7      0.00       0.0       0.2 U0_RegFile/Register[13][7]
-    0:00:47   19609.7      0.00       0.0       0.2 U0_RegFile/Register[13][7]
-    0:00:47   19619.1      0.00       0.0       0.4 UART_RX_DATA_SYNC/sync_bus_enable
-    0:00:47   19637.9      0.00       0.0       0.6 UART_TX_Clock_Divider/reg_div_clk
-    0:00:47   19637.9      0.00       0.0       0.6 UART_TX_Clock_Divider/reg_div_clk
-    0:00:47   19637.9      0.00       0.0       0.6 UART_TX_Clock_Divider/reg_div_clk
-    0:00:47   19628.5      0.00       0.0       0.4 UART_TX_Clock_Divider/net13297
-    0:00:47   19619.1      0.00       0.0       0.2 UART_RX_DATA_SYNC/net13295
-    0:00:47   19609.7      0.00       0.0       0.0 U0_RegFile/net13291      
-    0:00:47   19600.3      0.00       0.0       0.0 U0_RegFile/Register[13][7]
-    0:00:47   19590.9      0.00       0.0       0.0 UART_TX_Clock_Divider/reg_div_clk
-
-1
+Error: Current design is not defined. (UID-4)
+0
 ######################## Optimize Logic post DFT #######################
 compile_ultra -scan -incremental
-Information: Building the design 'FIFO' instantiated from design 'SYS_TOP' with
-	the parameters "DATA_WIDTH=8,ADDR_WIDTH=4,MEM_SIZE=16". (HDL-193)
-Warning: Cannot find the design 'FIFO' in the library 'WORK'. (LBR-1)
-Information: Building the design 'ClkDiv' instantiated from design 'SYS_TOP' with
-	the parameters "Width=6". (HDL-193)
-Warning: Cannot find the design 'ClkDiv' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'FIFO' in 'SYS_TOP'. (LINK-5)
-Warning: Unable to resolve reference 'ClkDiv' in 'SYS_TOP'. (LINK-5)
-Information: Performing power optimization. (PWR-850)
-Alib files are up-to-date.
-Information: Choosing a test methodology will restrict the optimization of sequential cells. (UIO-12)
-Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
-
-Information: There are 30 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
-
-
-Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db.alib'
-Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db.alib'
-Loaded alib file './alib-52/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db.alib'
-Warning: Operating condition scmetro_tsmc_cl013g_rvt_ss_1p08v_125c set on design SYS_TOP has different process,
-voltage and temperatures parameters than the parameters at which target library 
-scmetro_tsmc_cl013g_rvt_tt_1p2v_25c is characterized. Delays may be inaccurate as a result. (OPT-998)
-Information: State dependent leakage is now switched from on to off.
-
-  Beginning Pass 1 Mapping  (Incremental)
-  ------------------------
-Information: Building the design 'FIFO' instantiated from design 'SYS_TOP' with
-	the parameters "DATA_WIDTH=8,ADDR_WIDTH=4,MEM_SIZE=16". (HDL-193)
-Warning: Cannot find the design 'FIFO' in the library 'WORK'. (LBR-1)
-Information: Building the design 'ClkDiv' instantiated from design 'SYS_TOP' with
-	the parameters "Width=6". (HDL-193)
-Warning: Cannot find the design 'ClkDiv' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'FIFO' in 'SYS_TOP'. (LINK-5)
-Warning: Unable to resolve reference 'ClkDiv' in 'SYS_TOP'. (LINK-5)
-
-  Updating timing information
-Information: Updating design information... (UID-85)
-Information: There are 258 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
-Information: The library cell 'HOLDX1M' in the library 'scmetro_tsmc_cl013g_rvt_ss_1p08v_125c' is not characterized for internal power. (PWR-536)
-Information: The target library(s) contains cell(s), other than black boxes, that are not characterized for internal power. (PWR-24)
-
-                                  TOTAL                                                
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
-  --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:06   19590.9      0.00       0.0       0.0                           9996876.0000
-    0:00:06   19590.9      0.00       0.0       0.0                           9996876.0000
-Information: Complementing port 'test_so' in design 'ClkDiv_test_1'.
-	 The new name of the port is 'test_so_BAR'. (OPT-319)
-
-  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
-  -------------------------------
-
-  Beginning Incremental Implementation Selection
-  ----------------------------------------------
-    0:00:07   19607.4      0.00       0.0       0.3                           10028333.0000
-
-  Beginning Delay Optimization Phase
-  ----------------------------------
-
-                                  TOTAL                                                
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
-  --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:07   19607.4      0.00       0.0       0.3                           10028333.0000
-    0:00:07   19594.4      0.00       0.0       0.3                           10020671.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-
-  Beginning Delay Optimization
-  ----------------------------
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:08   19540.3      0.00       0.0       0.0                           9950490.0000
-    0:00:09   19542.6      0.00       0.0       0.0                           9917518.0000
-
-
-  Beginning Design Rule Fixing  (max_capacitance)
-  ----------------------------
-
-                                  TOTAL                                                
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
-  --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:09   19542.6      0.00       0.0       0.0                           9917518.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9915071.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:09   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-
-                                  TOTAL                                                
-   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
-    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
-  --------- --------- --------- --------- --------- ------------------------- ---------
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:10   19537.9      0.00       0.0       0.0                           9914054.0000
-    0:00:11   19482.6      0.00       0.0       0.0                           9861122.0000
-    0:00:11   19482.6      0.00       0.0       0.0                           9861122.0000
-Loading db file '/home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
-Loading db file '/home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
-Loading db file '/home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
-
-
-Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
-
-
-  Optimization Complete
-  ---------------------
-Information: State dependent leakage is now switched from off to on.
-Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
-Warning: Design has unannotated black box outputs. (PWR-428)
-1
+Error: Current design is not defined. (UID-4)
+0
 ###################### Design Rule Checking post DFT ###################
 dft_drc -verbose -coverage_estimate 
-Information: Building the design 'FIFO' instantiated from design 'SYS_TOP' with
-	the parameters "DATA_WIDTH=8,ADDR_WIDTH=4,MEM_SIZE=16". (HDL-193)
-Warning: Cannot find the design 'FIFO' in the library 'WORK'. (LBR-1)
-Information: Building the design 'ClkDiv' instantiated from design 'SYS_TOP' with
-	the parameters "Width=6". (HDL-193)
-Warning: Cannot find the design 'ClkDiv' in the library 'WORK'. (LBR-1)
-Warning: Unable to resolve reference 'FIFO' in 'SYS_TOP'. (LINK-5)
-Warning: Unable to resolve reference 'ClkDiv' in 'SYS_TOP'. (LINK-5)
-In mode: Internal_scan...
-  Design has scan chains in this mode
-  Design is scan routed
-  Post-DFT DRC enabled
-
-Information: Starting test design rule checking. (TEST-222)
-  Loading test protocol
-  ...basic checks...
-  ...basic sequential cell checks...
-  ...checking vector rules...
-  ...checking clock rules...
-  ...checking scan chain rules...
-  ...checking scan compression rules...
-  ...checking X-state rules...
-  ...checking tristate rules...
-  ...extracting scan details...
-
------------------------------------------------------------------
-Begin Modeling violations...
-
-Warning: Cell Async_FIFO (FIFO) is unknown (black box) because functionality for output pin W_CLK is bad or incomplete. (TEST-451)
-Information: Cells with this violation : Async_FIFO, UART_RX_Clock_Divider. (TEST-283)
-
-Modeling violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-Begin Topology violations...
-
-Warning: Three-state net REF_CLK_m is not properly driven. (TEST-115)
-Information: Nets with this violation : REF_CLK_m, RST_SYNC_REF_m, RST_SYNC_UART_m, System_Control/FIFO_WR, System_Control/TX_DATA_OUT[0], System_Control/TX_DATA_OUT[1], System_Control/TX_DATA_OUT[2], System_Control/TX_DATA_OUT[3], System_Control/TX_DATA_OUT[4], System_Control/TX_DATA_OUT[5], System_Control/TX_DATA_OUT[6], System_Control/TX_DATA_OUT[7], TX_BUSY_GEN/PULSE_GEN, TX_CLK_m, UART_CLK_m, UART_RX_Prescale[0], UART_RX_Prescale[1], UART_RX_Prescale[2], UART_RX_Prescale[3], n45, n46. (TEST-287)
-
-Topology violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-Begin Clock violations...
-
- Warning: Clock scan_rst used as data is different than capture clock scan_clk for inputs  of stable DFF (U0_RegFile/RdData_reg[7]). (C26-1)
- Warning: Clock scan_rst used as data is different than capture clock scan_clk for inputs  of stable DFF (U0_RegFile/RdData_reg[6]). (C26-2)
- Warning: Clock scan_rst used as data is different than capture clock scan_clk for inputs  of stable DFF (U0_RegFile/RdData_reg[5]). (C26-3)
- Warning: Clock scan_rst used as data is different than capture clock scan_clk for inputs  of stable DFF (U0_RegFile/RdData_reg[4]). (C26-4)
- Warning: Clock scan_rst used as data is different than capture clock scan_clk for inputs  of stable DFF (U0_RegFile/RdData_reg[3]). (C26-5)
- Warning: Clock scan_rst used as data is different than capture clock scan_clk for inputs  of stable DFF (U0_RegFile/RdData_reg[2]). (C26-6)
- Warning: Clock scan_rst used as data is different than capture clock scan_clk for inputs  of stable DFF (U0_RegFile/RdData_reg[1]). (C26-7)
- Warning: Clock scan_rst used as data is different than capture clock scan_clk for inputs  of stable DFF (U0_RegFile/RdData_reg[0]). (C26-8)
-
-Clock violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-Begin Scan chain violations...
-
- Warning: Nonscan DFF TX_BUSY_GEN/PULSE_GEN_flipflop_reg disturbed during time 30 of shift procedure. (S19-1)
-
-Scan chain violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-Begin Other violations...
-
-Warning: Cell ALU_CLOCK/LATCHED_CLK has constant 1 value. (TEST-505)
-
-Other violations completed...
------------------------------------------------------------------
-
------------------------------------------------------------------
-  DRC Report
-
-  Total violations: 33
-
------------------------------------------------------------------
-
-2 MODELING VIOLATIONS
-     2 Cell has unknown model violations (TEST-451)
-
-21 TOPOLOGY VIOLATIONS
-    21 Improperly driven three-state net violations (TEST-115)
-
-8 CLOCK VIOLATIONS
-     8 Clock as data different from capture clock for stable cell violations (C26)
-
-1 SCAN CHAIN VIOLATION
-     1 Nonscan cell disturb violation (S19)
-
-1 OTHER VIOLATION
-     1 Cell is constant 1 violation (TEST-505)
-
-
-Warning: Violations occurred during test design rule checking. (TEST-124)
-
------------------------------------------------------------------
-  Sequential Cell Report
-
-  2 out of 292 sequential cells have violations
-
------------------------------------------------------------------
-
-SEQUENTIAL CELLS WITH VIOLATIONS
-      *   1 cell has test design rule violations
-         TX_BUSY_GEN/PULSE_GEN_flipflop_reg
-      *   1 cell has constant 1 value
-         ALU_CLOCK/LATCHED_CLK
-SEQUENTIAL CELLS WITHOUT VIOLATIONS
-      * 287 cells are valid scan cells
-         System_Control/current_state_reg[1]
-         System_Control/RegFile_ADDR_Register_reg[0]
-         System_Control/RegFile_ADDR_Register_reg[1]
-         System_Control/RegFile_ADDR_Register_reg[2]
-         System_Control/RegFile_ADDR_Register_reg[3]
-         System_Control/ALU_Result_reg[0]
-         System_Control/ALU_Result_reg[1]
-         System_Control/ALU_Result_reg[2]
-         System_Control/ALU_Result_reg[3]
-         System_Control/ALU_Result_reg[4]
-         System_Control/ALU_Result_reg[5]
-         System_Control/ALU_Result_reg[6]
-         System_Control/ALU_Result_reg[7]
-         System_Control/ALU_Result_reg[8]
-         System_Control/ALU_Result_reg[9]
-         System_Control/ALU_Result_reg[10]
-         System_Control/ALU_Result_reg[11]
-         System_Control/ALU_Result_reg[12]
-         System_Control/ALU_Result_reg[13]
-         System_Control/ALU_Result_reg[14]
-         System_Control/ALU_Result_reg[15]
-         System_Control/RX_Data_Register_reg[0]
-         System_Control/RX_Data_Register_reg[1]
-         System_Control/RX_Data_Register_reg[2]
-         System_Control/RX_Data_Register_reg[3]
-         System_Control/RX_Data_Register_reg[4]
-         System_Control/RX_Data_Register_reg[5]
-         System_Control/RX_Data_Register_reg[6]
-         System_Control/RX_Data_Register_reg[7]
-         System_Control/current_state_reg[2]
-         System_Control/current_state_reg[3]
-         System_Control/current_state_reg[0]
-         U0_RegFile/RdData_Vaild_reg
-         U0_RegFile/Register_reg[15][7]
-         U0_RegFile/Register_reg[15][6]
-         U0_RegFile/Register_reg[15][5]
-         U0_RegFile/Register_reg[15][4]
-         U0_RegFile/Register_reg[15][3]
-         U0_RegFile/Register_reg[15][2]
-         U0_RegFile/Register_reg[15][1]
-         U0_RegFile/Register_reg[15][0]
-         U0_RegFile/Register_reg[14][7]
-         U0_RegFile/Register_reg[14][6]
-         U0_RegFile/Register_reg[14][5]
-         U0_RegFile/Register_reg[14][4]
-         U0_RegFile/Register_reg[14][3]
-         U0_RegFile/Register_reg[14][2]
-         U0_RegFile/Register_reg[14][1]
-         U0_RegFile/Register_reg[14][0]
-         U0_RegFile/Register_reg[13][6]
-         U0_RegFile/Register_reg[13][5]
-         U0_RegFile/Register_reg[13][4]
-         U0_RegFile/Register_reg[13][3]
-         U0_RegFile/Register_reg[13][2]
-         U0_RegFile/Register_reg[13][1]
-         U0_RegFile/Register_reg[13][0]
-         U0_RegFile/Register_reg[12][7]
-         U0_RegFile/Register_reg[12][6]
-         U0_RegFile/Register_reg[12][5]
-         U0_RegFile/Register_reg[12][4]
-         U0_RegFile/Register_reg[12][3]
-         U0_RegFile/Register_reg[12][2]
-         U0_RegFile/Register_reg[12][1]
-         U0_RegFile/Register_reg[12][0]
-         U0_RegFile/Register_reg[11][7]
-         U0_RegFile/Register_reg[11][6]
-         U0_RegFile/Register_reg[11][5]
-         U0_RegFile/Register_reg[11][4]
-         U0_RegFile/Register_reg[11][3]
-         U0_RegFile/Register_reg[11][2]
-         U0_RegFile/Register_reg[11][1]
-         U0_RegFile/Register_reg[11][0]
-         U0_RegFile/Register_reg[10][7]
-         U0_RegFile/Register_reg[10][6]
-         U0_RegFile/Register_reg[10][5]
-         U0_RegFile/Register_reg[10][4]
-         U0_RegFile/Register_reg[10][3]
-         U0_RegFile/Register_reg[10][2]
-         U0_RegFile/Register_reg[10][1]
-         U0_RegFile/Register_reg[10][0]
-         U0_RegFile/Register_reg[9][7]
-         U0_RegFile/Register_reg[9][6]
-         U0_RegFile/Register_reg[9][5]
-         U0_RegFile/Register_reg[9][4]
-         U0_RegFile/Register_reg[9][3]
-         U0_RegFile/Register_reg[9][2]
-         U0_RegFile/Register_reg[9][1]
-         U0_RegFile/Register_reg[9][0]
-         U0_RegFile/Register_reg[8][7]
-         U0_RegFile/Register_reg[8][6]
-         U0_RegFile/Register_reg[8][5]
-         U0_RegFile/Register_reg[8][4]
-         U0_RegFile/Register_reg[8][3]
-         U0_RegFile/Register_reg[8][2]
-         U0_RegFile/Register_reg[8][1]
-         U0_RegFile/Register_reg[8][0]
-         U0_RegFile/Register_reg[7][7]
-         U0_RegFile/Register_reg[7][6]
-         U0_RegFile/Register_reg[7][5]
-         U0_RegFile/Register_reg[7][4]
-         U0_RegFile/Register_reg[7][3]
-         U0_RegFile/Register_reg[7][2]
-         U0_RegFile/Register_reg[7][1]
-         U0_RegFile/Register_reg[7][0]
-         U0_RegFile/Register_reg[6][7]
-         U0_RegFile/Register_reg[6][6]
-         U0_RegFile/Register_reg[6][5]
-         U0_RegFile/Register_reg[6][4]
-         U0_RegFile/Register_reg[6][3]
-         U0_RegFile/Register_reg[6][2]
-         U0_RegFile/Register_reg[6][1]
-         U0_RegFile/Register_reg[6][0]
-         U0_RegFile/Register_reg[5][7]
-         U0_RegFile/Register_reg[5][6]
-         U0_RegFile/Register_reg[5][5]
-         U0_RegFile/Register_reg[5][4]
-         U0_RegFile/Register_reg[5][3]
-         U0_RegFile/Register_reg[5][2]
-         U0_RegFile/Register_reg[5][1]
-         U0_RegFile/Register_reg[5][0]
-         U0_RegFile/Register_reg[4][7]
-         U0_RegFile/Register_reg[4][6]
-         U0_RegFile/Register_reg[4][5]
-         U0_RegFile/Register_reg[4][4]
-         U0_RegFile/Register_reg[4][3]
-         U0_RegFile/Register_reg[4][2]
-         U0_RegFile/Register_reg[4][1]
-         U0_RegFile/Register_reg[4][0]
-         U0_RegFile/Register_reg[3][7]
-         U0_RegFile/Register_reg[3][6]
-         U0_RegFile/Register_reg[3][4]
-         U0_RegFile/Register_reg[3][3]
-         U0_RegFile/Register_reg[3][2]
-         U0_RegFile/Register_reg[3][1]
-         U0_RegFile/Register_reg[3][0]
-         U0_RegFile/Register_reg[2][6]
-         U0_RegFile/Register_reg[2][5]
-         U0_RegFile/Register_reg[2][4]
-         U0_RegFile/Register_reg[2][3]
-         U0_RegFile/Register_reg[2][2]
-         U0_RegFile/Register_reg[1][7]
-         U0_RegFile/Register_reg[1][6]
-         U0_RegFile/Register_reg[1][5]
-         U0_RegFile/Register_reg[1][4]
-         U0_RegFile/Register_reg[1][3]
-         U0_RegFile/Register_reg[1][2]
-         U0_RegFile/Register_reg[1][1]
-         U0_RegFile/Register_reg[1][0]
-         U0_RegFile/Register_reg[0][7]
-         U0_RegFile/Register_reg[0][6]
-         U0_RegFile/Register_reg[0][5]
-         U0_RegFile/Register_reg[0][3]
-         U0_RegFile/Register_reg[0][2]
-         U0_RegFile/Register_reg[0][1]
-         U0_RegFile/Register_reg[0][0]
-         U0_RegFile/Register_reg[2][1]
-         U0_RegFile/Register_reg[3][5]
-         U0_RegFile/Register_reg[2][7]
-         U0_RegFile/Register_reg[2][0]
-         U0_RegFile/RdData_reg[7]
-         U0_RegFile/RdData_reg[6]
-         U0_RegFile/RdData_reg[5]
-         U0_RegFile/RdData_reg[4]
-         U0_RegFile/RdData_reg[3]
-         U0_RegFile/RdData_reg[2]
-         U0_RegFile/RdData_reg[1]
-         U0_RegFile/RdData_reg[0]
-         U0_RegFile/Register_reg[0][4]
-         U0_RegFile/Register_reg[13][7]
-         ALU/ALU_OP_2_reg[0]
-         ALU/VALID_REG_reg[0]
-         ALU/ALU_OUT_REG_reg[15]
-         ALU/ALU_OUT_REG_reg[14]
-         ALU/ALU_OUT_REG_reg[13]
-         ALU/ALU_OUT_REG_reg[12]
-         ALU/ALU_OUT_REG_reg[11]
-         ALU/ALU_OUT_REG_reg[10]
-         ALU/ALU_OUT_REG_reg[9]
-         ALU/ALU_OUT_REG_reg[8]
-         ALU/ALU_OUT_REG_reg[7]
-         ALU/ALU_OUT_REG_reg[6]
-         ALU/ALU_OUT_REG_reg[5]
-         ALU/ALU_OUT_REG_reg[4]
-         ALU/ALU_OUT_REG_reg[3]
-         ALU/ALU_OUT_REG_reg[2]
-         ALU/ALU_OUT_REG_reg[1]
-         ALU/ALU_OUT_REG_reg[0]
-         ALU/ALU_OP_1_reg[4]
-         ALU/ALU_OP_1_reg[3]
-         ALU/ALU_OP_1_reg[2]
-         ALU/ALU_OP_1_reg[1]
-         ALU/ALU_OP_2_reg[3]
-         ALU/ALU_OP_1_reg[5]
-         ALU/ALU_OP_2_reg[5]
-         ALU/ALU_OP_2_reg[4]
-         ALU/ALU_OP_1_reg[6]
-         ALU/ALU_OP_1_reg[7]
-         ALU/ALU_OP_2_reg[7]
-         ALU/ALU_OP_2_reg[2]
-         ALU/ALU_OP_2_reg[1]
-         ALU/ALU_OP_2_reg[6]
-         ALU/ALU_OP_1_reg[0]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[0]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[1]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[2]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[3]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[4]
-         U0_UART/UART_TX/ser_block/Counter_reg[7]
-         U0_UART/UART_TX/ser_block/Counter_reg[0]
-         U0_UART/UART_TX/ser_block/Counter_reg[1]
-         U0_UART/UART_TX/ser_block/Counter_reg[2]
-         U0_UART/UART_TX/ser_block/Counter_reg[3]
-         U0_UART/UART_TX/ser_block/Counter_reg[4]
-         U0_UART/UART_TX/ser_block/Counter_reg[5]
-         U0_UART/UART_TX/ser_block/Counter_reg[6]
-         U0_UART/UART_TX/ser_block/data_reg_reg[7]
-         U0_UART/UART_TX/ser_block/data_reg_reg[6]
-         U0_UART/UART_TX/ser_block/data_reg_reg[5]
-         U0_UART/UART_TX/ser_block/data_reg_reg[4]
-         U0_UART/UART_TX/ser_block/data_reg_reg[3]
-         U0_UART/UART_TX/ser_block/data_reg_reg[2]
-         U0_UART/UART_TX/ser_block/data_reg_reg[1]
-         U0_UART/UART_TX/ser_block/data_reg_reg[0]
-         U0_UART/UART_TX/ser_block/serial_out_reg
-         U0_UART/UART_RX/UART_Config_block/SAMPLE_CMD_reg
-         U0_UART/UART_RX/UART_Config_block/sampler_enable_reg
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[0]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[1]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[2]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[3]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[4]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[5]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[6]
-         U0_UART/UART_RX/UART_Config_block/Edge_counter_reg[7]
-         U0_UART/UART_RX/UART_Config_block/start_enable_reg
-         U0_UART/UART_RX/UART_Config_block/parity_enable_reg
-         U0_UART/UART_RX/UART_Config_block/stop_enable_reg
-         U0_UART/UART_RX/UART_FSM_Controller/current_state_reg[0]
-         U0_UART/UART_RX/UART_FSM_Controller/current_state_reg[1]
-         U0_UART/UART_RX/UART_FSM_Controller/current_state_reg[2]
-         U0_UART/UART_RX/UART_FSM_Controller/BIT_COUNT_reg_reg[0]
-         U0_UART/UART_RX/UART_FSM_Controller/BIT_COUNT_reg_reg[1]
-         U0_UART/UART_RX/UART_FSM_Controller/BIT_COUNT_reg_reg[2]
-         U0_UART/UART_RX/UART_FSM_Controller/BIT_COUNT_reg_reg[3]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[0]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[1]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[2]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[3]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[4]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[5]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[6]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[7]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[8]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[9]
-         U0_UART/UART_RX/UART_Sampling_Register/sampled_data_register_reg[10]
-         U0_UART/UART_RX/UART_Sampler/Data_Storage_reg[0]
-         U0_UART/UART_RX/UART_Sampler/Data_Storage_reg[1]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[7]
-         U0_UART/UART_TX/FSM_control_block/current_state_reg[1]
-         U0_UART/UART_TX/FSM_control_block/current_state_reg[0]
-         U0_UART/UART_TX/FSM_control_block/current_state_reg[2]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[6]
-         U0_UART/UART_TX/parity_block/internal_reg_reg[5]
-         U0_UART/UART_RX/UART_Sampler/Data_Storage_reg[2]
-         UART_RX_DATA_SYNC/synchronizer_reg[0]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[7]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[6]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[5]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[4]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[3]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[2]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[1]
-         UART_RX_DATA_SYNC/sync_bus_register_reg[0]
-         UART_RX_DATA_SYNC/enable_pulse_flipflop_reg
-         UART_TX_Clock_Divider/edge_count_reg[7]
-         UART_TX_Clock_Divider/edge_count_reg[6]
-         UART_TX_Clock_Divider/edge_count_reg[5]
-         UART_TX_Clock_Divider/edge_count_reg[4]
-         UART_TX_Clock_Divider/edge_count_reg[3]
-         UART_TX_Clock_Divider/edge_count_reg[2]
-         UART_TX_Clock_Divider/edge_count_reg[1]
-         UART_TX_Clock_Divider/edge_count_reg[0]
-         UART_TX_Clock_Divider/reg_div_clk_reg
-         RST_SYNC_1/synchronizer_reg[0]
-         RST_SYNC_1/synchronizer_reg[1]
-         RST_SYNC_2/synchronizer_reg[0]
-         RST_SYNC_2/synchronizer_reg[1]
-      *   3 cells are non-scan shift-register cells
-         ALU/VALID_REG_reg[1]
-         UART_RX_DATA_SYNC/synchronizer_reg[1]
-         UART_RX_DATA_SYNC/sync_bus_enable_reg
-
-....Inferring feed-through connections....
-Information: Test design rule checking completed. (TEST-123)
-  Running test coverage estimation...
- 14162 faults were added to fault list.
- 0            6421   4624         6/0/0    63.17%      0.01
- 0            1554   3057        12/0/0    74.22%      0.01
- 0             802   2239        22/0/0    80.00%      0.02
- 0             496   1727        32/0/1    83.61%      0.02
- 0             251   1460        43/1/1    85.48%      0.02
- 0             216   1220        59/1/1    87.17%      0.02
- 0             144   1047        79/2/1    88.37%      0.03
- 0             117    886       108/4/1    89.47%      0.03
- 0              84    764       129/6/1    90.31%      0.03
- 0              67    660       151/7/1    91.02%      0.03
- 0              54    563       176/9/1    91.68%      0.04
- 0              66    160       393/9/1    94.45%      0.05
- 0              60     92      396/14/2    94.92%      0.05
- 0              54     34      397/17/2    95.33%      0.05
- 0              28      6      397/17/2    95.53%      0.05
- 
-            Pattern Summary Report
- -----------------------------------------------
- #internal patterns                           0
- -----------------------------------------------
- 
-
-     Uncollapsed Stuck Fault Summary Report
- -----------------------------------------------
- fault class                     code   #faults
- ------------------------------  ----  ---------
- Detected                         DT      12911
- Possibly detected                PT          8
- Undetectable                     UD        643
- ATPG untestable                  AU        594
- Not detected                     ND          6
- -----------------------------------------------
- total faults                             14162
- test coverage                            95.53%
- -----------------------------------------------
-  Information: The test coverage above may be inferior
-               than the real test coverage with customized
-               protocol and test simulation library.
-1
+Error: Current design is not defined. (UID-4)
+0
 #############################################################################
 # Write out Design after initial compile
 #############################################################################
 #Avoid Writing assign statements in the netlist
 write_file -format verilog -hierarchy -output netlists/$top_module.ddc
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Writing verilog file '/home/IC/Projects/Full_System/DFT/netlists/SYS_TOP.ddc'.
-Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
-1
+Error: No files or designs were specified. (UID-22)
+0
 write_file -format verilog -hierarchy -output netlists/$top_module.v
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Writing verilog file '/home/IC/Projects/Full_System/DFT/netlists/SYS_TOP.v'.
-Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
-1
+Error: No files or designs were specified. (UID-22)
+0
 write_sdf  sdf/$top_module.sdf
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
-Information: Writing timing information to file '/home/IC/Projects/Full_System/DFT/sdf/SYS_TOP.sdf'. (WT-3)
-Information: Updating design information... (UID-85)
-Information: There are 258 clock pins driven by multiple clocks, and some of them are driven by up-to 2 clocks. (TIM-099)
-Warning: Design contains black-box components.  These cells will have no timing information. (WT-7)
-1
+Error: Current design is not defined. (UID-4)
+0
 write_sdc  -nosplit sdc/$top_module.sdc
-Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
-1
+Error: Current design is not defined. (UID-4)
+0
 set_svf -off
 1
 ####################### reporting ##########################################
@@ -2500,8 +709,8 @@ cd ..
 #gui_start
 exit
 
-Memory usage for main task 479 Mbytes.
-Memory usage for this session 479 Mbytes.
-CPU usage for this session 55 seconds ( 0.02 hours ).
+Memory usage for main task 267 Mbytes.
+Memory usage for this session 267 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
 
 Thank you...
