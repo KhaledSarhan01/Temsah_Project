@@ -41,6 +41,7 @@ always @(posedge CLK or negedge RST) begin
         end
 
         RdData_Vaild <= 1'b0;
+	RdData <= {DATA_WIDTH{1'b0}};
     end 
     else begin
         if(WR_En && !(RD_EN))begin
@@ -52,7 +53,7 @@ always @(posedge CLK or negedge RST) begin
             RdData_Vaild <= 1'b1;
         end
         else begin
-            RdData <= 16'b0;
+            RdData <= {DATA_WIDTH{1'b0}};
             RdData_Vaild <= 1'b0;
         end 
     end

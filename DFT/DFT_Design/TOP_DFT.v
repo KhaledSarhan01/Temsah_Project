@@ -94,14 +94,6 @@ module SYS_TOP #(parameter DATA_WIDTH = 8 ,parameter SCAN_CHAIN_NUM = 6)(
     .mux_out(TX_CLK_m)
     );
 
-   wire ALU_CLK_m;
-    DFT_MUX ALU_CLK_MUX(
-    .select(test_mode),
-    .scan_in(scan_clk),
-    .main_in(ALU_CLK),
-    .mux_out(ALU_CLK_m)
-    );
-
  // Clock Bypassing  
    wire ALU_CLK_EN_m;
    assign ALU_CLK_EN_m = test_mode | ALU_CLK_EN;  
@@ -188,7 +180,7 @@ module SYS_TOP #(parameter DATA_WIDTH = 8 ,parameter SCAN_CHAIN_NUM = 6)(
 // ALU
  ALU #(.DATA_WIDTH(DATA_WIDTH) ,.FUNC_WIDTH(ALU_FUNC_WIDTH)) ALU (
     // Clock and Active low Async Reset
-    .CLK(ALU_CLK_m),
+    .CLK(ALU_CLK),
     .RST(RST_SYNC_REF_m),
 
     // Datapath 
@@ -277,9 +269,9 @@ module SYS_TOP #(parameter DATA_WIDTH = 8 ,parameter SCAN_CHAIN_NUM = 6)(
 // Clock Dividers
 ClkDiv #(.Width(8)) UART_TX_Clock_Divider (
     // active low async reset 
-    .i_rst_n(RST_SYNC_UART),
+    .i_rst_n(RST_SYNC_UART_m),
     // Reference Clock
-    .i_ref_clk(UART_CLK),
+    .i_ref_clk(UART_CLK_m),
     // Configuration 
     .i_clk_en(1'b1),
     .i_div_ratio(ClkDiv_Config),
@@ -301,9 +293,9 @@ always @(*) begin
 end
 ClkDiv #(.Width(6)) UART_RX_Clock_Divider (
     // active low async reset 
-    .i_rst_n(RST_SYNC_UART),
+    .i_rst_n(RST_SYNC_UART_m),
     // Reference Clock
-    .i_ref_clk(UART_CLK),
+    .i_ref_clk(UART_CLK_m),
     // Configuration 
     .i_clk_en(1'b1),
     .i_div_ratio(UART_RX_Prescale),
@@ -314,14 +306,14 @@ ClkDiv #(.Width(6)) UART_RX_Clock_Divider (
 
 // Reset Synchronizer
     RST_SYNC #(.NUM_STAGES(2)) RST_SYNC_1 (
-    .RST(RST),
-    .CLK(REF_CLK),
+    .RST(RST_m),
+    .CLK(REF_CLK_m),
     .SYNC_RST(RST_SYNC_REF)
     );
 
     RST_SYNC #(.NUM_STAGES(2)) RST_SYNC_2 (
-    .RST(RST),
-    .CLK(UART_CLK),
+    .RST(RST_m),
+    .CLK(UART_CLK_m),
     .SYNC_RST(RST_SYNC_UART)
     );
 

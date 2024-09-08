@@ -1,2 +1,56 @@
-Error: Current design is not defined. (UID-4)
-0
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : SYS_TOP
+Version: K-2015.06
+Date   : Mon Sep  9 07:03:59 2024
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+SYS_TOP                                4.06e-02    0.164 9.38e+06    0.214 100.0
+  RST_SYNC_2 (RST_SYNC_test_1)              N/A 4.89e-04 2.74e+04 3.92e-04   0.2
+  RST_SYNC_1 (RST_SYNC_test_0)              N/A 6.74e-04 3.08e+04      N/A   N/A
+  UART_TX_Clock_Divider (ClkDiv_test_1)
+                                            N/A 2.51e-03 2.95e+05 1.93e-03   0.9
+  UART_RX_DATA_SYNC (DATA_SYNC_test_1)      N/A 2.11e-03 2.00e+05 3.19e-04   0.1
+  ALU_CLOCK (CLK_GATE)                 5.30e-03 1.48e-03 1.14e+04 6.78e-03   3.2
+  TX_BUSY_GEN (PULSE_GEN)                   N/A 2.09e-04 1.94e+04      N/A   N/A
+  U0_UART (UART_test_1)                4.50e-04 2.02e-02 1.53e+06 2.22e-02  10.4
+  ALU (ALU_test_1)                     1.58e-02 9.93e-02 3.38e+06    0.118  55.3
+  U0_RegFile (RegFile_test_1)          1.48e-04 2.93e-02 2.96e+06 3.24e-02  15.1
+  System_Control (SYS_CONTRL_test_1)        N/A 6.61e-03 7.71e+05 5.67e-03   2.6
+  RST_SYNC_UART_MUX (DFT_MUX_3)        2.63e-03 1.53e-04 1.52e+04 2.80e-03   1.3
+  RST_SYNC_REF_MUX (DFT_MUX_4)         1.24e-05 5.13e-05 8.78e+03 7.25e-05   0.0
+  TX_CLK_MUX (DFT_MUX_5)               4.77e-04 8.30e-05 1.03e+04 5.70e-04   0.3
+  RX_CLK_MUX (DFT_MUX_0)               7.32e-04 1.59e-04 1.03e+04 9.01e-04   0.4
+  UART_CLK_MUX (DFT_MUX_6)             1.91e-04 5.77e-05 8.07e+03 2.57e-04   0.1
+  REF_CLK_MUX (DFT_MUX_2)              2.99e-03 9.63e-05 1.03e+04 3.10e-03   1.4
+1

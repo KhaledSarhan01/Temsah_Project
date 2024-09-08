@@ -34,9 +34,9 @@ puts "###########################################"
 puts "#             Reading RTL Files           #"
 puts "###########################################"
 
-set rtl_list [list "DFT_Design/TOP_DFT.v" "../Design/SYS_CONTRL.v" "../Design/RegFile.v" "../Design/ClkDiv.v" "../Design/RST_SYNC.v" "../Design/CLK_GATE.v" "../Design/DATA_SYNC.v" \
+set rtl_list [list "DFT_Design/TOP_DFT.v" "../Design/SYS_CONTRL.v" "../Design/RegFile.v" "../Design/ClkDiv.v" "../Design/RST_SYNC.v" "DFT_Design/CLK_GATE.v" "../Design/DATA_SYNC.v" \
 "../Design/ALU.v" "../Design/PULSE_GEN.v" "../Design/FIFO/F_DATA_SYNC.v" "../Design/FIFO/FIFO_RAM.v" "../Design/FIFO/RD_CONTRL.v" "../Design/FIFO/WR_CONTRL.v" "../Design/FIFO.v" \
-"../Design/UART.v" "../Design/UART/FSM_Controller.v" "../Design/UART/Parity.v" "../Design/UART/Serializer.v" "../Design/UART/UART_TX.v" "../Design/UART/Configuration.v" "../Design/UART/Controller.v" "../Design/UART/Sampler.v" "../Design/UART/Sampling_Register.v" "../Design/UART/UART_RX.v"]
+"../Design/UART.v" "../Design/UART/FSM_Controller.v" "../Design/UART/Parity.v" "../Design/UART/Serializer.v" "../Design/UART/UART_TX.v" "../Design/UART/Configuration.v" "../Design/UART/Controller.v" "../Design/UART/Sampler.v" "../Design/UART/Sampling_Register.v" "../Design/UART/UART_RX.v" "DFT_Design/mux2x1.v"]
 set file_format verilog
 
 read_file -format $file_format $rtl_list
