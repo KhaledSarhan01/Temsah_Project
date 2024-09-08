@@ -1,3 +1,5 @@
+##### Define Working Library Directory ######
+define_design_lib work -path ./work
 
 ########## Defining Top Module ##############
 set top_module SYS_TOP
@@ -77,6 +79,13 @@ write_file -format ddc -output SYS_TOP.ddc
 write_sdf SYS_TOP.sdf
 write_sdc SYS_TOP.sdc
 cd ..
+
+############################################
+############ DFT Preperation ###############
+############################################
+set max_scan_chain_depth 100
+set num_flipflop [sizeof_collection [all_registers -edge_triggered]]
+set num_scan_chain [expr $num_flipflop / $max_scan_chain_depth +1]
 
 cd "../Formality"
 set_svf -off

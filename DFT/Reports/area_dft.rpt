@@ -1,0 +1,56 @@
+Warning: Design 'SYS_TOP' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : SYS_TOP
+Version: K-2015.06
+Date   : Fri Aug 23 19:52:18 2024
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          293
+Number of nets:                          2027
+Number of cells:                         1706
+Number of combinational cells:           1393
+Number of sequential cells:               303
+Number of macros/black boxes:               0
+Number of buf/inv:                        227
+Number of references:                      28
+
+Combinational area:               9824.268459
+Buf/Inv area:                      818.983223
+Noncombinational area:            9658.353970
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                 19482.622428
+Total area:                 undefined
+
+Information: This design contains black box (unknown) components. (RPT-8)
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area           Local cell area
+                                  -------------------  ---------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-     Noncombi-  Black-
+                                  Total       Total    national   national   boxes   Design
+--------------------------------  ----------  -------  ---------  ---------  ------  -----------------
+SYS_TOP                           19482.6224    100.0   247.1070     0.0000  0.0000  SYS_TOP
+ALU                                5871.7331     30.1  4756.2214  1115.5116  0.0000  ALU_test_1
+ALU_CLOCK                            15.2971      0.1     0.0000    15.2971  0.0000  CLK_GATE
+RST_SYNC_1                           65.8952      0.3     0.0000    65.8952  0.0000  RST_SYNC_test_0
+RST_SYNC_2                           65.8952      0.3     0.0000    65.8952  0.0000  RST_SYNC_test_1
+System_Control                     1932.1415      9.9   877.8182  1054.3232  0.0000  SYS_CONTRL_test_1
+TX_BUSY_GEN                          38.8311      0.2     5.8835    32.9476  0.0000  PULSE_GEN
+U0_RegFile                         6551.8658     33.6  1974.5027  4577.3632  0.0000  RegFile_test_1
+U0_UART                            3539.5137     18.2  1499.1158  2040.3979  0.0000  UART_test_1
+UART_RX_DATA_SYNC                   478.9169      2.5    84.7224   394.1945  0.0000  DATA_SYNC_test_1
+UART_TX_Clock_Divider               675.4258      3.5   378.8974   296.5284  0.0000  ClkDiv_test_1
+--------------------------------  ----------  -------  ---------  ---------  ------  -----------------
+Total                                                  9824.2685  9658.3540  0.0000
+
+1

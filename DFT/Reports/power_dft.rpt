@@ -1,0 +1,50 @@
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+Warning: Design has unannotated black box outputs. (PWR-428)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : SYS_TOP
+Version: K-2015.06
+Date   : Fri Aug 23 19:52:18 2024
+****************************************
+
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/Projects/Full_System/STD_LIB/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 1.08 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+SYS_TOP                                3.43e-02    0.130 9.43e+06    0.174 100.0
+  RST_SYNC_2 (RST_SYNC_test_1)              N/A 4.77e-04 2.73e+04 3.80e-04   0.2
+  RST_SYNC_1 (RST_SYNC_test_0)              N/A 6.21e-04 2.74e+04      N/A   N/A
+  UART_TX_Clock_Divider (ClkDiv_test_1)
+                                            N/A 2.51e-03 2.95e+05 1.92e-03   1.1
+  UART_RX_DATA_SYNC (DATA_SYNC_test_1)      N/A 2.34e-03 2.07e+05 5.89e-04   0.3
+  ALU_CLOCK (CLK_GATE)                      N/A 8.91e-04 1.14e+04      N/A   N/A
+  TX_BUSY_GEN (PULSE_GEN)                   N/A 2.08e-04 1.94e+04      N/A   N/A
+  U0_UART (UART_test_1)                4.31e-04 2.01e-02 1.53e+06 2.21e-02  12.7
+  ALU (ALU_test_1)                     1.26e-02 6.37e-02 3.40e+06 7.97e-02  45.8
+  U0_RegFile (RegFile_test_1)               N/A 3.02e-02 2.98e+06 3.29e-02  19.0
+  System_Control (SYS_CONTRL_test_1)        N/A 6.89e-03 7.69e+05 5.96e-03   3.4
+1
